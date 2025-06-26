@@ -1,5 +1,5 @@
 'use client';
-import Image from "next/image";
+
 import PopupIntro from './components/PopupIntro';
 import Main1 from './components/main1'
 import Main2 from './components/main2'
