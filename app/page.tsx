@@ -7,6 +7,8 @@ import MainChat from './components/ChatGLY-IA'
 import MainCards from './components/mainCards'
 import Main4 from './components/main4'
 import Main5 from './components/main5'
+import Main6 from './components/main6'
+import MainLogos from './components/mainlogos'
 import Header from './components/header'; // Asegúrate de que la ruta sea correcta según tu estructura
 
 export default function Home() {
@@ -15,15 +17,15 @@ export default function Home() {
       <div className="min-h-screen text-white">
         <Header /> {/* El header siempre visible */}
         <Main1 />
-        <Main4 />
         <MainChat />
-        <MainCards />
         <Main2 />
-       
-       
+        <MainCards />
+        
+        <Main4 />
+        <MainLogos />
+        <Main6 />
        
         <Main5 />
-       
       </div>
     </PopupIntro>
   );
