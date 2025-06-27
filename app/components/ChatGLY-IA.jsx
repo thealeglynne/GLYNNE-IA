@@ -14,7 +14,7 @@ export default function MainGlyIACompleto() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/`,
+        redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/chat`,
       },
     });
     if (error) console.error('Error al iniciar sesión con Google:', error.message);
