@@ -15,10 +15,13 @@ export default function Home() {
       <div className="min-h-screen text-white">
         <Header /> {/* El header siempre visible */}
         <Main1 />
-        <Main2 />
+        <Main4 />
         <MainChat />
         <MainCards />
-        <Main4 />
+        <Main2 />
+       
+       
+       
         <Main5 />
        
       </div>

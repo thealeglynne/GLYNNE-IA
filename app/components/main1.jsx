@@ -19,6 +19,7 @@ export default function VideoBackground() {
         muted
         loop
         playsInline
+        preload="auto"
       >
         <source src="/main1.mp4" type="video/mp4" />
         Tu navegador no soporta videos HTML5.
