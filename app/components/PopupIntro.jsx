@@ -6,7 +6,7 @@ export default function PopupIntro({ children }) {
   const [fadeOut, setFadeOut] = useState(false);
   const [typedText, setTypedText] = useState('');
   const fullText =
-    '. GLYNNE transforma industrias creando profesionales expertos con inteligencia artificial para gestionar tus procesos.';
+    'GLYNNE transforma industrias creando profesionales expertos con inteligencia artificial para gestionar tus procesos.';
 
   useEffect(() => {
     const alreadyShown = sessionStorage.getItem('popupShown');

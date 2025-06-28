@@ -20,10 +20,10 @@ export default function TechShowcaseContainer() {
 
   return (
     <section
-      className="relative w-full min-h-[70vh] flex items-center justify-center px-6 py-20 bg-white"
+      className="relative w-full min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-10 py-10 bg-white"
       style={{
         backgroundImage: "url('/fig.png')",
-        backgroundSize: '100%',
+        backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
       }}
@@ -32,29 +32,29 @@ export default function TechShowcaseContainer() {
       <div className="absolute inset-0 bg-white/80 backdrop-blur-[3.7px] z-0" />
 
       {/* Contenido */}
-      <div className="relative z-10 w-full max-w-7xl flex flex-col items-center text-center space-y-8 bg-white/70 backdrop-blur-xl p-6 md:p-10 ring-1 ring-black/10 shadow-xl rounded-3xl">
-        <h2 className="text-lg md:text-xl font-bold text-gray-900 leading-snug tracking-tight">
+      <div className="relative z-10 w-full max-w-5xl flex flex-col items-center text-center space-y-8 bg-white/70 backdrop-blur-xl p-6 sm:p-10 ring-1 ring-black/10 shadow-xl rounded-3xl">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 leading-snug tracking-tight">
           Potencia tu arquitectura con lo mejor en tecnología
         </h2>
 
-        <p className="max-w-3xl text-gray-600 text-xs md:text-sm leading-relaxed font-medium">
+        <p className="max-w-3xl text-gray-600 text-sm md:text-base leading-relaxed font-medium">
           Trabajamos con un stack moderno, robusto y validado por la industria. Estas herramientas nos permiten construir soluciones escalables, eficientes y listas para evolucionar con tu negocio.
         </p>
 
         {/* Carrusel de logos */}
         <div className="w-full overflow-hidden scrollbar-hide">
-          <div className="flex space-x-8 min-w-max py-2 px-2 animate-slide-infinite">
+          <div className="flex space-x-6 sm:space-x-10 min-w-max py-2 px-2 animate-slide-infinite">
             {[...techLogos, ...techLogos].map((tech, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-20 h-14 relative opacity-90 hover:opacity-100 transition duration-300 ease-in-out"
+                className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 relative opacity-90 hover:opacity-100 transition duration-300 ease-in-out"
               >
                 <Image
                   src={tech.src}
                   alt={tech.alt}
                   fill
                   className="object-contain"
-                  sizes="80px"
+                  sizes="(max-width: 768px) 64px, 80px"
                 />
               </div>
             ))}
