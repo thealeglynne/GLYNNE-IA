@@ -19,18 +19,37 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
+  const navItems = [
+    { label: 'Arquitectura', href: '#arquitectura' },
+    { label: 'Automatización', href: '#automatizacion' },
+    { label: 'Integración', href: '#integracion' },
+    { label: 'Autonomía', href: '#autonomia' },
+    { label: 'Transformación', href: '#transformacion' },
+    { label: 'Contact', href: '#contact' },
+    { label: 'Nosotros', href: '#nosotros' },
+    { label: 'GLY-IA', href: '#glyia' },
+  ];
+
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-md' : 'bg-white shadow-md'
-    }`}>
+    <header
+      className={`fixed top-0 left-0 w-full z-50 px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-md' : 'bg-white shadow-md'
+      }`}
+    >
       {/* Logo */}
       <img src="/logo2.png" alt="Logo" className="h-8 sm:h-10 md:h-12" />
 
       {/* Desktop Nav */}
-      <nav className="hidden lg:flex gap-6 items-center">
-        <button className="text-black hover:text-neutral-600 transition text-sm md:text-base">Contact</button>
-        <button className="text-black hover:text-neutral-600 transition text-sm md:text-base">Nosotros</button>
-        <button className="text-black hover:text-neutral-600 transition text-sm md:text-base">GLY-IA</button>
+      <nav className="hidden lg:flex gap-4 xl:gap-6 items-center">
+        {navItems.map((item) => (
+          <a
+            key={item.label}
+            href={item.href}
+            className="text-black hover:text-neutral-600 transition text-sm md:text-base"
+          >
+            {item.label}
+          </a>
+        ))}
       </nav>
 
       {/* Mobile Toggle */}
@@ -47,24 +66,16 @@ export default function Header() {
         }`}
       >
         <div className="flex flex-col divide-y divide-black/10">
-          <button
-            onClick={handleCloseMenu}
-            className="text-black hover:text-neutral-600 px-6 py-4 text-left text-sm"
-          >
-            Contact
-          </button>
-          <button
-            onClick={handleCloseMenu}
-            className="text-black hover:text-neutral-600 px-6 py-4 text-left text-sm"
-          >
-            Nosotros
-          </button>
-          <button
-            onClick={handleCloseMenu}
-            className="text-black hover:text-neutral-600 px-6 py-4 text-left text-sm"
-          >
-            GLY-IA
-          </button>
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              onClick={handleCloseMenu}
+              className="text-black hover:text-neutral-600 px-6 py-4 text-left text-sm"
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
       </div>
     </header>

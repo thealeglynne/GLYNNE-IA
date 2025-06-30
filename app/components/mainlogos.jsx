@@ -47,14 +47,14 @@ export default function TechShowcaseContainer() {
             {[...techLogos, ...techLogos].map((tech, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 relative opacity-90 hover:opacity-100 transition duration-300 ease-in-out"
+                className="flex-shrink-0 w-20 h-14 sm:w-24 sm:h-16 relative opacity-90 hover:opacity-100 transition duration-300 ease-in-out"
               >
                 <Image
                   src={tech.src}
                   alt={tech.alt}
                   fill
                   className="object-contain"
-                  sizes="(max-width: 768px) 64px, 80px"
+                  sizes="(max-width: 768px) 80px, 96px"
                 />
               </div>
             ))}

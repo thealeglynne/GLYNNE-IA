@@ -6,15 +6,16 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import Header from './components/header';
 import PopupIntro from './components/PopupIntro';
 import Main1 from './components/main1';
+import Presentacion from './components/precentacion'
 import AutomationDashboard from './components/dashboard'
 import Main4 from './components/main4';
-import MainChat from './components/ChatGLY-IA';
+import Experiencia from './components/experienncia'
 import MainCards from './components/mainCards';
 import MainLogos from './components/mainlogos';
 import Main5 from './components/main5';
 import Main6 from './components/main6';
 import Footer from './components/footer';
-import DashboardExplanation from './components/dashboardExplication';
+
 
 function AnimatedSection({
   children,
@@ -74,13 +75,10 @@ export default function Home() {
         </AnimatedSection>
 
         <AnimatedSection>
-          <Main4 />
+          <Presentacion />
         </AnimatedSection>
 
-
-        <AnimatedSection>
-          <MainChat />
-        </AnimatedSection>
+    
   
         <AnimatedSection className="min-h-screen">
           <MainCards />
@@ -89,15 +87,24 @@ export default function Home() {
         <AnimatedSection>
           <MainLogos />
         </AnimatedSection>
+
+        <AnimatedSection>
+          <Main4 />
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <Experiencia />
+        </AnimatedSection>
+
         <AnimatedSection className="min-h-screen">
           <Main6 />
         </AnimatedSection>
+        
         <AnimatedSection className="min-h-screen bg-white text-black">
   <AutomationDashboard />
 </AnimatedSection>
-       <AnimatedSection className="min-h-screen">
-          <DashboardExplanation />
-        </AnimatedSection>
+
+  
         <AnimatedSection>
           <Main5 />
         </AnimatedSection>
