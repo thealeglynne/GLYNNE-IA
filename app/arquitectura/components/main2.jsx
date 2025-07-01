@@ -14,30 +14,22 @@ const sintomas = [
   {
     label: 'Flujos rotos',
     icon: <FaProjectDiagram className="text-orange-500 text-xl" />,
-    descripcion: `Los procesos internos se interrumpen con frecuencia debido a una mala secuencia lógica o falta de coordinación entre sistemas. La automatización sin una arquitectura definida lleva a fallos impredecibles y a una sobrecarga operativa.
-
-El resultado es que cada intervención humana se vuelve una solución temporal que impide escalar y mantener el control del sistema.`,
+    descripcion: `Los procesos internos se interrumpen con frecuencia por falta de una arquitectura clara. La automatización sin estructura se convierte en una cadena de parches temporales que impide escalar, controlar y mejorar el sistema.`,
   },
   {
     label: 'Integraciones frágiles',
     icon: <FaUnlink className="text-orange-500 text-xl" />,
-    descripcion: `Cuando los sistemas están conectados sin una capa robusta de orquestación, cualquier cambio en una API o evento inesperado puede romper el flujo.
-
-Esto hace que el mantenimiento sea costoso y las soluciones poco confiables en entornos empresariales dinámicos.`,
+    descripcion: `Cuando los sistemas están conectados de forma directa, sin una capa de orquestación o una arquitectura modular, cualquier cambio externo puede romperlo todo. Eso incrementa costos y genera frustración constante.`,
   },
   {
     label: 'APIs lentas',
     icon: <FaTachometerAlt className="text-orange-500 text-xl" />,
-    descripcion: `Si no se diseña una arquitectura que contemple colas, cachés o desacoplamientos, el sistema se verá afectado por cuellos de botella.
-
-Esto afecta directamente la experiencia del usuario, ralentiza la toma de decisiones y hace que la automatización pierda valor.`,
+    descripcion: `Sin colas, cachés ni separación de responsabilidades, las APIs se vuelven cuellos de botella. Esto afecta la experiencia del usuario y bloquea la automatización inteligente.`,
   },
   {
     label: 'Automatizaciones sin trazabilidad',
     icon: <FaEyeSlash className="text-orange-500 text-xl" />,
-    descripcion: `Una automatización sin registro ni observabilidad es una caja negra. No saber qué falló, cuándo ni por qué, genera desconfianza e impide escalar.
-
-La IA necesita contexto para aprender. Sin trazabilidad, no hay mejora continua.`,
+    descripcion: `Cuando no hay registros ni monitoreo, los errores se vuelven invisibles. Una IA necesita contexto para aprender. Si no sabes qué falló ni cuándo, no puedes mejorar.`,
   },
 ];
 
@@ -54,7 +46,7 @@ export default function Main2Arquitectura() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      {/* Blur de fondo */}
+      {/* Blur */}
       <div className="absolute inset-0 bg-white/80 backdrop-blur-[3.7px] z-0" />
 
       {/* Contenido */}
@@ -67,11 +59,11 @@ export default function Main2Arquitectura() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <span className="relative inline-block glitch-text" data-text="La IA no puede operar sobre caos.">
-            La IA no puede operar sobre caos.
-          </span>
+          ¿Tu empresa podría ir mejor?
           <br />
-          <span className="text-neutral-600 text-sm sm:text-base md:text-lg">Necesita estructura.</span>
+          <span className="text-neutral-600 text-sm sm:text-base md:text-lg">
+            ¿Sabes cuáles son los síntomas más comunes de una empresa mal integrada tecnológicamente?
+          </span>
         </motion.h2>
 
         {/* Logo */}
@@ -108,9 +100,14 @@ export default function Main2Arquitectura() {
             </motion.div>
           ))}
         </div>
+
+        {/* Mensaje cierre */}
+        <p className="text-sm sm:text-base text-neutral-600 max-w-xl pt-4">
+          Una arquitectura de software robusta no es un lujo, es la base para que la inteligencia artificial funcione con propósito, velocidad y escala.
+        </p>
       </div>
 
-      {/* Popup */}
+      {/* Popup detalle */}
       <AnimatePresence>
         {activeIndex !== null && (
           <motion.div
@@ -140,44 +137,6 @@ export default function Main2Arquitectura() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Glitch CSS */}
-      <style jsx>{`
-        .glitch-text::before,
-        .glitch-text::after {
-          content: attr(data-text);
-          position: absolute;
-          left: 0;
-          width: 100%;
-          opacity: 0.6;
-          clip: rect(0, 0, 0, 0);
-        }
-        .glitch-text::before {
-          animation: glitchTop 2s infinite linear;
-          color: #ff0055;
-        }
-        .glitch-text::after {
-          animation: glitchBottom 2s infinite linear;
-          color: #00ffff;
-        }
-        @keyframes glitchTop {
-          0% { clip: rect(0, 9999px, 0, 0); }
-          5% { clip: rect(0, 9999px, 10px, 0); }
-          10% { clip: rect(0, 9999px, 0, 0); }
-          15% { clip: rect(5px, 9999px, 15px, 0); }
-          20% { clip: rect(0, 9999px, 0, 0); }
-        }
-        @keyframes glitchBottom {
-          0% { clip: rect(0, 9999px, 0, 0); }
-          5% { clip: rect(10px, 9999px, 20px, 0); }
-          10% { clip: rect(0, 9999px, 0, 0); }
-          15% { clip: rect(5px, 9999px, 12px, 0); }
-          20% { clip: rect(0, 9999px, 0, 0); }
-        }
-        .glitch-text {
-          position: relative;
-        }
-      `}</style>
     </section>
   );
 }

@@ -5,9 +5,10 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 
 import Header from './components/header';
 import Main1 from './components/main1';
-import Main2 from './components/man2';
+import Main2 from './components/main2';
 import Main3 from './components/main3';
-
+import Main4 from './components/main4';
+import Main5 from './components/main5'
 // Animación con responsiveness adaptada
 function AnimatedSection({ children, className = '' }) {
   const ref = useRef(null);
@@ -66,6 +67,12 @@ export default function ArquitecturaPage() {
       </AnimatedSection>
       <AnimatedSection>
         <Main3 />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Main4 />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Main5 />
       </AnimatedSection>
     </div>
   );

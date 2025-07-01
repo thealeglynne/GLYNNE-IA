@@ -60,7 +60,7 @@ export default function Home() {
   return (
     <PopupIntro>
       <div
-        className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth text-black no-scrollbar"
+        className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-white text-black no-scrollbar"
         style={{ scrollSnapType: 'y mandatory', WebkitOverflowScrolling: 'touch' }}
       >
         {/* Header fijo */}
