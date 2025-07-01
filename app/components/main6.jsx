@@ -70,9 +70,9 @@ const cardVariants = {
 export default function Main6() {
   return (
     <section
-      className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 py-10 bg-white"
+      className="relative w-full min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-10 pt-[100px] bg-white"
       style={{
-        backgroundImage: "url('/fig.png')",
+        backgroundImage: "url('/')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -82,7 +82,7 @@ export default function Main6() {
       <div className="absolute inset-0 bg-white/80 backdrop-blur-[3.7px] z-0" />
 
       {/* Contenido */}
-      <div className="relative z-10 w-full max-w-7xl flex flex-col items-center text-center space-y-10 bg-white/70 backdrop-blur-xl p-6 sm:p-10 ring-1 ring-black/10 shadow-xl rounded-3xl">
+      <div className="relative z-10 w-full max-w-7xl flex flex-col items-center text-center space-y-10 p-6 sm:p-10">
         <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 30 }}

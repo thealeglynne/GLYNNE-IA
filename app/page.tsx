@@ -6,16 +6,15 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import Header from './components/header';
 import PopupIntro from './components/PopupIntro';
 import Main1 from './components/main1';
-import Presentacion from './components/precentacion'
-import AutomationDashboard from './components/dashboard'
+import Presentacion from './components/precentacion';
+import AutomationDashboard from './components/dashboard';
 import Main4 from './components/main4';
-import Experiencia from './components/experienncia'
+import Experiencia from './components/experienncia';
 import MainCards from './components/mainCards';
 import MainLogos from './components/mainlogos';
 import Main5 from './components/main5';
 import Main6 from './components/main6';
 import Footer from './components/footer';
-
 
 function AnimatedSection({
   children,
@@ -61,7 +60,7 @@ export default function Home() {
   return (
     <PopupIntro>
       <div
-        className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth text-white no-scrollbar"
+        className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth text-black no-scrollbar"
         style={{ scrollSnapType: 'y mandatory', WebkitOverflowScrolling: 'touch' }}
       >
         {/* Header fijo */}
@@ -78,8 +77,6 @@ export default function Home() {
           <Presentacion />
         </AnimatedSection>
 
-    
-  
         <AnimatedSection className="min-h-screen">
           <MainCards />
         </AnimatedSection>
@@ -99,12 +96,11 @@ export default function Home() {
         <AnimatedSection className="min-h-screen">
           <Main6 />
         </AnimatedSection>
-        
-        <AnimatedSection className="min-h-screen bg-white text-black">
-  <AutomationDashboard />
-</AnimatedSection>
 
-  
+        <AnimatedSection className="min-h-screen bg-white text-black">
+          <AutomationDashboard />
+        </AnimatedSection>
+
         <AnimatedSection>
           <Main5 />
         </AnimatedSection>

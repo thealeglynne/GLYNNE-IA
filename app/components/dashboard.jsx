@@ -23,9 +23,9 @@ const radarData = [
 export default function DashboardWithExplanation() {
   return (
     <section
-      className="relative w-full h-screen flex items-center justify-center px-4 sm:px-6 md:px-10"
+      className="relative w-full min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-10 pt-[100px]"
       style={{
-        backgroundImage: "url('/fig.png')",
+        backgroundImage: "url('/)",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -36,7 +36,7 @@ export default function DashboardWithExplanation() {
 
       {/* Contenedor del dashboard */}
       <motion.div
-        className="relative z-10 w-full max-w-7xl bg-white/80 backdrop-blur-xl ring-1 ring-black/10 shadow-xl rounded-3xl p-8 sm:p-12 text-center flex flex-col items-center space-y-10"
+        className="relative z-10 w-full max-w-7xl bg-white/80 backdrop-blur-xl rounded-3xl p-8 sm:p-12 text-center flex flex-col items-center space-y-10"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}

@@ -56,7 +56,7 @@ export default function CarouselExperience() {
       }}
     >
       {/* Fondo con blur suave */}
-      <div className="absolute inset-0 bg-white/60 backdrop-blur-[3.5px] z-0" />
+      <div className="absolute inset-0 bg-white/60 backdrop-blur-[5.5px] z-0" />
 
       {/* Imagen decorativa */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
