@@ -9,6 +9,9 @@ import Main2 from './components/main2';
 import Main3 from './components/main3';
 import Main4 from './components/main4';
 import Main5 from './components/main5'
+import Main6 from './components/GLY-IA'
+import Main7 from '../components/main5'
+import Footer from '../components/footer'
 // Animación con responsiveness adaptada
 function AnimatedSection({ children, className = '' }) {
   const ref = useRef(null);
@@ -74,6 +77,13 @@ export default function ArquitecturaPage() {
       <AnimatedSection>
         <Main5 />
       </AnimatedSection>
+      <AnimatedSection>
+        <Main6 />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Main7 />
+      </AnimatedSection>
+      
     </div>
   );
 }

@@ -8,6 +8,8 @@ import {
   FaUnlink,
   FaTachometerAlt,
   FaEyeSlash,
+  FaExpandAlt,
+  FaClone,
 } from 'react-icons/fa';
 
 const sintomas = [
@@ -31,6 +33,16 @@ const sintomas = [
     icon: <FaEyeSlash className="text-orange-500 text-xl" />,
     descripcion: `Cuando no hay registros ni monitoreo, los errores se vuelven invisibles. Una IA necesita contexto para aprender. Si no sabes qué falló ni cuándo, no puedes mejorar.`,
   },
+  {
+    label: 'Escalabilidad limitada',
+    icon: <FaExpandAlt className="text-orange-500 text-xl" />,
+    descripcion: `Si tu sistema no fue diseñado para crecer, cada nueva función se convierte en un reto. Una arquitectura no escalable frena la innovación y eleva los costos operativos.`,
+  },
+  {
+    label: 'Duplicación de datos',
+    icon: <FaClone className="text-orange-500 text-xl" />,
+    descripcion: `La falta de una fuente única de verdad lleva a datos redundantes en múltiples sistemas. Esto complica reportes, decisiones y entrenamientos de modelos de IA.`,
+  },
 ];
 
 export default function Main2Arquitectura() {
@@ -38,7 +50,7 @@ export default function Main2Arquitectura() {
 
   return (
     <section
-      className="relative w-full min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-10 py-16 sm:py-20 bg-white"
+      className="relative w-full flex items-center justify-center p-6 sm:p-10 md:p-16 bg-white"
       style={{
         backgroundImage: "url('/fig.png')",
         backgroundSize: 'cover',
@@ -49,9 +61,8 @@ export default function Main2Arquitectura() {
       {/* Blur */}
       <div className="absolute inset-0 bg-white/80 backdrop-blur-[3.7px] z-0" />
 
-      {/* Contenido */}
+      {/* Contenido centrado */}
       <div className="relative z-10 w-full max-w-5xl flex flex-col items-center text-center space-y-8 sm:space-y-10 bg-white/70 backdrop-blur-xl p-6 sm:p-10 ring-1 ring-black/10 shadow-xl rounded-3xl text-black">
-
         {/* Título */}
         <motion.h2
           className="text-xl sm:text-2xl md:text-4xl font-bold text-center mb-2 leading-tight"
@@ -101,7 +112,7 @@ export default function Main2Arquitectura() {
           ))}
         </div>
 
-        {/* Mensaje cierre */}
+        {/* Mensaje de cierre */}
         <p className="text-sm sm:text-base text-neutral-600 max-w-xl pt-4">
           Una arquitectura de software robusta no es un lujo, es la base para que la inteligencia artificial funcione con propósito, velocidad y escala.
         </p>
@@ -125,8 +136,12 @@ export default function Main2Arquitectura() {
               exit={{ opacity: 0, scale: 0.8, y: 20 }}
               transition={{ duration: 0.3 }}
             >
-              <h3 className="text-lg sm:text-xl font-bold mb-4">{sintomas[activeIndex].label}</h3>
-              <p className="text-sm sm:text-base whitespace-pre-line">{sintomas[activeIndex].descripcion}</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-4">
+                {sintomas[activeIndex].label}
+              </h3>
+              <p className="text-sm sm:text-base whitespace-pre-line">
+                {sintomas[activeIndex].descripcion}
+              </p>
               <button
                 onClick={() => setActiveIndex(null)}
                 className="absolute top-2 right-3 text-lg font-bold text-gray-400 hover:text-black"

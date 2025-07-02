@@ -17,56 +17,54 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleCloseMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const handleCloseMenu = () => setIsMenuOpen(false);
 
   const navItems = [
+    { label: 'Home', path: '/' },
     { label: 'Arquitectura', path: '/arquitectura' },
-    { label: 'Automatización', path: '/automatizacion' },
     { label: 'Integración', path: '/integracion' },
     { label: 'Autonomía', path: '/autonomia' },
     { label: 'Transformación', path: '/transformacion' },
     { label: 'Contact', path: '/contact' },
     { label: 'Nosotros', path: '/nosotros' },
-    { label: 'GLY-IA', path: '/chat' }, // Ruta especial
+    { label: 'GLY-IA', path: '/chat' },
   ];
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 px-4 md:px-8 py-3 flex items-center justify-between transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-white shadow-md'
+      className={`fixed top-0 left-0 w-full z-50 px-4 md:px-6 py-2 flex items-center justify-between transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-md' : 'bg-white'
       }`}
     >
-      {/* Logo */}
+      {/* Logo compacto */}
       <img
         src="/logo2.png"
         alt="Logo"
-        className="h-8 sm:h-10 md:h-12 cursor-pointer"
+        className="h-6 sm:h-7 md:h-8 cursor-pointer"
         onClick={() => router.push('/')}
       />
 
-      {/* Desktop Nav */}
-      <nav className="hidden lg:flex gap-4 xl:gap-6 items-center">
+      {/* Navegación escritorio más ligera */}
+      <nav className="hidden lg:flex gap-3 xl:gap-5 items-center">
         {navItems.map((item) => (
           <button
             key={item.label}
             onClick={() => router.push(item.path)}
-            className="text-black hover:text-neutral-600 transition text-sm md:text-base"
+            className="text-black hover:text-neutral-600 transition text-xs sm:text-sm"
           >
             {item.label}
           </button>
         ))}
       </nav>
 
-      {/* Mobile Toggle */}
+      {/* Botón móvil */}
       <div className="lg:hidden">
         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-black">
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Menú móvil */}
       <div
         className={`absolute top-full left-0 right-0 mt-2 bg-white shadow-md lg:hidden transform transition-all duration-300 origin-top ${
           isMenuOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none'
@@ -80,7 +78,7 @@ export default function Header() {
                 router.push(item.path);
                 handleCloseMenu();
               }}
-              className="text-black hover:text-neutral-600 px-6 py-4 text-left text-sm"
+              className="text-black hover:text-neutral-600 px-6 py-3 text-left text-sm"
             >
               {item.label}
             </button>

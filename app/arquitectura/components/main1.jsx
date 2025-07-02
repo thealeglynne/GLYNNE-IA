@@ -3,10 +3,10 @@
 import { useEffect, useState } from 'react';
 
 export default function VideoBackground() {
-  const [showLogo, setShowLogo] = useState(false);
+  const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setShowLogo(true), 800); // aparece más suave y rápido
+    const timeout = setTimeout(() => setShowContent(true), 800);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -25,16 +25,25 @@ export default function VideoBackground() {
         Tu navegador no soporta videos HTML5.
       </video>
 
-      {/* Overlay oscuro */}
+      {/* Capa oscura */}
       <div className="absolute inset-0 bg-black/50 z-10" />
 
-      {/* Contenido encima del video */}
-      <div className="relative z-20 flex items-center justify-center h-full">
+      {/* Contenido centrado */}
+      <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
+        {/* Texto Banner - reducido */}
+        <h1
+          className={`text-white text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold tracking-wide transition-all duration-1000 ease-out
+            ${showContent ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-2 blur-sm'}`}
+        >
+          ARQUITECTURA ESCALABLE
+        </h1>
+
+        {/* Logo pequeño */}
         <img
           src="/logo.png"
           alt="Logo"
-          className={`w-40 sm:w-52 md:w-64 lg:w-72 xl:w-80 transform transition-all duration-1000 ease-out
-            ${showLogo ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-2 blur-sm'}`}
+          className={`mt-4 w-16 sm:w-20 md:w-24 lg:w-28 transition-all duration-1000 ease-out
+            ${showContent ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-2 blur-sm'}`}
         />
       </div>
     </div>

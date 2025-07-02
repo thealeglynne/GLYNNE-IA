@@ -1,22 +1,78 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  FaNetworkWired,
+  FaBrain,
+  FaLayerGroup,
+  FaCogs,
+  FaShieldAlt,
+} from 'react-icons/fa';
+
 import '../../components/mainlogos.css';
 
+const techLogos = [
+  { src: '/langchain-text.png', alt: 'LangChain' },
+  { src: '/n8n-color.png', alt: 'n8n' },
+  { src: '/icons8-next.js-48.png', alt: 'Next.js' },
+  { src: '/icons8-nodejs-480.png', alt: 'Node.js' },
+  { src: '/icons8-supabase-480.png', alt: 'Supabase' },
+  { src: '/icons8-python-480.png', alt: 'Python' },
+  { src: '/icons8-chatear-500.png', alt: 'OpenAI' },
+  { src: '/vercel.png', alt: 'Vercel' },
+  { src: '/icons8-estibador-240.png', alt: 'Docker' },
+  { src: '/scikit-learn.png', alt: 'Scikit-learn' },
+  { src: '/TensorFlow.png', alt: 'TensorFlow' },
+];
+
+const architecturePhases = [
+  {
+    key: 'capa-inteligente',
+    name: 'Capa Inteligente',
+    icon: FaBrain,
+    content: `
+Donde vive la IA. Aquí diseñamos agentes autónomos con LLMs, prompts dinámicos y flujos de pensamiento orquestados. Esta capa permite que el sistema analice, razone y actúe con autonomía contextual sobre los procesos del negocio.
+`,
+  },
+  {
+    key: 'orquestacion',
+    name: 'Orquestación de Procesos',
+    icon: FaCogs,
+    content: `
+La inteligencia no sirve sin acción. Por eso conectamos la IA a flujos automatizados que ejecutan tareas: desde enviar correos y responder chats hasta integrarse con CRMs, ERPs o plataformas internas. Todo esto se coordina en tiempo real.
+`,
+  },
+  {
+    key: 'capa-datos',
+    name: 'Capa de Datos',
+    icon: FaLayerGroup,
+    content: `
+Una IA que no accede a datos, está ciega. Aquí organizamos la arquitectura de bases de datos, RAGs, embeddings y capas semánticas. Esta estructura permite consultar, aprender y adaptarse a información actualizada del negocio.
+`,
+  },
+  {
+    key: 'seguridad',
+    name: 'Seguridad & Gobernanza',
+    icon: FaShieldAlt,
+    content: `
+Cada decisión de IA debe estar auditada y protegida. Implementamos RLS, trazabilidad de decisiones y control de acceso por contexto. Así, tus datos y procesos están seguros sin limitar la autonomía del sistema.
+`,
+  },
+  {
+    key: 'infraestructura',
+    name: 'Infraestructura Modular',
+    icon: FaNetworkWired,
+    content: `
+Toda la arquitectura corre sobre infraestructura cloud escalable y modular: Vercel, Docker, Supabase y más. Esto permite desplegar nuevas funcionalidades, escalar por demanda y mantener entornos consistentes para entrenar, probar y operar IA sin fricción.
+`,
+  },
+];
+
 export default function TechShowcaseContainer() {
-  const techLogos = [
-    { src: '/langchain-text.png', alt: 'LangChain' },
-    { src: '/n8n-color.png', alt: 'n8n' },
-    { src: '/icons8-next.js-48.png', alt: 'Next.js' },
-    { src: '/icons8-nodejs-480.png', alt: 'Node.js' },
-    { src: '/icons8-supabase-480.png', alt: 'Supabase' },
-    { src: '/icons8-python-480.png', alt: 'Python' },
-    { src: '/icons8-chatear-500.png', alt: 'OpenAI' },
-    { src: '/vercel.png', alt: 'Vercel' },
-    { src: '/icons8-estibador-240.png', alt: 'Docker' },
-    { src: '/scikit-learn.png', alt: 'Scikit-learn' },
-    { src: '/TensorFlow.png', alt: 'TensorFlow' },
-  ];
+  const [activeTab, setActiveTab] = useState('capa-inteligente');
+  const current = architecturePhases.find(tab => tab.key === activeTab);
 
   return (
     <section
@@ -28,13 +84,13 @@ export default function TechShowcaseContainer() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      {/* Blur de fondo */}
+      {/* Fondo difuminado */}
       <div className="absolute inset-0 bg-white/85 backdrop-blur-[3.7px] z-0" />
 
-      {/* Contenido principal */}
+      {/* Contenedor principal */}
       <div className="relative z-10 w-full max-w-6xl flex flex-col items-center text-center space-y-10 bg-white/70 backdrop-blur-xl p-6 sm:p-12 ring-1 ring-black/10 shadow-xl rounded-3xl">
 
-        {/* Carrusel de logos más pequeños */}
+        {/* Carrusel de logos */}
         <div className="w-full overflow-hidden">
           <div className="flex space-x-6 min-w-max py-3 px-2 animate-slide-infinite">
             {[...techLogos, ...techLogos].map((tech, index) => (
@@ -54,24 +110,56 @@ export default function TechShowcaseContainer() {
           </div>
         </div>
 
-        {/* Texto descriptivo */}
-        <div className="space-y-4 max-w-4xl">
-          <h2 className="text-2xl md:text-4xl font-bold text-black leading-snug">
-            Aquí se construye el hogar de tu inteligencia artificial
-          </h2>
+        {/* Título */}
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-black text-center px-4"
+        >
+          Arquitectura Viva para Inteligencia Artificial
+        </motion.h2>
 
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed font-medium">
-            Cada herramienta que ves aquí es una columna en la arquitectura digital que sustenta los sistemas inteligentes más avanzados del mercado. No se trata solo de APIs o frameworks: hablamos de una <strong>infraestructura pensante</strong> lista para escalar, adaptarse y evolucionar con cada necesidad del negocio.
-          </p>
-
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed font-medium">
-            En <strong>GLYNNE</strong>, orquestamos lo mejor del desarrollo moderno (Next.js, Node, Python, Supabase, Docker) con motores de IA y automatización (OpenAI, LangChain, TensorFlow, n8n) para construir software que no solo resuelve tareas, sino que entiende procesos y se adapta al contexto empresarial.
-          </p>
-
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed font-medium">
-            El resultado: plataformas inteligentes que automatizan decisiones, integran datos en tiempo real y aprenden con cada interacción. Todo sobre una arquitectura diseñada para sostener la revolución empresarial que viene.
-          </p>
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center gap-3 w-full">
+          {architecturePhases.map(phase => {
+            const Icon = phase.icon;
+            const isActive = activeTab === phase.key;
+            return (
+              <button
+                key={phase.key}
+                onClick={() => setActiveTab(phase.key)}
+                className={`relative group overflow-hidden px-4 py-2 rounded-full border transition-all flex items-center gap-2
+                  ${isActive
+                    ? 'bg-orange-500 text-white'
+                    : 'border-gray-300 text-gray-700 hover:bg-gray-100'}`}
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  <Icon className={`text-xl sm:text-2xl transition-colors ${isActive ? 'text-white' : 'text-orange-500'}`} />
+                  <span className="font-medium">{phase.name}</span>
+                </span>
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out" />
+              </button>
+            );
+          })}
         </div>
+
+        {/* Contenido dinámico */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={current.key}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="w-full bg-white p-6 sm:p-8 md:p-10 rounded-3xl shadow-xl border border-gray-200 text-left"
+          >
+            <h3 className="text-xl sm:text-2xl font-semibold text-black text-center mb-6">{current.name}</h3>
+            <p className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed text-justify whitespace-pre-line">
+              {current.content.trim()}
+            </p>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );
