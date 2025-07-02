@@ -5,11 +5,13 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 
 import Header from './components/header';
 import Main1 from './components/main1';
-
-function AnimatedSection({
-  children,
-  className = 'h-screen',
-}) {
+import Main2 from './components/main2';
+import Main3 from './components/main3';
+import GLY from './components/GLY-IA';
+import Main4 from './components/main4';
+import MainLogos from './components/mainLogos';
+import Main6 from '../components/main5'
+function AnimatedSection({ children, className = 'min-h-screen' }) {
   const ref = useRef(null);
   const controls = useAnimation();
   const inView = useInView(ref, { once: true, margin: '0px 0px -100px 0px' });
@@ -36,7 +38,7 @@ function AnimatedSection({
           },
         },
       }}
-      className={`snap-start ${className}`}
+      className={className}
     >
       {children}
     </motion.section>
@@ -45,18 +47,33 @@ function AnimatedSection({
 
 export default function ArquitecturaPage() {
   return (
-    <div
-      className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth text-white no-scrollbar"
-      style={{ scrollSnapType: 'y mandatory', WebkitOverflowScrolling: 'touch' }}
-    >
+    <div className="min-h-screen w-full overflow-y-auto bg-white text-black">
       {/* Header fijo */}
       <div className="sticky top-0 z-50">
         <Header />
       </div>
 
-      {/* Sección animada */}
+      {/* Secciones animadas */}
       <AnimatedSection>
         <Main1 />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Main2 />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Main3 />
+      </AnimatedSection>
+      <AnimatedSection>
+        <GLY />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Main4 />
+      </AnimatedSection>
+      <AnimatedSection>
+        <MainLogos />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Main6 />
       </AnimatedSection>
     </div>
   );
