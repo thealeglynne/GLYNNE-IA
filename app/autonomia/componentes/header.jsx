@@ -23,9 +23,9 @@ export default function Header() {
     { label: 'Home', path: '/' },
     { label: 'Arquitectura', path: '/arquitectura' },
     { label: 'Automatización', path: '/automatizacion' },
-    { label: 'Autonomía', path: '/autonomia' },
+    { label: 'Integración', path: '/integracion' }, 
     { label: 'Contact', path: '/contact' },
-    { label: 'Nosotros', path: '/nosotros' },
+
     { label: 'GLY-IA', path: '/chat' },
   ];
 

@@ -24,9 +24,8 @@ export default function Header() {
     { label: 'Automatización', path: '/automatizacion' },
     { label: 'Integración', path: '/integracion' },
     { label: 'Autonomía', path: '/autonomia' },
-    { label: 'Transformación', path: '/transformacion' },
     { label: 'Contact', path: '/contact' },
-    { label: 'Nosotros', path: '/nosotros' },
+
     { label: 'GLY-IA', path: '/chat' },
   ];
 
