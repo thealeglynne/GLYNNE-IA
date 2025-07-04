@@ -10,7 +10,7 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Tu Plataforma IA",
+  title: "GLYNNE",
   description: "Automatización empresarial completa impulsada por inteligencia artificial",
 };
 
