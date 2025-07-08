@@ -6,7 +6,7 @@ import Head from 'next/head';
 
 import Header from './components/header';
 import Main1 from './components/main1';
-import Main2 from './components/main2';
+
 import Main3 from './components/main3';
 import GLY from './components/GLY-IA';
 import Main4 from './components/main4';
@@ -106,9 +106,7 @@ export default function ArquitecturaPage() {
         <AnimatedSection>
           <Main1 />
         </AnimatedSection>
-        <AnimatedSection>
-          <Main2 />
-        </AnimatedSection>
+
         <AnimatedSection>
           <Main3 />
         </AnimatedSection>

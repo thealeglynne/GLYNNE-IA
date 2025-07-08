@@ -19,7 +19,7 @@ import Footer from './components/footer';
 
 function AnimatedSection({
   children,
-  className = 'h-screen',
+  className = '',
 }: {
   children: React.ReactNode;
   className?: string;
@@ -50,7 +50,7 @@ function AnimatedSection({
           },
         },
       }}
-      className={`snap-start ${className}`}
+      className={`w-full ${className}`}
     >
       {children}
     </motion.section>
@@ -62,43 +62,32 @@ export default function Home() {
     <>
       <Head>
         <title>GLYNNE – Automatización Empresarial con IA y Arquitectura Escalable</title>
-        <meta name="description" content="GLYNNE es una plataforma empresarial que permite integrar inteligencia artificial y automatización avanzada en cada proceso operativo. Diagnósticos inteligentes, orquestación con agentes IA, dashboards en tiempo real y más." />
-        <meta name="keywords" content="GLYNNE, automatización empresarial, inteligencia artificial, RPA, BPA, integración, agentes IA, LangChain, Next.js, arquitectura escalable, orquestación, low-code, no-code, procesos empresariales, eficiencia operativa, Supabase, n8n" />
+        <meta name="description" content="GLYNNE es una plataforma empresarial que permite integrar inteligencia artificial y automatización avanzada en cada proceso operativo..." />
+        <meta name="keywords" content="GLYNNE, automatización empresarial, inteligencia artificial..." />
         <meta name="author" content="GLYNNE Tech" />
         <meta name="robots" content="index, follow" />
-
-        {/* Open Graph (para redes sociales y WhatsApp) */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="GLYNNE – IA para Automatizar tu Empresa" />
-        <meta property="og:description" content="Orquesta procesos empresariales con IA: arquitecturas inteligentes, integración de APIs, agentes personalizados y diagnósticos inteligentes." />
+        <meta property="og:description" content="Orquesta procesos empresariales con IA..." />
         <meta property="og:image" content="https://glynne-ia-6rjd.vercel.app/meta-banner.jpg" />
         <meta property="og:url" content="https://glynne-ia-6rjd.vercel.app/" />
         <meta property="og:site_name" content="GLYNNE" />
-
-        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="GLYNNE – IA para Automatizar tu Empresa" />
-        <meta name="twitter:description" content="Orquestación de procesos empresariales con inteligencia artificial y automatización avanzada." />
+        <meta name="twitter:description" content="Orquestación de procesos empresariales con IA..." />
         <meta name="twitter:image" content="https://glynne-ia-6rjd.vercel.app/meta-banner.jpg" />
-
-        {/* Canonical */}
         <link rel="canonical" href="https://glynne-ia-6rjd.vercel.app/" />
-
-        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <PopupIntro>
-        <div
-          className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-white text-black no-scrollbar"
-          style={{ scrollSnapType: 'y mandatory', WebkitOverflowScrolling: 'touch' }}
-        >
+        <div className="h-auto w-full overflow-y-auto scroll-smooth bg-white text-black">
           {/* Header fijo */}
           <div className="sticky top-0 z-50">
             <Header />
           </div>
 
-          {/* Secciones de scroll 100vh + animación */}
+          {/* Secciones animadas */}
           <AnimatedSection>
             <Main1 />
           </AnimatedSection>

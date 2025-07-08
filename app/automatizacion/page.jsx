@@ -14,7 +14,8 @@ import GLY from './components/GLY-IA';
 import Logos from './components/mainLogos';
 import Main6 from '../components/main5';
 
-function AnimatedSection({ children, className = 'min-h-screen' }) {
+// 🎯 Removida la clase min-h-screen por defecto, se puede ajustar por sección si se desea
+function AnimatedSection({ children, className = '' }) {
   const ref = useRef(null);
   const controls = useAnimation();
   const inView = useInView(ref, { once: true, margin: '0px 0px -100px 0px' });
@@ -55,43 +56,32 @@ export default function ArquitecturaPage() {
         <title>GLYNNE | Arquitectura de Inteligencia Artificial Empresarial</title>
         <meta
           name="description"
-          content="Construimos arquitecturas escalables que permiten integrar inteligencia artificial en empresas. Desde microservicios hasta agentes inteligentes y orquestación de procesos en tiempo real."
+          content="Construimos arquitecturas escalables que permiten integrar inteligencia artificial en empresas..."
         />
-        <meta
-          name="keywords"
-          content="arquitectura de software, inteligencia artificial, automatización, agentes inteligentes, orquestación, microservicios, nodos IA, integración APIs, GLYNNE, LangChain, Supabase, Next.js, IA empresarial"
-        />
+        <meta name="keywords" content="arquitectura de software, inteligencia artificial..." />
         <meta name="author" content="GLYNNE AI Systems" />
         <meta name="robots" content="index, follow" />
-
-        {/* Open Graph para compartir en redes */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="GLYNNE – Arquitectura de IA Empresarial" />
         <meta
           property="og:description"
-          content="Integra IA de forma estructurada y escalable. Diseñamos sistemas inteligentes que automatizan y orquestan procesos de negocio en tiempo real."
+          content="Integra IA de forma estructurada y escalable..."
         />
         <meta property="og:image" content="https://glynne-ia-6rjd.vercel.app/meta-architecture.jpg" />
         <meta property="og:url" content="https://glynne-ia-6rjd.vercel.app/arquitectura" />
         <meta property="og:site_name" content="GLYNNE" />
-
-        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="GLYNNE – Arquitectura IA Empresarial" />
         <meta
           name="twitter:description"
-          content="Orquesta tu empresa con inteligencia artificial. Arquitecturas modulares, nodos inteligentes y escalabilidad nativa."
+          content="Orquesta tu empresa con inteligencia artificial..."
         />
         <meta name="twitter:image" content="https://glynne-ia-6rjd.vercel.app/meta-architecture.jpg" />
-
-        {/* Canonical */}
         <link rel="canonical" href="https://glynne-ia-6rjd.vercel.app/arquitectura" />
-
-        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="w-full text-black bg-white">
+      <div className="w-full text-black bg-white overflow-y-auto scroll-smooth">
         {/* Header fijo */}
         <div className="sticky top-0 z-50">
           <Header />
