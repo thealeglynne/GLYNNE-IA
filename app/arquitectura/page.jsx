@@ -81,13 +81,11 @@ export default function ArquitecturaPage() {
           <Header />
         </div>
 
-        <AnimatedSection><Main1 /></AnimatedSection>
-        <AnimatedSection><Main2 /></AnimatedSection>
-        <AnimatedSection><Main3 /></AnimatedSection>
-        <AnimatedSection><Main4 /></AnimatedSection>
-        <AnimatedSection><Main5 /></AnimatedSection>
-        <AnimatedSection><Main6 /></AnimatedSection>
-        <AnimatedSection><Main7 /></AnimatedSection>
+<Main1 />
+<Main2 />
+<Main5 />
+<Main6 />
+<Main7 />
       </div>
     </>
   );

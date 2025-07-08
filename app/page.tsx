@@ -17,116 +17,75 @@ import Main5 from './components/main5';
 import Main6 from './components/main6';
 import Footer from './components/footer';
 
-function AnimatedSection({
-  children,
-  className = '',
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  const ref = useRef(null);
-  const controls = useAnimation();
-  const inView = useInView(ref, { once: true, margin: '0px 0px -100px 0px' });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [inView, controls]);
-
-  return (
-    <motion.section
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={{
-        hidden: { opacity: 0, y: 60 },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 0.8,
-            ease: 'easeOut',
-          },
-        },
-      }}
-      className={`w-full ${className}`}
-    >
-      {children}
-    </motion.section>
-  );
-}
+  
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>GLYNNE – Automatización Empresarial con IA y Arquitectura Escalable</title>
-        <meta name="description" content="GLYNNE es una plataforma empresarial que permite integrar inteligencia artificial y automatización avanzada en cada proceso operativo..." />
-        <meta name="keywords" content="GLYNNE, automatización empresarial, inteligencia artificial..." />
+        <meta name="description" content="GLYNNE es una plataforma empresarial que permite integrar inteligencia artificial y automatización avanzada en cada proceso operativo." />
+        <meta name="keywords" content="GLYNNE, automatización empresarial, inteligencia artificial, RPA, BPA, integración, agentes IA, LangChain, Next.js, arquitectura escalable, orquestación, low-code, no-code, procesos empresariales, eficiencia operativa, Supabase, n8n" />
         <meta name="author" content="GLYNNE Tech" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="GLYNNE – IA para Automatizar tu Empresa" />
-        <meta property="og:description" content="Orquesta procesos empresariales con IA..." />
+        <meta property="og:description" content="Orquesta procesos empresariales con IA: arquitecturas inteligentes, integración de APIs, agentes personalizados y diagnósticos inteligentes." />
         <meta property="og:image" content="https://glynne-ia-6rjd.vercel.app/meta-banner.jpg" />
         <meta property="og:url" content="https://glynne-ia-6rjd.vercel.app/" />
         <meta property="og:site_name" content="GLYNNE" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="GLYNNE – IA para Automatizar tu Empresa" />
-        <meta name="twitter:description" content="Orquestación de procesos empresariales con IA..." />
+        <meta name="twitter:description" content="Orquestación de procesos empresariales con inteligencia artificial y automatización avanzada." />
         <meta name="twitter:image" content="https://glynne-ia-6rjd.vercel.app/meta-banner.jpg" />
         <link rel="canonical" href="https://glynne-ia-6rjd.vercel.app/" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <PopupIntro>
-        <div className="h-auto w-full overflow-y-auto scroll-smooth bg-white text-black">
+        <div className="w-full min-h-screen overflow-y-auto scroll-smooth bg-white text-black">
           {/* Header fijo */}
           <div className="sticky top-0 z-50">
             <Header />
           </div>
 
-          {/* Secciones animadas */}
-          <AnimatedSection>
             <Main1 />
-          </AnimatedSection>
 
-          <AnimatedSection>
+
+
             <Presentacion />
-          </AnimatedSection>
 
-          <AnimatedSection className="min-h-screen">
+
+
             <MainCards />
-          </AnimatedSection>
 
-          <AnimatedSection>
+
+
             <MainLogos />
-          </AnimatedSection>
 
-          <AnimatedSection>
+
+
             <Main4 />
-          </AnimatedSection>
 
-          <AnimatedSection>
+
+
             <Experiencia />
-          </AnimatedSection>
 
-          <AnimatedSection className="min-h-screen">
+
+
             <Main6 />
-          </AnimatedSection>
 
-          <AnimatedSection className="min-h-screen bg-white text-black">
+
+
             <AutomationDashboard />
-          </AnimatedSection>
 
-          <AnimatedSection>
+
             <Main5 />
-          </AnimatedSection>
 
-          <AnimatedSection className="h-[50vh]">
+
+
             <Footer />
-          </AnimatedSection>
+
         </div>
       </PopupIntro>
     </>
