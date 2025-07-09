@@ -1,7 +1,6 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
-import { motion, useAnimation, useInView } from 'framer-motion';
+
 import Head from 'next/head';
 
 import Header from './components/header';
