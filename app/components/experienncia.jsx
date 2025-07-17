@@ -13,7 +13,7 @@ const experiences = [
     image: '/Logo_CUN_EXTERNOS_Logo_Corporacion_unificada_nacional_color.png',
   },
   {
-    title: 'Científico de Datos y Desarrollador de Soluciones Freelance',
+    title: 'Desarrollo y dirección de sistemas de software orientados a la automatización empresarial con IA  ',
     company: 'GLYNNE',
     color: 'text-black',
     description:
@@ -120,14 +120,7 @@ export default function CarouselExperience() {
           </button>
         </div>
 
-        {/* Botón Ver más (más pequeño) */}
-        <button
-          onClick={() => console.log('Ver más clickeado')}
-          className="relative mt-2 px-6 py-2 text-sm font-medium bg-black text-white shadow-md overflow-hidden rounded-xl group transition-all duration-300"
-        >
-          <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
-          <span className="relative z-10">Ver más</span>
-        </button>
+      
       </motion.div>
     </section>
   );

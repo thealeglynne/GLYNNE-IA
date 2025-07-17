@@ -91,7 +91,7 @@ export default function Main6() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-wide text-gray-900">
-            What We Provide
+            Servicios
           </h2>
           <p className="text-gray-700 max-w-3xl mx-auto mt-4 text-base md:text-lg">
             La inteligencia artificial puede escalar y optimizar cualquier proceso sin importar el sector o industria. Aquí algunas formas de aplicarla.

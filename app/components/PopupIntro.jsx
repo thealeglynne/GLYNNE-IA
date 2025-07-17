@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 export default function PopupIntro({ children }) {
   const [showPopup, setShowPopup] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
-  const [typedText, setTypedText] = useState('');
+
   const fullText =
     'GLYNNE transforma industrias creando profesionales expertos con inteligencia artificial para gestionar tus procesos.';
 
@@ -18,18 +18,6 @@ export default function PopupIntro({ children }) {
 
   useEffect(() => {
     document.body.style.overflow = showPopup ? 'hidden' : 'auto';
-  }, [showPopup]);
-
-  // Efecto máquina de escribir
-  useEffect(() => {
-    if (!showPopup) return;
-    let index = 0;
-    const interval = setInterval(() => {
-      setTypedText((prev) => prev + fullText.charAt(index));
-      index++;
-      if (index >= fullText.length) clearInterval(interval);
-    }, 50);
-    return () => clearInterval(interval);
   }, [showPopup]);
 
   const handleClose = () => {
@@ -69,11 +57,11 @@ export default function PopupIntro({ children }) {
               />
 
               <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
-            La competencia ya escala con IA... ¿y tú?
+                La competencia ya escala con IA... ¿y tú?
               </p>
 
-              <p className="text-gray-300 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl max-w-xs sm:max-w-md md:max-w-2xl min-h-[3rem]">
-                {typedText}
+              <p className="text-gray-300 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl max-w-xs sm:max-w-md md:max-w-2xl min-h-[4rem]">
+                {fullText}
               </p>
 
               <button
