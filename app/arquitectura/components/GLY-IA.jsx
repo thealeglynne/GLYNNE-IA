@@ -9,7 +9,7 @@ export default function Main1() {
 
   const handleRedirect = () => {
     // Puedes usar router.push si el dominio está dentro del mismo host, pero en este caso redireccionamos completamente
-    window.location.href = 'https://gly-ai-arq.vercel.app/';
+    window.location.href = 'https://glynne-sst-ai-hsiy.vercel.app/';
   };
 
   return (
@@ -31,7 +31,7 @@ export default function Main1() {
             Te damos una visión clara, precisa y personalizada. ¿Listo para ver el potencial oculto de tu operación?
           </p>
         </div>
-
+   
         <button
           onClick={handleRedirect}
           className="relative mt-6 px-10 py-4 text-base font-semibold bg-black text-white shadow-xl overflow-hidden rounded-xl group transition-all duration-300"

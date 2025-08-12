@@ -50,13 +50,13 @@ export default function Home() {
 
             <Main1 />
 
-
+            <MainCards />
 
             <Presentacion />
 
 
 
-            <MainCards />
+  
 
 
 
@@ -68,7 +68,7 @@ export default function Home() {
 
 
 
-            <Experiencia />
+
 
 
 

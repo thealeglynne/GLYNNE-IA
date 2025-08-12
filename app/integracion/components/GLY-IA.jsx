@@ -2,7 +2,7 @@
 
 export default function MainGlyIACompleto() {
   const handleRedirect = () => {
-    window.location.href = 'https://gly-ai-arq.vercel.app/';
+    window.location.href = 'https://glynne-sst-ai-hsiy.vercel.app/';
   };
 
   return (

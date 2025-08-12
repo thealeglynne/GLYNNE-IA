@@ -26,7 +26,7 @@ export default function Header() {
     { label: 'Autonomía', path: '/autonomia' },
     { label: 'Contact', path: '/contact' },
     { label: 'Nosotros', path: '/nosotros' },
-    { label: 'GLY-IA', path: '/chat' },
+    { label: 'GLY-IA', path: 'https://glynne-sst-ai-hsiy.vercel.app/' },
   ];
 
   return (

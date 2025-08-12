@@ -26,7 +26,7 @@ export default function Header() {
     { label: 'Integración', path: '/integracion' }, 
     { label: 'Contact', path: '/contact' },
 
-    { label: 'GLY-IA', path: '/chat' },
+    { label: 'GLY-IA', path: 'https://glynne-sst-ai-hsiy.vercel.app/' },
   ];
 
   return (
