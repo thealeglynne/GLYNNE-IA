@@ -9,7 +9,7 @@ import Main1 from './components/main1';
 import Presentacion from './components/precentacion';
 import AutomationDashboard from './components/dashboard';
 import Main4 from './components/main4';
-import Experiencia from './components/experienncia';
+
 import MainCards from './components/mainCards';
 import MainLogos from './components/mainlogos';
 import Main5 from './components/main5';
