@@ -1,4 +1,4 @@
-// app/lib/supabaseClient.js
+// app/lib/supabaseClient2.js
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://zixyjbmaczqsitxubcbp.supabase.co';
@@ -28,12 +28,4 @@ export async function saveAuditToSupabase({ audit_content, user_id }) {
   }
 
   return { data, error: null };
-}
-
-// Subscribe to auth state changes
-export function subscribeToAuthState(callback) {
-  const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-    callback(event, session);
-  });
-  return subscription;
 }

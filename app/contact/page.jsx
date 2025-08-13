@@ -1,8 +1,12 @@
 // app/arquitectura/page.jsx
+'use client'
+import Regisstro from './components/reistro'
+import Header from './components/header'
 export default function ArquitecturaPage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-4xl font-bold">Sección: contacto</h1>
+        <Header />
+        <Regisstro />
       </div>
     );
   }
