@@ -12,45 +12,116 @@ import GLY from './componentes/GLY-IA';
 import Main4 from './componentes/main4';
 import Main6 from '../components/main5';
 
-
 export default function ArquitecturaPage() {
   return (
     <>
       <Head>
-        <title>GLYNNE | Arquitectura Inteligente para Empresas</title>
+        {/* 🔹 Metadatos principales */}
+        <title>Arquitectura Inteligente de Software Empresarial | GLYNNE</title>
         <meta
           name="description"
-          content="Diseñamos arquitecturas escalables que integran inteligencia artificial, microservicios, nodos inteligentes y orquestación de procesos para empresas modernas."
+          content="GLYNNE crea arquitecturas inteligentes y escalables con microservicios, nodos autónomos e inteligencia artificial para empresas modernas."
         />
         <meta
           name="keywords"
-          content="arquitectura de software, inteligencia artificial, automatización, orquestación, microservicios, IA empresarial, nodos inteligentes, GLYNNE, LangChain, Supabase, Next.js"
+          content="arquitectura inteligente, inteligencia artificial empresarial, microservicios, orquestación, automatización, nodos inteligentes, agentes autónomos, GLYNNE AI"
         />
         <meta name="author" content="GLYNNE AI Systems" />
         <meta name="robots" content="index, follow" />
 
-        {/* Open Graph */}
+        {/* 🔹 Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="GLYNNE – Arquitectura Inteligente para Empresas" />
+        <meta
+          property="og:title"
+          content="Arquitectura Inteligente Empresarial | GLYNNE AI Systems"
+        />
         <meta
           property="og:description"
-          content="Transforma tu empresa con arquitecturas modulares y agentes inteligentes. Integra IA de forma escalable y orquesta procesos de negocio con GLYNNE."
+          content="Transforma tu empresa con arquitecturas modulares, nodos inteligentes y agentes autónomos. GLYNNE integra IA de forma escalable."
         />
-        <meta property="og:image" content="https://glynne-ia-6rjd.vercel.app/meta-architecture.jpg" />
-        <meta property="og:url" content="https://glynne-ia-6rjd.vercel.app/arquitectura" />
+        <meta
+          property="og:image"
+          content="https://glynne-ia-6rjd.vercel.app/meta-architecture.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://glynne-ia-6rjd.vercel.app/arquitectura"
+        />
         <meta property="og:site_name" content="GLYNNE" />
 
-        {/* Twitter */}
+        {/* 🔹 Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="GLYNNE – Arquitectura IA para Empresas" />
+        <meta
+          name="twitter:title"
+          content="Arquitectura Inteligente para Empresas | GLYNNE"
+        />
         <meta
           name="twitter:description"
-          content="Orquesta y automatiza tu negocio con inteligencia artificial. GLYNNE crea arquitectura IA empresarial con nodos inteligentes y agentes autónomos."
+          content="Arquitecturas IA empresariales con nodos inteligentes y orquestación de procesos para escalar tu negocio."
         />
-        <meta name="twitter:image" content="https://glynne-ia-6rjd.vercel.app/meta-architecture.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://glynne-ia-6rjd.vercel.app/meta-architecture.jpg"
+        />
 
-        <link rel="canonical" href="https://glynne-ia-6rjd.vercel.app/arquitectura" />
+        {/* 🔹 SEO técnico */}
+        <link
+          rel="canonical"
+          href="https://glynne-ia-6rjd.vercel.app/arquitectura"
+        />
         <link rel="icon" href="/favicon.ico" />
+
+        {/* 🔹 Schema JSON-LD enriquecido */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "Arquitectura Inteligente de Software Empresarial",
+              description:
+                "GLYNNE desarrolla arquitecturas modulares y escalables con inteligencia artificial, microservicios y agentes inteligentes para empresas.",
+              url: "https://glynne-ia-6rjd.vercel.app/arquitectura",
+              publisher: {
+                "@type": "Organization",
+                name: "GLYNNE AI Systems",
+                url: "https://glynne-ia-6rjd.vercel.app",
+                logo: "https://glynne-ia-6rjd.vercel.app/logo.png",
+              },
+              breadcrumb: {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Inicio",
+                    item: "https://glynne-ia-6rjd.vercel.app/",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Arquitectura",
+                    item: "https://glynne-ia-6rjd.vercel.app/arquitectura",
+                  },
+                ],
+              },
+              mainEntity: {
+                "@type": "Service",
+                name: "Arquitectura Inteligente Empresarial",
+                provider: {
+                  "@type": "Organization",
+                  name: "GLYNNE AI Systems",
+                },
+                areaServed: {
+                  "@type": "Place",
+                  name: "Global",
+                },
+                serviceType:
+                  "Arquitectura de Software con Inteligencia Artificial y Microservicios",
+              },
+            }),
+          }}
+        />
       </Head>
 
       <div className="w-full text-black bg-white">
@@ -59,21 +130,13 @@ export default function ArquitecturaPage() {
           <Header />
         </div>
 
-        {/* Secciones animadas */}
-
-          <Main1 />
-
-
-          <Main2 />
-
-          <GLY />
-
-          <Main4 />
-
-          <Main3 />
-
-          <Main6 />
-
+        {/* Secciones */}
+        <Main1 />
+        <Main2 />
+        <GLY />
+        <Main4 />
+        <Main3 />
+        <Main6 />
       </div>
     </>
   );

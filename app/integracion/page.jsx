@@ -1,9 +1,6 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
-import { motion, useAnimation, useInView } from 'framer-motion';
 import Head from 'next/head';
-
 import Header from './components/header';
 import Main1 from './components/main1';
 import Main2 from './components/main2';
@@ -13,48 +10,47 @@ import Main4 from './components/main4';
 import MainLogos from './components/mainLogos';
 import Main6 from '../components/main5';
 
-
-export default function ArquitecturaPage() {
+export default function AutomatizacionPage() {
   return (
     <>
       <Head>
-        <title>GLYNNE | Arquitectura de Automatización con IA</title>
+        {/* SEO Básico */}
+        <title>GLYNNE | Arquitectura de Automatización Empresarial con IA</title>
         <meta
           name="description"
-          content="Explora cómo GLYNNE construye arquitecturas empresariales que integran inteligencia artificial, microservicios, nodos inteligentes y orquestación de procesos para lograr autonomía operacional."
+          content="GLYNNE construye arquitecturas empresariales inteligentes que integran IA, microservicios y orquestación para lograr autonomía operacional y eficiencia escalable."
         />
         <meta
           name="keywords"
-          content="GLYNNE, arquitectura de software, inteligencia artificial, automatización empresarial, microservicios, nodos inteligentes, orquestación, LangChain, Supabase, Next.js, IA en empresas"
+          content="automatización empresarial, inteligencia artificial, arquitectura de software, nodos inteligentes, microservicios, orquestación de procesos, GLYNNE, IA empresarial, LangChain, Supabase, Next.js"
         />
         <meta name="author" content="GLYNNE AI Systems" />
         <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="GLYNNE – Arquitectura Inteligente para Empresas" />
+        <meta property="og:title" content="GLYNNE – Arquitectura de Automatización con IA" />
         <meta
           property="og:description"
-          content="Arquitectura modular con IA para automatizar procesos empresariales. Construye flujos orquestados con agentes inteligentes y nodos conectados a tus sistemas actuales."
+          content="Automatiza procesos empresariales con arquitecturas inteligentes, agentes autónomos y nodos interconectados. Descubre cómo GLYNNE transforma la autonomía operativa."
         />
-        <meta
-          property="og:image"
-          content="https://glynne-ia-6rjd.vercel.app/meta-architecture.jpg"
-        />
-        <meta
-          property="og:url"
-          content="https://glynne-ia-6rjd.vercel.app/arquitectura"
-        />
+        <meta property="og:image" content="https://glynne-ia-6rjd.vercel.app/meta-architecture.jpg" />
+        <meta property="og:url" content="https://glynne-ia-6rjd.vercel.app/automatizacion" />
         <meta property="og:site_name" content="GLYNNE" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="GLYNNE – Arquitectura IA Empresarial" />
+        <meta name="twitter:title" content="GLYNNE – Automatización Empresarial con IA" />
         <meta
           name="twitter:description"
-          content="Diseñamos arquitecturas empresariales con nodos inteligentes, orquestación de procesos y automatización total mediante inteligencia artificial."
+          content="Arquitecturas modulares y escalables que permiten a tu empresa orquestar y automatizar procesos con inteligencia artificial."
         />
-        <meta
-          name="twitter:image"
-          content="https://glynne-ia-6rjd.vercel.app/meta-architecture.jpg"
-        />
-        <link rel="canonical" href="https://glynne-ia-6rjd.vercel.app/arquitectura" />
+        <meta name="twitter:image" content="https://glynne-ia-6rjd.vercel.app/meta-architecture.jpg" />
+
+        {/* Canonical */}
+        <link rel="canonical" href="https://glynne-ia-6rjd.vercel.app/automatizacion" />
+
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -64,29 +60,36 @@ export default function ArquitecturaPage() {
           <Header />
         </div>
 
-        {/* Secciones animadas */}
+        {/* Secciones */}
+        <main>
+          <section id="intro">
+            <Main1 />
+          </section>
 
-          <Main1 />
+          <section id="beneficios">
+            <Main2 />
+          </section>
 
-        <Main2 />
+          <section id="automatizacion">
+            <Main3 />
+          </section>
 
-          <Main3 />
+          <section id="gly-ai">
+            <GLY />
+          </section>
 
+          <section id="procesos">
+            <Main4 />
+          </section>
 
+          <section id="logos">
+            <MainLogos />
+          </section>
 
-          <GLY />
-
-
-          <Main4 />
-
-
-
-          <MainLogos />
-
-
-
-          <Main6 />
-
+          <section id="conclusion">
+            <Main6 />
+          </section>
+        </main>
       </div>
     </>
   );

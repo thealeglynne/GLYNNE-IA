@@ -4,43 +4,65 @@ import Image from 'next/image';
 
 export default function MainCodeShowcase() {
   return (
-    <main className="w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-16 bg-white">
+    <section
+      className="w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-16 bg-white"
+      role="region"
+      aria-label="Arquitectura de software con inteligencia artificial"
+    >
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
 
-        {/* Columna Izquierda - Imagen */}
-        <div className="relative w-full h-[300px] md:h-[500px] shadow-xl overflow-hidden order-1 md:order-none">
+        {/* Columna Izquierda - Imagen con SEO */}
+        <figure className="relative w-full h-[300px] md:h-[500px] shadow-xl overflow-hidden order-1 md:order-none">
           <Image
             src="/codeArquitectura.png"
-            alt="Arquitectura de código GLYNNE"
+            alt="Representación visual de arquitectura de código empresarial con inteligencia artificial de GLYNNE"
             fill
             className="object-cover object-top"
+            priority
           />
-        </div>
+          <figcaption className="sr-only">
+            Ejemplo visual de arquitectura de software diseñada para escalar con inteligencia artificial en empresas modernas.
+          </figcaption>
+        </figure>
 
-        {/* Columna Derecha - Texto */}
-        <div className="space-y-5 md:space-y-7">
-          <h1 className="text-2xl md:text-4xl font-bold text-black leading-snug">
-            Tu IA no puede vivir en ruinas: necesitas construirle una ciudad.
-          </h1>
+        {/* Columna Derecha - Texto SEO */}
+        <article className="space-y-5 md:space-y-7">
+          <header>
+            <h1 className="text-2xl md:text-4xl font-bold text-black leading-snug">
+              Tu IA no puede vivir en ruinas: necesita una arquitectura sólida para crecer.
+            </h1>
+          </header>
 
           <p className="text-gray-700 text-sm md:text-lg leading-relaxed">
-            Una infraestructura de software es como un edificio: sólido, modular, preparado para crecer. Ahí es donde vive tu inteligencia artificial, donde trabaja, colabora y produce valor.
+            La <strong>arquitectura de software</strong> es la ciudad donde habita tu inteligencia artificial. 
+            Si los cimientos no son sólidos, la IA se convierte en un riesgo. Con una infraestructura modular y escalable, 
+            tu empresa obtiene un entorno estable para la <strong>automatización empresarial</strong> y la toma de decisiones inteligentes.
           </p>
 
           <p className="text-gray-700 text-sm md:text-lg leading-relaxed">
-            En <strong>GLYNNE</strong>, construimos esos edificios digitales. Diseñamos arquitecturas donde los sistemas no solo funcionan: se comunican, aprenden y evolucionan. Creamos entornos donde la IA no es un adorno, sino un ciudadano activo, eficiente y contextual.
+            En <strong>GLYNNE</strong>, diseñamos arquitecturas digitales donde los sistemas se comunican, 
+            aprenden y evolucionan. Creamos entornos resilientes donde la <strong>IA empresarial</strong> no 
+            es un accesorio, sino un ciudadano activo que aporta valor en cada flujo de trabajo.
           </p>
 
+          <h2 className="text-xl md:text-2xl font-semibold text-black">
+            Principios de nuestra arquitectura de software inteligente
+          </h2>
           <ul className="list-disc list-inside text-gray-600 text-sm md:text-base space-y-1">
-            <li>Fundaciones sólidas con infraestructuras modulares y escalables</li>
+            <li>Fundaciones sólidas con <strong>infraestructuras modulares y escalables</strong></li>
             <li>Interiores inteligentes: APIs, pipelines y motores de datos interconectados</li>
-            <li>IA empotrada en el núcleo: LLMs, RAG, visión, agentes autónomos</li>
-            <li>Entornos seguros, resilientes y orquestados por DevOps + MLOps</li>
-            <li>Espacios listos para ser habitados por flujos automáticos y decisiones inteligentes</li>
+            <li>IA en el núcleo: LLMs, RAG, visión computacional y agentes autónomos</li>
+            <li>Entornos seguros, resilientes y orquestados con DevOps + MLOps</li>
+            <li>Espacios preparados para flujos automáticos y decisiones inteligentes</li>
           </ul>
-        </div>
 
+          <p className="text-gray-700 text-sm md:text-lg leading-relaxed">
+            Construir sin arquitectura es como poner un motor de avión en una bicicleta. 
+            Nuestra misión es que tu infraestructura esté lista para despegar, 
+            <strong>con escalabilidad, seguridad y rendimiento empresarial</strong>.
+          </p>
+        </article>
       </div>
-    </main>
+    </section>
   );
 }

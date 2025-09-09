@@ -40,7 +40,7 @@ function AnimatedSection({ children, className = '' }) {
           },
         },
       }}
-      className={`w-full min-h-[100vh] md:min-h-screen ${className}`} // ← eliminado snap-start
+      className={`w-full min-h-[100vh] md:min-h-screen ${className}`}
     >
       {children}
     </motion.section>
@@ -51,22 +51,41 @@ export default function ArquitecturaPage() {
   return (
     <>
       <Head>
-        <title>Arquitectura Inteligente – GLYNNE IA Empresarial</title>
-        <meta name="description" content="Descubre cómo diseñamos arquitecturas inteligentes..." />
-        <meta name="keywords" content="arquitectura de software, inteligencia artificial..." />
+        {/* SEO Core */}
+        <title>Arquitectura de Software con Inteligencia Artificial | GLYNNE</title>
+        <meta
+          name="description"
+          content="GLYNNE diseña arquitecturas de software inteligentes, escalables y seguras, integrando inteligencia artificial para optimizar procesos empresariales, automatizar flujos y garantizar la escalabilidad de tu organización."
+        />
+        <meta
+          name="keywords"
+          content="arquitectura de software con inteligencia artificial, automatización empresarial, integración de sistemas, escalabilidad, microservicios, IA para empresas, GLYNNE"
+        />
         <meta name="author" content="GLYNNE Tech" />
         <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Arquitectura Inteligente – GLYNNE IA Empresarial" />
-        <meta property="og:description" content="Explora la arquitectura modular y escalable..." />
-        <meta property="og:image" content="https://glynne-ia-6rjd.vercel.app/meta-architecture.jpg" />
-        <meta property="og:url" content="https://glynne-ia-6rjd.vercel.app/arquitectura" />
+        <meta property="og:title" content="Arquitectura de Software con Inteligencia Artificial | GLYNNE" />
+        <meta
+          property="og:description"
+          content="Arquitectura modular, escalable y segura con inteligencia artificial para empresas que buscan optimizar procesos, integrar sistemas y lograr autonomía empresarial."
+        />
+        <meta property="og:image" content="https://www.glynneai.com/meta-architecture.jpg" />
+        <meta property="og:url" content="https://www.glynneai.com/arquitectura" />
         <meta property="og:site_name" content="GLYNNE" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Arquitectura Inteligente – GLYNNE" />
-        <meta name="twitter:description" content="Orquesta tus sistemas con IA..." />
-        <meta name="twitter:image" content="https://glynne-ia-6rjd.vercel.app/meta-architecture.jpg" />
-        <link rel="canonical" href="https://glynne-ia-6rjd.vercel.app/arquitectura" />
+        <meta name="twitter:title" content="Arquitectura de Software con Inteligencia Artificial | GLYNNE" />
+        <meta
+          name="twitter:description"
+          content="Orquesta tus sistemas empresariales con inteligencia artificial y escalabilidad avanzada con GLYNNE."
+        />
+        <meta name="twitter:image" content="https://www.glynneai.com/meta-architecture.jpg" />
+
+        {/* Canonical */}
+        <link rel="canonical" href="https://www.glynneai.com/arquitectura" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -74,21 +93,20 @@ export default function ArquitecturaPage() {
         className="w-full max-h-screen overflow-y-auto scroll-smooth text-white no-scrollbar"
         style={{
           WebkitOverflowScrolling: 'touch',
-          // scrollSnapType: 'y mandatory', ← eliminado
         }}
       >
         <div className="sticky top-0 z-50 bg-black/80 backdrop-blur">
           <Header />
         </div>
 
-<Main1 />
-<Main2 />
-<Main6 />
-<Main3 />
-<Main4 />
-<Main5 />
-
-<Main7 />
+        {/* Aquí adentro asegúrate de que uno de los componentes (ej. Main1) tenga el <h1> */}
+        <Main1 />
+        <Main2 />
+        <Main6 />
+        <Main3 />
+        <Main4 />
+        <Main5 />
+        <Main7 />
       </div>
     </>
   );

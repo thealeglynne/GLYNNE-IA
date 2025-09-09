@@ -1,6 +1,5 @@
 'use client';
 
-
 import Head from 'next/head';
 
 import Header from './components/header';
@@ -9,35 +8,53 @@ import Main1 from './components/main1';
 import Presentacion from './components/precentacion';
 import AutomationDashboard from './components/dashboard';
 import Main4 from './components/main4';
-
 import MainCards from './components/mainCards';
 import MainLogos from './components/mainlogos';
 import Main5 from './components/main5';
 import Main6 from './components/main6';
 import Footer from './components/footer';
 
-  
-
 export default function Home() {
   return (
     <>
       <Head>
-        <title>GLYNNE – Automatización Empresarial con IA y Arquitectura Escalable</title>
-        <meta name="description" content="GLYNNE es una plataforma empresarial que permite integrar inteligencia artificial y automatización avanzada en cada proceso operativo." />
-        <meta name="keywords" content="GLYNNE, automatización empresarial, inteligencia artificial, RPA, BPA, integración, agentes IA, LangChain, Next.js, arquitectura escalable, orquestación, low-code, no-code, procesos empresariales, eficiencia operativa, Supabase, n8n" />
-        <meta name="author" content="GLYNNE Tech" />
+        {/* SEO Básico */}
+        <title>GLYNNE | Inteligencia Artificial y Automatización Empresarial</title>
+        <meta
+          name="description"
+          content="GLYNNE impulsa la autonomía empresarial mediante inteligencia artificial, automatización de procesos, arquitecturas escalables y agentes inteligentes diseñados para crecer con tu empresa."
+        />
+        <meta
+          name="keywords"
+          content="GLYNNE, automatización empresarial, inteligencia artificial, arquitectura escalable, integración de APIs, agentes autónomos, orquestación de procesos, LangChain, Supabase, Next.js, RPA, BPA, low-code, no-code, eficiencia operativa"
+        />
+        <meta name="author" content="GLYNNE AI Systems" />
         <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="GLYNNE – IA para Automatizar tu Empresa" />
-        <meta property="og:description" content="Orquesta procesos empresariales con IA: arquitecturas inteligentes, integración de APIs, agentes personalizados y diagnósticos inteligentes." />
+        <meta property="og:title" content="GLYNNE – IA y Automatización Empresarial" />
+        <meta
+          property="og:description"
+          content="Integra IA y automatización en cada área de tu empresa con arquitecturas modulares, nodos inteligentes y agentes personalizados."
+        />
         <meta property="og:image" content="https://glynne-ia-6rjd.vercel.app/meta-banner.jpg" />
         <meta property="og:url" content="https://glynne-ia-6rjd.vercel.app/" />
         <meta property="og:site_name" content="GLYNNE" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="GLYNNE – IA para Automatizar tu Empresa" />
-        <meta name="twitter:description" content="Orquestación de procesos empresariales con inteligencia artificial y automatización avanzada." />
+        <meta name="twitter:title" content="GLYNNE – IA y Automatización Empresarial" />
+        <meta
+          name="twitter:description"
+          content="Transforma tu empresa con IA: orquestación de procesos, agentes inteligentes y automatización escalable."
+        />
         <meta name="twitter:image" content="https://glynne-ia-6rjd.vercel.app/meta-banner.jpg" />
+
+        {/* Canonical */}
         <link rel="canonical" href="https://glynne-ia-6rjd.vercel.app/" />
+
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -48,43 +65,41 @@ export default function Home() {
             <Header />
           </div>
 
-            <Main1 />
+          <main>
+            <section id="hero">
+              <Main1 />
+            </section>
 
-            <MainCards />
+            <section id="cards">
+              <MainCards />
+            </section>
 
-            <Presentacion />
+            <section id="presentacion">
+              <Presentacion />
+            </section>
 
+            <section id="logos">
+              <MainLogos />
+            </section>
 
+            <section id="beneficios">
+              <Main4 />
+            </section>
 
-  
+            <section id="casos-uso">
+              <Main6 />
+            </section>
 
+            <section id="dashboard">
+              <AutomationDashboard />
+            </section>
 
+            <section id="cta">
+              <Main5 />
+            </section>
+          </main>
 
-            <MainLogos />
-
-
-
-            <Main4 />
-
-
-
-
-
-
-
-            <Main6 />
-
-
-
-            <AutomationDashboard />
-
-
-            <Main5 />
-
-
-
-            <Footer />
-
+          <Footer />
         </div>
       </PopupIntro>
     </>

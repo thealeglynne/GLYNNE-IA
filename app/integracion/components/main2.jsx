@@ -33,23 +33,24 @@ const NODE_TYPES = {
         <data.icon className="text-orange-500 text-sm sm:text-base" />
         <strong className="text-[11px] sm:text-[13px]">{data.label}</strong>
       </div>
-      <p className="text-gray-500 text-[9px] sm:text-[11px] leading-tight">{data.description}</p>
+      <p className="text-gray-600 text-[9px] sm:text-[11px] leading-tight">{data.description}</p>
       <Handle type="source" position={Position.Right} className="bg-orange-500 w-2 h-2" />
     </motion.div>
   ),
 };
 
+// === SEO OPTIMIZADO ===
 const nodes = [
-  { id: '1', type: 'default', position: { x: 0, y: 50 }, data: { label: 'Recepción Leads', icon: FaEnvelope, description: 'Entrada automática desde formularios, WhatsApp, emails.' } },
-  { id: '2', type: 'default', position: { x: 250, y: 50 }, data: { label: 'CRM Inteligente', icon: FaUsers, description: 'Clasifica, prioriza y nutre leads automáticamente.' } },
-  { id: '3', type: 'default', position: { x: 500, y: 50 }, data: { label: 'Agente Comercial IA', icon: FaRobot, description: 'Responde, agenda y cierra ventas con IA.' } },
-  { id: '4', type: 'default', position: { x: 750, y: 50 }, data: { label: 'Ventas Predictivas', icon: FaChartBar, description: 'Predicción de cierres, análisis de embudo.' } },
-  { id: '5', type: 'default', position: { x: 1000, y: 50 }, data: { label: 'Automatización Operativa', icon: FaCog, description: 'Bots de tareas repetitivas: RRHH, Finanzas, Legal.' } },
-  { id: '6', type: 'default', position: { x: 500, y: 200 }, data: { label: 'Orquestador IA', icon: FaBrain, description: 'Control total de procesos IA desde un solo lugar.' } },
-  { id: '7', type: 'default', position: { x: 750, y: 200 }, data: { label: 'Integración API', icon: FaLaptopCode, description: 'Conecta sistemas como WhatsApp, Gmail, ERPs.' } },
-  { id: '8', type: 'default', position: { x: 250, y: 200 }, data: { label: 'Gestión Logística', icon: FaWarehouse, description: 'Pedidos, inventarios y rutas automatizadas.' } },
-  { id: '9', type: 'default', position: { x: 0, y: 200 }, data: { label: 'Control de Calidad', icon: FaCheckCircle, description: 'Auditorías automáticas de procesos clave.' } },
-  { id: '10', type: 'default', position: { x: 1000, y: 200 }, data: { label: 'Gestión Reuniones', icon: FaCalendarAlt, description: 'Agenda, recordatorios, resúmenes automáticos.' } },
+  { id: '1', type: 'default', position: { x: 0, y: 50 }, data: { label: 'Recepción de Leads Multicanal', icon: FaEnvelope, description: 'Captura automática desde formularios web, WhatsApp y correos electrónicos.' } },
+  { id: '2', type: 'default', position: { x: 250, y: 50 }, data: { label: 'CRM Inteligente con IA', icon: FaUsers, description: 'Clasifica, prioriza y nutre leads con segmentación predictiva.' } },
+  { id: '3', type: 'default', position: { x: 500, y: 50 }, data: { label: 'Agente Comercial Autónomo', icon: FaRobot, description: 'Responde en tiempo real, agenda citas y cierra ventas con IA conversacional.' } },
+  { id: '4', type: 'default', position: { x: 750, y: 50 }, data: { label: 'Ventas Predictivas', icon: FaChartBar, description: 'Predicción de cierres, análisis de embudo y forecasting con IA.' } },
+  { id: '5', type: 'default', position: { x: 1000, y: 50 }, data: { label: 'Automatización Operativa Empresarial', icon: FaCog, description: 'Optimiza procesos de RRHH, Finanzas y Legal con bots inteligentes.' } },
+  { id: '6', type: 'default', position: { x: 500, y: 200 }, data: { label: 'Orquestador Central IA', icon: FaBrain, description: 'Control y coordinación de todos los procesos inteligentes desde un solo panel.' } },
+  { id: '7', type: 'default', position: { x: 750, y: 200 }, data: { label: 'Integración vía API', icon: FaLaptopCode, description: 'Conecta sistemas clave como WhatsApp, Gmail, CRMs y ERPs sin fricción.' } },
+  { id: '8', type: 'default', position: { x: 250, y: 200 }, data: { label: 'Gestión Logística Inteligente', icon: FaWarehouse, description: 'Automatización de pedidos, inventarios y rutas con IA predictiva.' } },
+  { id: '9', type: 'default', position: { x: 0, y: 200 }, data: { label: 'Control de Calidad Automático', icon: FaCheckCircle, description: 'Auditorías y validación de procesos críticos en tiempo real.' } },
+  { id: '10', type: 'default', position: { x: 1000, y: 200 }, data: { label: 'Gestión de Reuniones Inteligente', icon: FaCalendarAlt, description: 'Agenda automática, recordatorios inteligentes y resúmenes con IA.' } },
 ];
 
 const edges = [
@@ -67,16 +68,24 @@ const edges = [
 export default function EmpresaIAFlowStatic() {
   return (
     <div className="w-full flex flex-col justify-center items-center py-12 px-4 bg-white gap-8">
-      {/* Título y descripción */}
+      {/* Título y descripción optimizados */}
       <div className="max-w-5xl text-center">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">
-          Arquitectura IA Empresarial
-        </h2>
-        <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-          Este diagrama representa una arquitectura empresarial inteligente, donde cada proceso es
-          orquestado por inteligencia artificial. Desde la recepción automática de leads hasta la
-          automatización operativa y la integración con sistemas clave, esta estructura permite a las
-          organizaciones escalar con eficiencia, precisión y sin fricción.
+        <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">
+          Arquitectura Empresarial con Inteligencia Artificial
+        </h1>
+        <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
+          Descubre cómo una <strong>arquitectura de IA empresarial</strong> orquesta procesos clave
+          —desde la recepción de leads hasta la <strong>automatización operativa y la integración API</strong>—
+          para escalar tu negocio con precisión, eficiencia y sin fricción.
+        </p>
+        <ul className="text-sm sm:text-base text-gray-600 leading-relaxed list-disc list-inside space-y-1">
+          <li><strong>Integración de IA en CRM</strong> y automatización de ventas predictivas.</li>
+          <li><strong>Agentes autónomos interdepartamentales</strong> que trabajan 24/7.</li>
+          <li><strong>Orquestación inteligente</strong> de sistemas legacy, ERPs y plataformas cloud.</li>
+          <li>Automatización logística, control de calidad y gestión de reuniones con IA.</li>
+        </ul>
+        <p className="text-sm sm:text-base text-gray-700 leading-relaxed mt-4">
+          Implementa esta arquitectura modular y escalable y potencia tu ROI en semanas.
         </p>
       </div>
 

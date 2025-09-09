@@ -14,34 +14,40 @@ import {
 
 const sintomas = [
   {
-    label: 'Flujos rotos',
+    label: 'Flujos rotos en procesos internos',
     icon: <FaProjectDiagram className="text-orange-500 text-xl" />,
-    descripcion: `Los procesos internos se interrumpen con frecuencia por falta de una arquitectura clara. La automatización sin estructura se convierte en una cadena de parches temporales que impide escalar, controlar y mejorar el sistema.`,
+    descripcion: `Los procesos internos se interrumpen con frecuencia por falta de una arquitectura clara. 
+    La automatización sin estructura se convierte en una cadena de parches temporales que impide escalar, controlar y mejorar el sistema.`,
   },
   {
-    label: 'Integraciones frágiles',
+    label: 'Integraciones frágiles entre sistemas',
     icon: <FaUnlink className="text-orange-500 text-xl" />,
-    descripcion: `Cuando los sistemas están conectados de forma directa, sin una capa de orquestación o una arquitectura modular, cualquier cambio externo puede romperlo todo. Eso incrementa costos y genera frustración constante.`,
+    descripcion: `Cuando los sistemas están conectados sin una capa de orquestación modular, 
+    cualquier cambio externo puede romper todo. Esto incrementa costos y genera frustración constante.`,
   },
   {
-    label: 'APIs lentas',
+    label: 'APIs lentas y cuellos de botella',
     icon: <FaTachometerAlt className="text-orange-500 text-xl" />,
-    descripcion: `Sin colas, cachés ni separación de responsabilidades, las APIs se vuelven cuellos de botella. Esto afecta la experiencia del usuario y bloquea la automatización inteligente.`,
+    descripcion: `Sin colas, cachés ni separación de responsabilidades, las APIs se convierten en cuellos de botella. 
+    Esto afecta la experiencia del usuario y bloquea la automatización inteligente.`,
   },
   {
     label: 'Automatizaciones sin trazabilidad',
     icon: <FaEyeSlash className="text-orange-500 text-xl" />,
-    descripcion: `Cuando no hay registros ni monitoreo, los errores se vuelven invisibles. Una IA necesita contexto para aprender. Si no sabes qué falló ni cuándo, no puedes mejorar.`,
+    descripcion: `Cuando no hay registros ni monitoreo, los errores se vuelven invisibles. 
+    Una IA necesita contexto para aprender y optimizar. Sin trazabilidad, no puedes mejorar.`,
   },
   {
     label: 'Escalabilidad limitada',
     icon: <FaExpandAlt className="text-orange-500 text-xl" />,
-    descripcion: `Si tu sistema no fue diseñado para crecer, cada nueva función se convierte en un reto. Una arquitectura no escalable frena la innovación y eleva los costos operativos.`,
+    descripcion: `Si tu sistema no fue diseñado para crecer, cada nueva función es un reto. 
+    Una arquitectura no escalable frena la innovación y aumenta los costos operativos.`,
   },
   {
     label: 'Duplicación de datos',
     icon: <FaClone className="text-orange-500 text-xl" />,
-    descripcion: `La falta de una fuente única de verdad lleva a datos redundantes en múltiples sistemas. Esto complica reportes, decisiones y entrenamientos de modelos de IA.`,
+    descripcion: `La falta de una fuente única de verdad genera datos redundantes en múltiples sistemas. 
+    Esto complica reportes, decisiones y entrenamientos de modelos de IA.`,
   },
 ];
 
@@ -63,6 +69,7 @@ export default function Main2Arquitectura() {
 
       {/* Contenido centrado */}
       <div className="relative z-10 w-full max-w-5xl flex flex-col items-center text-center space-y-8 sm:space-y-10 bg-white/70 backdrop-blur-xl p-6 sm:p-10 ring-1 ring-black/10 shadow-xl rounded-3xl text-black">
+        
         {/* Título */}
         <motion.h2
           className="text-xl sm:text-2xl md:text-4xl font-bold text-center mb-2 leading-tight"
@@ -70,12 +77,13 @@ export default function Main2Arquitectura() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          ¿Tu empresa podría ir mejor?
-          <br />
-          <span className="text-neutral-600 text-sm sm:text-base md:text-lg">
-            ¿Sabes cuáles son los síntomas más comunes de una empresa mal integrada tecnológicamente?
-          </span>
+          Arquitectura empresarial: ¿tu empresa podría ir mejor?
         </motion.h2>
+
+        <p className="text-neutral-700 text-sm sm:text-base md:text-lg max-w-3xl">
+          Estos son los <strong>síntomas más comunes</strong> de una empresa con una arquitectura mal integrada tecnológicamente. 
+          Identificarlos es el primer paso para escalar con inteligencia artificial y automatización confiable.
+        </p>
 
         {/* Logo */}
         <motion.div
@@ -85,7 +93,7 @@ export default function Main2Arquitectura() {
         >
           <Image
             src="/logo2.png"
-            alt="Logo GLYNNE"
+            alt="Logo GLYNNE - Arquitectura de Software y Automatización Empresarial"
             width={60}
             height={60}
             className="mx-auto mb-4"
@@ -104,17 +112,22 @@ export default function Main2Arquitectura() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              role="button"
+              aria-label={`Abrir detalle sobre ${item.label}`}
             >
-              <div className="text-base sm:text-lg font-semibold flex items-center gap-2 text-black">
+              <h3 className="text-base sm:text-lg font-semibold flex items-center gap-2 text-black">
                 {item.icon} {item.label}
-              </div>
+              </h3>
+              {/* Texto oculto para SEO (visible al abrir el popup) */}
+              <p className="sr-only">{item.descripcion}</p>
             </motion.div>
           ))}
         </div>
 
         {/* Mensaje de cierre */}
         <p className="text-sm sm:text-base text-neutral-600 max-w-xl pt-4">
-          Una arquitectura de software robusta no es un lujo, es la base para que la inteligencia artificial funcione con propósito, velocidad y escala.
+          Una <strong>arquitectura de software robusta</strong> no es un lujo, 
+          es la base para que la <strong>inteligencia artificial</strong> funcione con propósito, velocidad y escala.
         </p>
       </div>
 
@@ -145,6 +158,7 @@ export default function Main2Arquitectura() {
               <button
                 onClick={() => setActiveIndex(null)}
                 className="absolute top-2 right-3 text-lg font-bold text-gray-400 hover:text-black"
+                aria-label="Cerrar detalle"
               >
                 ×
               </button>

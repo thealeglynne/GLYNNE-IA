@@ -16,55 +16,55 @@ const departments = [
     name: 'Ventas',
     icon: FaBriefcase,
     content: `
-En los departamentos de ventas tradicionales, el seguimiento manual de prospectos, la mala calificación de leads y la pérdida de oportunidades son problemas comunes. Estos obstáculos ralentizan el crecimiento y generan costos innecesarios.
+Los equipos de ventas suelen perder tiempo en tareas manuales: seguimiento repetitivo de prospectos, leads mal calificados y oportunidades que se enfrían rápido. El resultado: ciclos de venta más largos y menor conversión.
 
-GLYNNE automatiza tu funnel de ventas con scoring inteligente, CRM con inteligencia artificial y bots de seguimiento proactivos. Esto significa que tus equipos se enfocan solo en prospectos de alto valor mientras la IA gestiona tareas repetitivas.
+Con GLYNNE transformas tu funnel con **automatización de ventas con IA**, scoring inteligente de leads y bots de seguimiento proactivos. Así tus asesores se enfocan solo en clientes con mayor probabilidad de cierre.
 
-Desde la auditoría del proceso actual hasta la integración con sistemas como HubSpot o Salesforce, implementamos predicción con modelos LLM y orquestamos workflows automatizados para aumentar tu conversión hasta en un 40%.`,
+Desde la auditoría de tu proceso hasta la integración con **CRM líderes como HubSpot o Salesforce**, implementamos predicción con modelos LLM y workflows automatizados que han demostrado aumentar la conversión hasta en un **40%**.`,
   },
   {
     key: 'rh',
     name: 'Recursos Humanos',
     icon: FaUsers,
     content: `
-La selección de talento y el onboarding pueden volverse cuellos de botella si no están optimizados. Reclutar lleva semanas, los procesos son inconsistentes y la rotación aumenta.
+El reclutamiento tradicional consume semanas y los procesos inconsistentes aumentan la rotación de personal. Muchas empresas pierden talento por falta de velocidad y trazabilidad.
 
-Con GLYNNE, implementamos reclutamiento basado en IA, onboarding guiado por agentes inteligentes y monitoreo de clima laboral en tiempo real. Esto permite identificar problemas antes de que se agraven.
+Con GLYNNE, implementas **reclutamiento inteligente con IA**, onboarding guiado por agentes autónomos y monitoreo de clima laboral en tiempo real. Esto permite detectar riesgos de rotación antes de que impacten.
 
-Desde formularios inteligentes hasta flujos con LLMs y herramientas como n8n, tu departamento de RR.HH. pasa de ser reactivo a ser predictivo. Reducimos el tiempo de contratación a la mitad y mejoramos la retención notablemente.`,
+Desde formularios inteligentes hasta flujos orquestados con LLMs y **n8n**, tu equipo de RR.HH. pasa de ser reactivo a predictivo: reducimos el tiempo de contratación hasta en un **50%** y aumentamos la retención de talento.`,
   },
   {
     key: 'soporte',
     name: 'Soporte',
     icon: FaRobot,
     content: `
-El soporte técnico suele ser un punto crítico: tickets desordenados, respuestas tardías y clientes frustrados. Una experiencia deficiente puede costarte clientes.
+Un soporte ineficiente genera tickets acumulados, clientes frustrados y pérdida de confianza. Cada minuto de espera puede costarte una oportunidad.
 
-GLYNNE transforma tu soporte con clasificación automática de solicitudes, respuestas contextuales con modelos LLM y dashboards de métricas en tiempo real.
+GLYNNE automatiza la atención al cliente con **clasificación inteligente de tickets**, respuestas contextuales con modelos LLM y dashboards en tiempo real para visibilidad completa.
 
-Conectamos plataformas como Zendesk o Freshdesk, automatizamos respuestas frecuentes y damos trazabilidad total al flujo de atención. El resultado: un 60% menos en tiempos de resolución y un mejor NPS.`,
+Integramos con plataformas como **Zendesk o Freshdesk**, eliminamos respuestas repetitivas y damos trazabilidad total al flujo de soporte. El impacto: reducción de tiempos de resolución en un **60%** y mejora sustancial en tu NPS.`,
   },
   {
     key: 'operaciones',
     name: 'Operaciones',
     icon: FaCog,
     content: `
-Los procesos operativos suelen estar fragmentados entre herramientas, departamentos y personas. Esto genera errores humanos, retrabajo y una falta crítica de trazabilidad.
+Los procesos operativos fragmentados entre múltiples herramientas y equipos generan errores, sobrecostos y pérdida de eficiencia.
 
-Automatizamos y orquestamos tus flujos operativos usando tecnologías como Supabase, LangChain y n8n. Implementamos validaciones automáticas, alertas inteligentes y pipelines que se adaptan al cambio.
+GLYNNE unifica y orquesta tus flujos con tecnologías como **Supabase, LangChain y n8n**, aplicando validaciones automáticas, alertas inteligentes y pipelines resilientes.
 
-Así, GLYNNE convierte operaciones caóticas en sistemas resilientes, escalables y trazables. Donde antes había desorden, ahora hay eficiencia y control.`,
+El resultado: operaciones escalables y trazables, con menos retrabajo y más control. Lo que antes era caos ahora se convierte en un **sistema eficiente y confiable**.`,
   },
   {
     key: 'finanzas',
     name: 'Finanzas',
     icon: FaMoneyBillWave,
     content: `
-El análisis financiero manual no solo es lento, también propenso a errores. Las proyecciones pueden estar desactualizadas y los informes llegan tarde, limitando la toma de decisiones.
+El análisis financiero manual es lento y propenso a errores. Los reportes tardíos y las proyecciones imprecisas limitan la capacidad de tomar decisiones estratégicas.
 
-GLYNNE introduce predicción de flujo de caja con IA, generación automática de reportes y monitoreo en tiempo real de KPIs financieros clave.
+GLYNNE introduce **predicción de flujo de caja con IA**, generación automática de reportes y monitoreo en tiempo real de KPIs financieros clave.
 
-Integramos con ERPs y CRMs para automatizar conciliaciones, detectar anomalías y prever riesgos. Así, el área financiera se convierte en un motor estratégico, no solo operativo.`,
+Integramos con ERPs y CRMs para automatizar conciliaciones, detectar anomalías y prever riesgos. Así, tu área financiera deja de ser solo operativa para convertirse en un **motor estratégico del negocio**.`,
   },
 ];
 
@@ -118,7 +118,9 @@ export default function MainAutomationShowcase() {
             transition={{ duration: 0.5 }}
             className="w-full bg-white p-6 sm:p-8 md:p-10 rounded-3xl shadow-xl border border-gray-200 text-left"
           >
-            <h3 className="text-xl sm:text-2xl font-semibold text-black text-center mb-6">{current.name}</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold text-black text-center mb-6">
+              {current.name}
+            </h3>
             <div className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed space-y-5 text-justify">
               {current.content
                 .trim()

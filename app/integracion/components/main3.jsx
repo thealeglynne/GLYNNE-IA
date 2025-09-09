@@ -10,61 +10,62 @@ import {
   FaMoneyBillWave,
 } from 'react-icons/fa';
 
+// === CONTENIDO OPTIMIZADO PARA SEO ===
 const departments = [
   {
     key: 'ventas',
     name: 'Ventas',
     icon: FaBriefcase,
     content: `
-El área de ventas presenta nodos clave para la calificación de leads, seguimiento y cierre. Muchos de estos procesos se ejecutan de forma manual, lo cual genera fugas en el embudo comercial.
+El área de ventas suele presentar fugas en el embudo comercial debido a procesos manuales de calificación, seguimiento y cierre.
 
-GLYNNE crea una orquestación basada en nodos inteligentes: conectamos formularios de captación con LLMs que realizan lead scoring automatizado, activamos agentes que nutren prospectos en tiempo real y desplegamos bots conectados a tu CRM (HubSpot, Salesforce, etc.) que gestionan el flujo de ventas.
+Con GLYNNE, diseñamos una **arquitectura de ventas inteligente** basada en nodos conectados: los formularios de captación se enlazan con modelos LLM que ejecutan lead scoring automático, agentes que nutren prospectos en tiempo real y bots sincronizados con tu CRM (HubSpot, Salesforce, Zoho, etc.) que gestionan el pipeline.
 
-El resultado es una arquitectura donde los datos fluyen sin fricción, los equipos se enfocan en las oportunidades correctas y la IA trabaja 24/7 para maximizar conversiones.`,
+El resultado: **datos unificados, flujos sin fricción y una IA que trabaja 24/7 para maximizar conversiones**.`,
   },
   {
     key: 'rh',
     name: 'Recursos Humanos',
     icon: FaUsers,
     content: `
-Recursos Humanos puede ser rediseñado como un sistema modular de nodos conectados: uno para atracción, otro para selección, onboarding y clima organizacional.
+Recursos Humanos se transforma en un **sistema modular de nodos conectados**: atracción, selección, onboarding y gestión del clima laboral.
 
-GLYNNE integra agentes LLM que filtran hojas de vida, evalúan compatibilidad con IA conversacional y activan procesos de contratación desde plataformas como LinkedIn, Greenhouse o Personio. Cada nodo ejecuta una tarea específica y se comunica con el siguiente mediante eventos orquestados.
+GLYNNE integra agentes LLM que filtran hojas de vida, evalúan compatibilidad cultural con entrevistas conversacionales y activan procesos de contratación en plataformas como LinkedIn, Greenhouse o Personio. Cada nodo cumple una función y se comunica con el siguiente mediante eventos orquestados.
 
-Además, se incluye un nodo de clima laboral conectado a canales como Slack o WhatsApp, donde se ejecuta escucha activa con modelos de lenguaje para anticipar renuncias y mejorar retención.`,
+Además, un nodo de clima organizacional escucha en Slack o WhatsApp con modelos de lenguaje, anticipando renuncias y mejorando la retención del talento.`,
   },
   {
     key: 'soporte',
-    name: 'Soporte',
+    name: 'Soporte Técnico',
     icon: FaRobot,
     content: `
-Soporte técnico se puede dividir en nodos como recepción, clasificación, resolución y escalamiento. Muchos de estos pasos se hacen hoy de forma desordenada o redundante.
+El soporte tradicional suele ser desordenado y redundante en la recepción, clasificación, resolución y escalamiento de tickets.
 
-Con GLYNNE, cada nodo se automatiza e interconecta: los tickets entran vía Zendesk o Freshdesk y son categorizados con IA. Se responde automáticamente con un LLM o se enruta al agente correcto según el nivel de prioridad, todo supervisado por un nodo de trazabilidad.
+Con GLYNNE, cada **nodo de soporte** se automatiza: los tickets entran vía Zendesk o Freshdesk, se categorizan con IA y reciben respuesta inmediata con un LLM o se escalan al agente correcto según prioridad. Todo está supervisado por un nodo de trazabilidad.
 
-Esto reduce drásticamente los tiempos de atención, incrementa la satisfacción y convierte el soporte en un flujo inteligente y autoajustable.`,
+El impacto: **tiempos de atención reducidos, mayor satisfacción del cliente y un soporte autoajustable**.`,
   },
   {
     key: 'operaciones',
     name: 'Operaciones',
     icon: FaCog,
     content: `
-Operaciones es el núcleo ideal para una arquitectura de nodos: órdenes, inventario, logística, calidad y reportes son procesos que pueden desacoplarse, automatizarse y orquestarse.
+Operaciones abarca órdenes, inventario, logística, calidad y reportes: un ecosistema perfecto para una **arquitectura de nodos desacoplados y orquestados**.
 
-Usamos tecnologías como Supabase, n8n y LangChain para crear nodos que validan datos, disparan alertas, sincronizan inventarios o ejecutan acciones en tiempo real. Cada nodo es independiente pero trabaja en red, adaptándose al contexto y necesidades de tu operación.
+Usamos Supabase, n8n y LangChain para crear nodos que validan datos, lanzan alertas, sincronizan inventarios y ejecutan acciones en tiempo real. Cada nodo es independiente pero trabaja en red, asegurando resiliencia y trazabilidad.
 
-Esto convierte tu sistema operativo en un entorno flexible, resiliente y altamente trazable donde cada evento puede ser auditado y optimizado.`,
+Así, tu sistema operativo evoluciona hacia un **entorno flexible, auditable y optimizado con IA**.`,
   },
   {
     key: 'finanzas',
     name: 'Finanzas',
     icon: FaMoneyBillWave,
     content: `
-Finanzas tradicionalmente depende de hojas de cálculo aisladas y procesos manuales. GLYNNE lo transforma en una malla de nodos inteligentes interconectados: conciliación, facturación, predicción y auditoría.
+Las finanzas suelen depender de hojas de cálculo y procesos manuales. GLYNNE lo redefine en una **malla de nodos financieros inteligentes**: conciliación, facturación, predicción y auditoría.
 
-Cada nodo actúa sobre una función crítica. Conectamos tu ERP o CRM a modelos LLM que generan reportes automáticos, detectan anomalías en flujos de caja y emiten alertas inteligentes cuando hay desviaciones presupuestales.
+Cada nodo actúa sobre una función crítica: conectamos tu ERP o CRM con modelos LLM que generan reportes automáticos, detectan anomalías en flujo de caja y emiten alertas proactivas ante desviaciones.
 
-Esta estructura modular permite a finanzas operar en tiempo real, con predicción proactiva y toma de decisiones basada en datos precisos y actualizados.`,
+Esto habilita una gestión financiera en tiempo real, con **predicción proactiva y decisiones basadas en datos confiables**.`,
   },
 ];
 
@@ -75,15 +76,17 @@ export default function MainAutomationShowcase() {
   return (
     <section className="w-full min-h-screen flex items-center justify-center bg-white px-4 sm:px-6 md:px-10 lg:px-16 py-10 sm:py-16">
       <div className="w-full max-w-7xl flex flex-col items-center justify-center gap-10">
+        {/* Título optimizado */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-3xl sm:text-4xl md:text-5xl font-bold text-black text-center px-4"
         >
-          Integración Inteligente por Departamentos
+          Automatización e Integración por Departamentos con IA
         </motion.h2>
 
+        {/* Botones de selección */}
         <div className="flex flex-wrap justify-center gap-3 w-full">
           {departments.map(dep => {
             const Icon = dep.icon;
@@ -107,6 +110,7 @@ export default function MainAutomationShowcase() {
           })}
         </div>
 
+        {/* Contenido dinámico */}
         <AnimatePresence mode="wait">
           <motion.div
             key={current.key}
@@ -116,7 +120,9 @@ export default function MainAutomationShowcase() {
             transition={{ duration: 0.5 }}
             className="w-full bg-white p-6 sm:p-8 md:p-10 rounded-3xl shadow-xl border border-gray-200 text-left"
           >
-            <h3 className="text-xl sm:text-2xl font-semibold text-black text-center mb-6">{current.name}</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold text-black text-center mb-6">
+              {current.name}: Automatización con Inteligencia Artificial
+            </h3>
             <div className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed space-y-5 text-justify">
               {current.content
                 .trim()
