@@ -32,8 +32,29 @@ export default function RegistroContacto({ onComplete }) {
   const paises = ['Colombia', 'México', 'Argentina', 'Chile', 'España', 'Estados Unidos'];
   const ciudades = ['Bogotá', 'Medellín', 'CDMX', 'Buenos Aires', 'Santiago', 'Madrid', 'Miami'];
 
+  // Función para generar el mensaje y abrir WhatsApp
+  const enviarWhatsApp = () => {
+    const mensaje = `
+Hola, mi nombre es ${formData.nombre}.
+Correo: ${formData.correo}
+Teléfono: ${formData.telefono}
+Empresa: ${formData.empresa}
+Asunto: ${formData.asunto}
+Ciudad: ${formData.ciudad}
+País: ${formData.pais}
+    `;
+    const numero = '+573123455328';
+    const url = `https://wa.me/${numero.replace('+', '')}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleClose();
+    enviarWhatsApp();
+  };
+
   return (
-    
     <AnimatePresence>
       {showModal && (
         <motion.div
@@ -50,21 +71,16 @@ export default function RegistroContacto({ onComplete }) {
             transition={{ duration: 0.5, ease: 'easeOut' }}
           >
             <div className="w-full flex flex-col items-center gap-4">
-              {/* Título más pequeño */}
               <motion.h2
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
                 className="font-bold text-center text-black"
-                style={{
-                  fontSize: 'clamp(0.9rem, 1.8vw, 1.4rem)',
-                  lineHeight: '1.2',
-                }}
+                style={{ fontSize: 'clamp(0.9rem, 1.8vw, 1.4rem)', lineHeight: '1.2' }}
               >
                 Completa tu registro de contacto
               </motion.h2>
 
-              {/* Logo reducido y animado */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -80,12 +96,8 @@ export default function RegistroContacto({ onComplete }) {
                 />
               </motion.div>
 
-              {/* Formulario en grilla asimétrica */}
               <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  handleClose();
-                }}
+                onSubmit={handleSubmit}
                 className="w-full max-w-4xl grid grid-cols-6 gap-4 mt-4"
               >
                 <input
@@ -138,7 +150,6 @@ export default function RegistroContacto({ onComplete }) {
                   required
                 />
 
-                {/* Select País */}
                 <select
                   name="pais"
                   value={formData.pais}
@@ -148,13 +159,10 @@ export default function RegistroContacto({ onComplete }) {
                 >
                   <option value="">País</option>
                   {paises.map((p) => (
-                    <option key={p} value={p}>
-                      {p}
-                    </option>
+                    <option key={p} value={p}>{p}</option>
                   ))}
                 </select>
 
-                {/* Select Ciudad */}
                 <select
                   name="ciudad"
                   value={formData.ciudad}
@@ -164,23 +172,20 @@ export default function RegistroContacto({ onComplete }) {
                 >
                   <option value="">Ciudad</option>
                   {ciudades.map((c) => (
-                    <option key={c} value={c}>
-                      {c}
-                    </option>
+                    <option key={c} value={c}>{c}</option>
                   ))}
                 </select>
 
-                {/* Botón de asesor */}
                 <motion.a
-  href="https://glynne-sst-ai-hsiy.vercel.app/" // <-- pon aquí la URL
-  target="_blank"
-  rel="noopener noreferrer"
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.97 }}
-  className="col-span-2 p-2 rounded-lg font-medium text-black bg-white border border-black hover:bg-gray-100 transition text-xs leading-tight text-center"
->
-  Habla con nuestro asesor para despejar dudas antes de agendar una cita
-</motion.a>
+                  href="https://glynne-sst-ai-hsiy.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="col-span-2 p-2 rounded-lg font-medium text-black bg-white border border-black hover:bg-gray-100 transition text-xs leading-tight text-center"
+                >
+                  Habla con nuestro asesor para despejar dudas antes de agendar una cita
+                </motion.a>
 
                 <motion.button
                   whileTap={{ scale: 0.97 }}
