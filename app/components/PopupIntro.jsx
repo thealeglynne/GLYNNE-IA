@@ -20,8 +20,26 @@ export default function PopupIntro({ children }) {
     document.body.style.overflow = showPopup ? 'hidden' : 'auto';
   }, [showPopup]);
 
+  // Función para despertar los servicios de backend
+  const wakeUpServers = async () => {
+    try {
+      await Promise.all([
+        fetch('https://gly-ai-brain.onrender.com', { method: 'GET' }),
+        fetch('https://gly-tts-back.onrender.com/conversar', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ texto: 'ping' }),
+        }),
+        fetch('https://gly-csv-service-3.onrender.com', { method: 'GET' })
+      ]);
+    } catch (error) {
+      console.error('Error al despertar los servicios:', error);
+    }
+  };
+
   const handleClose = () => {
     setFadeOut(true);
+    wakeUpServers(); // inicia la carga de recursos del backend de forma silenciosa
     setTimeout(() => {
       setShowPopup(false);
       setFadeOut(false);
@@ -36,7 +54,7 @@ export default function PopupIntro({ children }) {
             fadeOut ? 'opacity-0' : 'opacity-100'
           }`}
         >
-          <div className="relative w-full max-w-[90vw] md:max-w-[70vw] lg:max-w-[60vw] h-[90vh] rounded-xl overflow-hidden shadow-2xl border border-white/20">
+           <div className="relative w-full max-w-[65vw] md:max-w-[65vw] lg:max-w-[60vw] h-[65vh] rounded-xl overflow-hidden shadow-2xl border border-white/20">
 
             {/* Imagen de fondo */}
             <img

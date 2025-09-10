@@ -34,7 +34,7 @@ export default function VideoBackground() {
           src="/logo.png"
           alt="Logo"
           className={`w-40 sm:w-52 md:w-64 lg:w-72 xl:w-80 transition-opacity transition-transform duration-1000 ease-out
-            ${showLogo ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}
+            ${showLogo ? 'opacity-100 scale-70' : 'opacity-0 scale-75'}`}
         />
       </div>
     </div>
