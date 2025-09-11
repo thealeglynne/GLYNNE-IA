@@ -54,7 +54,7 @@ export default function MainCodeShowcase() {
         {/* Columna Derecha */}
         <div className="relative w-full h-[300px] md:h-[500px] shadow-xl overflow-hidden rounded-2xl">
           <Image
-            src="/langimg.png"
+            src="/iaimgej.png"
             alt="Resumen de servicios GLYNNE IA"
             fill
             className="object-cover object-center"s
