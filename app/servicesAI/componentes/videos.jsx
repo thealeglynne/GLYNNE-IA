@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 const services = [
   {
     title: "GLY-IA SPEACH Auditor",
-    video: "/ttsVideo.mp4",
+    video:
+      "https://res.cloudinary.com/dpdyco5po/video/upload/f_auto,q_auto/ttsVideo_aqnbij.mp4",
     description:
       "Un agente de voz especializado en comprender tu negocio: escucha, interpreta y realiza una auditoría inicial de tus procesos para mostrarte en qué puedes mejorar y cómo adaptarte a la era de la IA.",
     bullets: [
@@ -14,24 +15,23 @@ const services = [
       "Genera un resumen inicial que te prepara para la transformación con IA.",
     ],
   },
-  
   {
-    
-      title: "GLY-IA Auditor",
-      video: "auditoria.mp4",
-      description:
-        "Transforma la auditoría inicial en una arquitectura de software y un plan de automatización diseñado para escalar y adaptarse a tu negocio.",
-      bullets: [
-        "Convierte diagnósticos en propuestas técnicas claras.",
-        "Diseña arquitecturas modulares basadas en microservicios.",
-        "Integra con ERP, CRM, WhatsApp, Gmail y más.",
-        "Entrega soluciones personalizadas que evolucionan contigo.",
-      ],
-     
+    title: "GLY-IA Auditor",
+    video:
+      "https://res.cloudinary.com/dpdyco5po/video/upload/auditoria_-_Compressed_with_FlexClip_zau8id.mp4",
+    description:
+      "Transforma la auditoría inicial en una arquitectura de software y un plan de automatización diseñado para escalar y adaptarse a tu negocio.",
+    bullets: [
+      "Convierte diagnósticos en propuestas técnicas claras.",
+      "Diseña arquitecturas modulares basadas en microservicios.",
+      "Integra con ERP, CRM, WhatsApp, Gmail y más.",
+      "Entrega soluciones personalizadas que evolucionan contigo.",
+    ],
   },
   {
     title: "GLY-IA DB Analyzer",
-    video: "analisisDB.mp4",
+    video:
+      "https://res.cloudinary.com/dpdyco5po/video/upload/analisisDB_cjsyxf.mp4",
     description:
       "Analiza tus bases de datos con IA para encontrar patrones, estructurar la información y generar resúmenes densos que facilitan decisiones estratégicas.",
     bullets: [
@@ -70,6 +70,7 @@ export default function ServiciosIA() {
               src={service.video}
               controls
               playsInline
+              poster={service.video.replace(".mp4", ".jpg")} // captura de Cloudinary como miniatura
               className="w-full h-auto object-contain"
             />
           </div>
@@ -99,3 +100,4 @@ export default function ServiciosIA() {
     </section>
   );
 }
+
