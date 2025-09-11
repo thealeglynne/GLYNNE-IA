@@ -10,33 +10,35 @@ export default function MainCodeShowcase() {
         {/* Columna Izquierda */}
         <div className="space-y-5 md:space-y-7">
           <h1 className="text-2xl md:text-4xl font-bold text-black leading-snug">
-            Desarrollamos Software que Piensa. Arquitecturas que Escalan. IA que Ejecuta.
+            Transformamos la manera en que tu empresa trabaja
           </h1>
 
           <p className="text-gray-700 text-sm md:text-lg leading-relaxed">
-            En <strong>GLYNNE</strong>, combinamos ingeniería de software avanzada con modelos de inteligencia artificial diseñados para transformar cómo las empresas operan, deciden y escalan.
-            Creamos soluciones a medida: desde sistemas que automatizan flujos críticos hasta plataformas que entienden lenguaje natural, analizan datos en tiempo real y generan valor desde el primer día.
+            En <strong>GLYNNE</strong>, ayudamos a las empresas a operar de forma más ágil, inteligente y sin fricciones.  
+            No vendemos herramientas genéricas: diseñamos y adaptamos soluciones de software que encajan con tu realidad y evolucionan contigo.  
           </p>
 
-          
+          <p className="text-gray-700 text-sm md:text-lg leading-relaxed">
+            Nuestro propósito es simple: que tu negocio gane tiempo, reduzca costos y libere el verdadero potencial de sus equipos. 
+            Mientras tu empresa se concentra en crecer, nosotros nos encargamos de que la tecnología trabaje en segundo plano, anticipando y resolviendo los retos del día a día.
+          </p>
 
           <ul className="list-disc list-inside text-gray-600 text-sm md:text-base space-y-1">
-            <li>Desarrollo de sistemas escalables con enfoque modular</li>
-            <li>Integración de modelos LLM, RAG, visión e IA personalizada</li>
-            <li>Automatización inteligente con flujos guiados por contexto</li>
-            <li>Diseño de arquitecturas ágiles, seguras y listas para escalar</li>
-            <li>Procesos de DevOps y MLOps optimizados para iteración rápida</li>
+            <li>Eliminamos tareas repetitivas que consumen recursos.</li>
+            <li>Conectamos y hacemos dialogar tus sistemas actuales.</li>
+            <li>Convertimos tus procesos en motores de eficiencia.</li>
+            <li>Preparamos tu empresa para escalar sin limitaciones.</li>
+            <li>Creamos soluciones que se adaptan a ti, no al revés.</li>
           </ul>
-
         </div>
 
         {/* Columna Derecha */}
         <div className="relative w-full h-[300px] md:h-[500px] shadow-xl overflow-hidden">
           <Image
-            src="/code.png"
-            alt="Captura de VSCode"
+            src="/codeArquitectura.png"
+            alt="Presentación de GLYNNE"
             fill
-            className="object-100% object-top"
+            className="object-cover object-center"
           />
         </div>
       </div>

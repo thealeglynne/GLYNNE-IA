@@ -19,24 +19,24 @@ export default function Home() {
     <>
       <Head>
         {/* SEO Básico */}
-        <title>GLYNNE | Inteligencia Artificial y Automatización Empresarial</title>
+        <title>GLYNNE | Software a la medida y automatización empresarial</title>
         <meta
           name="description"
-          content="GLYNNE impulsa la autonomía empresarial mediante inteligencia artificial, automatización de procesos, arquitecturas escalables y agentes inteligentes diseñados para crecer con tu empresa."
+          content="En GLYNNE ayudamos a empresas a transformar su operación con software a la medida, automatización inteligente e integración de IA en sus sistemas actuales."
         />
         <meta
           name="keywords"
-          content="GLYNNE, automatización empresarial, inteligencia artificial, arquitectura escalable, integración de APIs, agentes autónomos, orquestación de procesos, LangChain, Supabase, Next.js, RPA, BPA, low-code, no-code, eficiencia operativa"
+          content="software a la medida, automatización empresarial, inteligencia artificial, integración de sistemas, modernización tecnológica, eficiencia operativa, GLYNNE"
         />
-        <meta name="author" content="GLYNNE AI Systems" />
+        <meta name="author" content="GLYNNE" />
         <meta name="robots" content="index, follow" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="GLYNNE – IA y Automatización Empresarial" />
+        <meta property="og:title" content="GLYNNE – Software y automatización para empresas" />
         <meta
           property="og:description"
-          content="Integra IA y automatización en cada área de tu empresa con arquitecturas modulares, nodos inteligentes y agentes personalizados."
+          content="Modernizamos la operación de tu empresa con soluciones de software personalizadas, integración de IA y automatización de procesos."
         />
         <meta property="og:image" content="https://glynne-ia-6rjd.vercel.app/meta-banner.jpg" />
         <meta property="og:url" content="https://glynne-ia-6rjd.vercel.app/" />
@@ -44,10 +44,10 @@ export default function Home() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="GLYNNE – IA y Automatización Empresarial" />
+        <meta name="twitter:title" content="GLYNNE – Software y automatización para empresas" />
         <meta
           name="twitter:description"
-          content="Transforma tu empresa con IA: orquestación de procesos, agentes inteligentes y automatización escalable."
+          content="Transforma tu negocio con software a la medida, integración de IA y automatización de procesos."
         />
         <meta name="twitter:image" content="https://glynne-ia-6rjd.vercel.app/meta-banner.jpg" />
 
@@ -69,7 +69,9 @@ export default function Home() {
             <section id="hero">
               <Main1 />
             </section>
-
+            <section id="beneficios">
+              <Main4 />
+            </section>
             <section id="cards">
               <MainCards />
             </section>
@@ -80,10 +82,6 @@ export default function Home() {
 
             <section id="logos">
               <MainLogos />
-            </section>
-
-            <section id="beneficios">
-              <Main4 />
             </section>
 
             <section id="casos-uso">

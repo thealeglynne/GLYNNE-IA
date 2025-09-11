@@ -34,11 +34,13 @@ export default function TechShowcaseContainer() {
       {/* Contenido */}
       <div className="relative z-10 w-full max-w-5xl flex flex-col items-center text-center space-y-8 bg-white/70 backdrop-blur-xl p-6 sm:p-10 ring-1 ring-black/10 shadow-xl rounded-3xl">
         <h2 className="text-xl md:text-2xl font-bold text-gray-900 leading-snug tracking-tight">
-          Potencia tu arquitectura con lo mejor en tecnología
+          Tecnología de clase mundial al servicio de tu empresa
         </h2>
 
         <p className="max-w-3xl text-gray-600 text-sm md:text-base leading-relaxed font-medium">
-          Trabajamos con un stack moderno, robusto y validado por la industria. Estas herramientas nos permiten construir soluciones escalables, eficientes y listas para evolucionar con tu negocio.
+          En GLYNNE usamos las mismas tecnologías que impulsan a las compañías más innovadoras del mundo.  
+          Esto significa que cada solución que construimos es rápida, segura y capaz de crecer al mismo ritmo que tu negocio.  
+          No se trata solo de herramientas: se trata de poner la tecnología adecuada en tus manos para que tu empresa gane eficiencia, reduzca costos y esté preparada para el futuro.
         </p>
 
         {/* Carrusel de logos */}

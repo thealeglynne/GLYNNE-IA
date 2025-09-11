@@ -7,45 +7,46 @@ import {
   FaDatabase,
   FaProjectDiagram,
   FaBolt,
+  FaClipboardCheck,
 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const services = [
   {
     icon: <FaRobot size={40} className="text-orange-500 drop-shadow-sm" />,
-    title: 'AUTOMATIZACIÓN',
+    title: 'Automatización',
     description:
-      'La IA permite automatizar tareas repetitivas, mejorando la eficiencia y reduciendo errores humanos sin importar la industria.',
+      'Hacemos que las tareas repetitivas se hagan solas, para que tu equipo tenga más tiempo en lo que realmente importa.',
   },
   {
     icon: <FaChartLine size={40} className="text-orange-500 drop-shadow-sm" />,
-    title: 'PREDICCIÓN',
+    title: 'Predicción',
     description:
-      'Modelos predictivos para anticipar demanda, comportamiento de clientes o mantenimiento preventivo.',
+      'Te ayudamos a anticipar lo que viene: clientes, ventas o posibles problemas antes de que pasen.',
   },
   {
     icon: <FaCogs size={40} className="text-orange-500 drop-shadow-sm" />,
-    title: 'OPTIMIZACIÓN',
+    title: 'Optimización',
     description:
-      'Optimiza procesos logísticos, operativos o financieros con algoritmos inteligentes adaptativos.',
+      'Encontramos formas más rápidas y eficientes de hacer las cosas, reduciendo costos y errores.',
+  },
+  {
+    icon: <FaClipboardCheck size={40} className="text-orange-500 drop-shadow-sm" />,
+    title: 'Auditorías con IA',
+    description:
+      'Analizamos tus procesos con inteligencia artificial para detectar mejoras, ahorrar tiempo y aumentar productividad.',
   },
   {
     icon: <FaDatabase size={40} className="text-orange-500 drop-shadow-sm" />,
-    title: 'GESTIÓN DE DATOS',
+    title: 'Gestión de Datos',
     description:
-      'Clasifica, analiza y estructura grandes volúmenes de datos automáticamente con NLP y ML.',
-  },
-  {
-    icon: <FaProjectDiagram size={40} className="text-orange-500 drop-shadow-sm" />,
-    title: 'PROCESOS INTELIGENTES',
-    description:
-      'Transforma flujos de negocio tradicionales en sistemas autoajustables e inteligentes.',
+      'Organizamos y damos sentido a tus datos para que se conviertan en información útil para tu negocio.',
   },
   {
     icon: <FaBolt size={40} className="text-orange-500 drop-shadow-sm" />,
-    title: 'RESPUESTAS EN TIEMPO REAL',
+    title: 'Respuestas en Tiempo Real',
     description:
-      'Implementa sistemas con IA que responden en tiempo real a clientes, procesos o cambios de contexto.',
+      'Creamos sistemas que reaccionan al instante a clientes, cambios o nuevas oportunidades.',
   },
 ];
 
@@ -94,7 +95,9 @@ export default function Main6() {
             Servicios
           </h2>
           <p className="text-gray-700 max-w-3xl mx-auto mt-4 text-base md:text-lg">
-            La inteligencia artificial puede escalar y optimizar cualquier proceso sin importar el sector o industria. Aquí algunas formas de aplicarla.
+            Lo que hacemos es simple: usamos inteligencia artificial para que tu
+            negocio trabaje más rápido, con menos errores y con más claridad en
+            la toma de decisiones.
           </p>
         </motion.div>
 

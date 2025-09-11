@@ -21,6 +21,8 @@ export default function Header() {
 
   const navItems = [
     { label: 'Home', path: '/' },
+    { label: 'Nostros', path: '/somos' },
+    { label: 'Nuestros servicios IA', path: '/servicesAI' },
     { label: 'Arquitectura', path: '/arquitectura' },
     { label: 'Automatización', path: '/automatizacion' },
     { label: 'Integración', path: '/integracion' }, 

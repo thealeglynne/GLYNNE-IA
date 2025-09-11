@@ -22,10 +22,12 @@ export default function Header() {
   const navItems = [
     { label: 'Home', path: '/' },
     { label: 'Arquitectura', path: '/arquitectura' },
+    { label: 'Nostros', path: '/somos' },
+    { label: 'Nuestros servicios IA', path: '/servicesAI' },
     { label: 'Integración', path: '/integracion' },
     { label: 'Autonomía', path: '/autonomia' },
     { label: 'Contact', path: '/contact' },
-
+  
     { label: 'GLY-IA', path: 'https://glynne-sst-ai-hsiy.vercel.app/' },
   ];
 

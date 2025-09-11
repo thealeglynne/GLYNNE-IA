@@ -22,7 +22,8 @@ export default function MainGlyIAIntro() {
       <div
         className="relative z-10 w-full max-w-5xl min-h-[70vh] rounded-3xl p-6 sm:p-10 text-center flex flex-col items-center justify-center space-y-6 shadow-xl ring-1 ring-black/10 overflow-hidden"
         style={{
-          backgroundImage: "url('https://i.pinimg.com/originals/84/99/f6/8499f609e22630dd88d057e58fb5617e.gif')", // imagen de fondo del contenedor
+          backgroundImage:
+            "url('https://i.pinimg.com/1200x/cb/33/e1/cb33e1e09df38cd388f197575ac8be83.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -33,23 +34,33 @@ export default function MainGlyIAIntro() {
         {/* Contenido */}
         <div className="relative z-10">
           <h2 className="text-lg md:text-2xl font-bold text-white tracking-tight">
-            Bienvenido a GLYNNE: Software e inteligencia para empresas del futuro
+            Descubre el poder de la IA aplicada a tu negocio
           </h2>
 
           <p className="text-gray-200 text-sm md:text-base leading-relaxed font-medium max-w-3xl mx-auto">
-            En GLYNNE no solo digitalizamos procesos: diseñamos soluciones de software e inteligencia artificial que se adaptan a tu empresa, reducen costos y mejoran la eficiencia en cada área.
+            Los ejemplos que ves en nuestros videos no son solo demostraciones:{" "}
+            <span className="font-bold text-white">
+              son herramientas reales que puedes probar ahora mismo
+            </span>.
           </p>
 
           <p className="text-gray-200 text-sm md:text-base leading-relaxed font-medium max-w-3xl mx-auto">
-            Nuestro enfoque va más allá de la automatización. Creamos sistemas capaces de analizar, anticipar y optimizar tu operación para que tu negocio funcione con mayor autonomía y escalabilidad.
+            En GLYNNE construimos soluciones de software e inteligencia artificial que
+            <span className="font-semibold text-white"> analizan, optimizan y transforman</span> 
+            procesos empresariales en ventas, soporte, operaciones y más.
           </p>
 
-          <img src="/logo.png" alt="Logo GLY-IA" className="w-20 mt-4 mb-2 mx-auto" />
+          <img
+            src="/logo.png"
+            alt="Logo GLY-IA"
+            className="w-20 mt-4 mb-2 mx-auto"
+          />
 
           <p className="text-sm md:text-base text-gray-100 font-semibold">
-            ¿Quieres conocer oportunidades de mejora en tu empresa?{" "}
-            Prueba <span className="text-white font-bold">GLY-IA</span>, nuestra IA de diagnóstico que realiza una{" "}
-            <u>evaluación inicial gratuita</u>. ¡Sin compromiso!
+            ¿Quieres pasar de ver la teoría a{" "}
+            <span className="text-white font-bold">usarla en tu negocio</span>?  
+            Haz clic y prueba nuestras <u>IA de diagnóstico</u>.  
+            <span className="text-white"> ¡Gratis y sin compromiso!</span>
           </p>
 
           <button
@@ -57,7 +68,7 @@ export default function MainGlyIAIntro() {
             className="relative mt-6 px-10 py-4 text-base font-semibold bg-white text-black shadow-xl overflow-hidden rounded-xl group transition-all duration-300"
           >
             <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-black/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
-            <span className="relative z-10">Probar GLY-IA</span>
+            <span className="relative z-10">Probar ahora las IA</span>
           </button>
         </div>
       </div>
