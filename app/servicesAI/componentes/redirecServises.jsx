@@ -23,13 +23,14 @@ export default function MainGlyIAIntro() {
         className="relative z-10 w-full max-w-5xl min-h-[70vh] rounded-3xl p-6 sm:p-10 text-center flex flex-col items-center justify-center space-y-6 shadow-xl ring-1 ring-black/10 overflow-hidden"
         style={{
           backgroundImage:
-            "url('https://i.pinimg.com/1200x/cb/33/e1/cb33e1e09df38cd388f197575ac8be83.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+            "url('/pngPerson2.png')",
+          backgroundSize: '200%',
+
+          backgroundPosition: 'center -1000px' , 
         }}
       >
-        {/* Overlay oscuro ajustado al 100% */}
-        <div className="absolute inset-0 w-full h-full bg-black/70 z-0" />
+        {/* Blur overlay en vez de sombra negra */}
+        <div className="absolute inset-0 w-full h-full backdrop-blur-md bg-white/10 z-0" />
 
         {/* Contenido */}
         <div className="relative z-10">
