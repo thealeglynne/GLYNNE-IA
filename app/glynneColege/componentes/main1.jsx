@@ -38,7 +38,7 @@ export default function VideoBackground() {
           className={`text-white text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold tracking-wide transition-all duration-1000 ease-out
             ${showContent ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-2 blur-sm'}`}
         >
-          AUTONOMÍA
+          ESTUDIA Y CREA IA CON GLYNNE 
         </h1>
 
         {/* Logo pequeño */}

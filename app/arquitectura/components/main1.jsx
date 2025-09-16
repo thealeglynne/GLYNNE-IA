@@ -12,7 +12,7 @@ export default function VideoBackground() {
 
   return (
     <div className="relative w-full h-screen overflow-hidden mt-[60px]">
-      {/* Video de fondo */}
+      {/* Video de fondo desde Cloudinary */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         autoPlay
@@ -21,7 +21,10 @@ export default function VideoBackground() {
         playsInline
         preload="auto"
       >
-        <source src="/Arquitectura.mp4" type="video/mp4" />
+        <source
+          src="https://res.cloudinary.com/dpdyco5po/video/upload/f_auto,q_auto/integracionV_zwpblj.mp4"
+          type="video/mp4"
+        />
         Tu navegador no soporta videos HTML5.
       </video>
 
@@ -30,7 +33,7 @@ export default function VideoBackground() {
 
       {/* Contenido centrado */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
-        {/* Texto Banner - reducido */}
+        {/* Texto Banner */}
         <h1
           className={`text-white text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold tracking-wide transition-all duration-1000 ease-out
             ${showContent ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-2 blur-sm'}`}

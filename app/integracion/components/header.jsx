@@ -19,17 +19,46 @@ export default function Header() {
 
   const handleCloseMenu = () => setIsMenuOpen(false);
 
+  // Función para despertar servicios de backend de forma silenciosa
+  const wakeUpServers = async () => {
+    try {
+      await Promise.all([
+        fetch('https://gly-ai-brain.onrender.com', { method: 'GET' }),
+        fetch('https://gly-tts-back.onrender.com/conversar', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ texto: 'ping' }),
+        }),
+        fetch('https://gly-csv-service-3.onrender.com', { method: 'GET' }),
+      ]);
+    } catch (error) {
+      console.error('Error al despertar los servicios:', error);
+    }
+  };
+
   const navItems = [
     { label: 'Home', path: '/' },
-    { label: 'Nostros', path: '/somos' },
-    { label: 'Nuestros servicios IA', path: '/servicesAI' },
     { label: 'Arquitectura', path: '/arquitectura' },
     { label: 'Automatización', path: '/automatizacion' },
+    { label: 'Integración', path: '/integracion' },
     { label: 'Autonomía', path: '/autonomia' },
     { label: 'Contact', path: '/contact' },
-
+    { label: 'Nostros', path: '/somos' },
+    { label: 'Nuestros servicios IA', path: '/servicesAI' },
+    { label: 'Estudia IA con GLYNNE', path: '/glynneColege' },
     { label: 'GLY-IA', path: 'https://glynne-sst-ai-hsiy.vercel.app/' },
   ];
+
+  // Función de navegación con wakeUpServers
+  const handleNavClick = async (path) => {
+    wakeUpServers(); // Llamada silenciosa
+    if (path.startsWith('http')) {
+      window.open(path, '_blank'); // abrir links externos
+    } else {
+      router.push(path); // navegación interna
+    }
+    handleCloseMenu(); // cerrar menu mobile si estaba abierto
+  };
 
   return (
     <header
@@ -37,28 +66,35 @@ export default function Header() {
         isScrolled ? 'bg-white shadow-md' : 'bg-white'
       }`}
     >
-      {/* Logo más pequeño */}
+      {/* Logo */}
       <img
         src="/logo2.png"
         alt="Logo"
         className="h-6 sm:h-7 md:h-8 cursor-pointer"
-        onClick={() => router.push('/')}
+        onClick={() => handleNavClick('/')}
       />
 
-      {/* Desktop Nav compacto */}
+      {/* Desktop Nav */}
       <nav className="hidden lg:flex gap-3 xl:gap-5 items-center">
-        {navItems.map((item) => (
-          <button
-            key={item.label}
-            onClick={() => router.push(item.path)}
-            className="text-black hover:text-neutral-600 transition text-xs sm:text-sm"
-          >
-            {item.label}
-          </button>
-        ))}
+        {navItems.map((item, index) => {
+          const isHighlighted = index >= navItems.length - 4; // últimos 4 botones
+          return (
+            <button
+              key={item.label}
+              onClick={() => handleNavClick(item.path)}
+              className={`transition text-xs sm:text-sm ${
+                isHighlighted
+                  ? 'font-bold text-orange-500 hover:text-orange-600'
+                  : 'font-normal text-black hover:text-neutral-600'
+              }`}
+            >
+              {item.label}
+            </button>
+          );
+        })}
       </nav>
 
-      {/* Toggle para mobile */}
+      {/* Mobile toggle */}
       <div className="lg:hidden">
         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-black">
           {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -72,18 +108,22 @@ export default function Header() {
         }`}
       >
         <div className="flex flex-col divide-y divide-black/10">
-          {navItems.map((item) => (
-            <button
-              key={item.label}
-              onClick={() => {
-                router.push(item.path);
-                handleCloseMenu();
-              }}
-              className="text-black hover:text-neutral-600 px-6 py-3 text-left text-sm"
-            >
-              {item.label}
-            </button>
-          ))}
+          {navItems.map((item, index) => {
+            const isHighlighted = index >= navItems.length - 4;
+            return (
+              <button
+                key={item.label}
+                onClick={() => handleNavClick(item.path)}
+                className={`px-6 py-3 text-left text-sm transition ${
+                  isHighlighted
+                    ? 'font-bold text-orange-500 hover:text-orange-600'
+                    : 'font-normal text-black hover:text-neutral-600'
+                }`}
+              >
+                {item.label}
+              </button>
+            );
+          })}
         </div>
       </div>
     </header>

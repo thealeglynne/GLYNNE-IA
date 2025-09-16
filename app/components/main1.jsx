@@ -12,18 +12,21 @@ export default function VideoBackground() {
 
   return (
     <div className="relative w-full h-screen overflow-hidden mt-[60px]">
-      {/* Video de fondo */}
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-      >
-        <source src="/main1.mp4" type="video/mp4" />
-        Tu navegador no soporta videos HTML5.
-      </video>
+      {/* Video de fondo desde Cloudinary */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        <video
+          src="https://res.cloudinary.com/dpdyco5po/video/upload/f_auto,q_auto/main1_y4ivc3.mp4"
+          poster="https://res.cloudinary.com/dpdyco5po/video/upload/main1_y4ivc3.jpg"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="w-full h-full object-cover"
+        >
+          Tu navegador no soporta videos HTML5.
+        </video>
+      </div>
 
       {/* Overlay oscuro */}
       <div className="absolute inset-0 bg-black/50 z-10" />
