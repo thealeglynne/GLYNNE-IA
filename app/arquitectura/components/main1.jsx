@@ -22,7 +22,8 @@ export default function VideoBackground() {
         preload="auto"
       >
         <source
-          src="https://res.cloudinary.com/dpdyco5po/video/upload/f_auto,q_auto/Hailuo_Video_quiero_que_a_esta_iimagen_le_c_404445423176769539_row0fw.mp4"
+          src="https://res.cloudinary.com/dpdyco5po/video/upload/f_auto,q_auto/Generated_File_September_17_2025_-_12_29PM_bj00ma.mp4"
+          poster="https://res.cloudinary.com/dpdyco5po/video/upload/Generated_File_September_17_2025_-_12_29PM_bj00ma.jpg"
           type="video/mp4"
         />
         Tu navegador no soporta videos HTML5.
