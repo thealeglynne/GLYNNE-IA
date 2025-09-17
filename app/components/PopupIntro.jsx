@@ -58,7 +58,7 @@ export default function PopupIntro({ children }) {
 
             {/* Imagen de fondo */}
             <img
-              src="https://i.pinimg.com/1200x/63/d4/e0/63d4e0e4eff3f423c7af85237f43bf60.jpg"
+              src="https://i.pinimg.com/1200x/31/a7/d8/31a7d8a337f73766d58a8033ebc20507.jpg"
               alt="Fondo popup"
               className="absolute inset-0 w-full h-full object-cover object-center opacity-90 z-0 scale-x-[-1]" 
             />
