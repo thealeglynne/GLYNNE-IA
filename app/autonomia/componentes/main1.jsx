@@ -22,7 +22,7 @@ export default function VideoBackground() {
         preload="auto"
       >
         <source
-          src="https://res.cloudinary.com/dpdyco5po/video/upload/f_auto,q_auto/auttomatizacion_hrq72p.mp4"
+          src="https://res.cloudinary.com/dpdyco5po/video/upload/f_auto,q_auto/Generated_File_September_17_2025_-_12_33PM_txreju.mp4"
           type="video/mp4"
         />
         Tu navegador no soporta videos HTML5.
