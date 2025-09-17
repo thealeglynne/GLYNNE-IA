@@ -77,15 +77,15 @@ export default function Header() {
       {/* Desktop Nav */}
       <nav className="hidden lg:flex gap-3 xl:gap-5 items-center">
         {navItems.map((item, index) => {
-          const isHighlighted = index >= navItems.length - 4; // últimos 4 botones
+          const isHighlighted = index >= navItems.length - 4; // últimos 4
           return (
             <button
               key={item.label}
               onClick={() => handleNavClick(item.path)}
-              className={`transition text-xs sm:text-sm ${
+              className={`transition text-xs sm:text-sm font-normal text-black ${
                 isHighlighted
-                  ? 'font-bold text-orange-500 hover:text-orange-600'
-                  : 'font-normal text-black hover:text-neutral-600'
+                  ? 'underline' // subrayado permanente
+                  : 'hover:text-neutral-600 hover:underline' // normal con hover
               }`}
             >
               {item.label}
@@ -114,10 +114,10 @@ export default function Header() {
               <button
                 key={item.label}
                 onClick={() => handleNavClick(item.path)}
-                className={`px-6 py-3 text-left text-sm transition ${
+                className={`px-6 py-3 text-left text-sm transition font-normal text-black ${
                   isHighlighted
-                    ? 'font-bold text-orange-500 hover:text-orange-600'
-                    : 'font-normal text-black hover:text-neutral-600'
+                    ? 'underline'
+                    : 'hover:text-neutral-600 hover:underline'
                 }`}
               >
                 {item.label}

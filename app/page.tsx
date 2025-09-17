@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Header from './components/header';
 import PopupIntro from './components/PopupIntro';
 import Main1 from './components/main1';
-import Presentacion from './components/precentacion';
+
 import AutomationDashboard from './components/dashboard';
 import Main4 from './components/main4';
 import MainCards from './components/mainCards';
@@ -77,7 +77,7 @@ export default function Home() {
             </section>
 
             <section id="presentacion">
-              <Presentacion />
+
             </section>
 
             <section id="logos">

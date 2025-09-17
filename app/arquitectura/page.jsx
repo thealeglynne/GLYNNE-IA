@@ -10,7 +10,7 @@ import Main2 from './components/main2';
 import Main3 from './components/main3';
 import Main4 from './components/main4';
 import Main5 from './components/main5';
-import Main6 from './components/GLY-IA';
+
 import Main7 from '../components/main5';
 
 function AnimatedSection({ children, className = '' }) {
@@ -102,7 +102,7 @@ export default function ArquitecturaPage() {
         {/* Aquí adentro asegúrate de que uno de los componentes (ej. Main1) tenga el <h1> */}
         <Main1 />
         <Main2 />
-        <Main6 />
+
         <Main3 />
         <Main4 />
         <Main5 />
