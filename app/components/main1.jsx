@@ -2,36 +2,44 @@
 
 import { useEffect, useState } from 'react';
 
-export default function VideoBackground() {
+export default function ImageBackground() {
   const [showLogo, setShowLogo] = useState(false);
+  const [bgImage, setBgImage] = useState('/main1.jpg'); // Imagen por defecto
 
+  // Mostrar logo con animación
   useEffect(() => {
-    const timeout = setTimeout(() => setShowLogo(true), 1000); // 1 segundo
+    const timeout = setTimeout(() => setShowLogo(true), 1000);
     return () => clearTimeout(timeout);
+  }, []);
+
+  // Cambiar imagen según ancho de pantalla
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 700) {
+        setBgImage('https://i.pinimg.com/736x/9e/a9/af/9ea9af19c18e476fb4d7717873ded2a1.jpg'); // Imagen para móviles
+      } else {
+        setBgImage('/main1.jpg'); // Imagen para escritorio
+      }
+    };
+
+    handleResize(); // Comprobar al montar
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
     <div className="relative w-full h-screen overflow-hidden mt-[60px]">
-      {/* Video de fondo desde Cloudinary */}
-      <div className="absolute top-0 left-0 w-full h-full">
-        <video
-          src="https://res.cloudinary.com/dpdyco5po/video/upload/f_auto,q_auto/main1_y4ivc3.mp4"
-          poster="https://res.cloudinary.com/dpdyco5po/video/upload/main1_y4ivc3.jpg"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="w-full h-full object-cover"
-        >
-          Tu navegador no soporta videos HTML5.
-        </video>
-      </div>
+      {/* Imagen de fondo */}
+      <div
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+        style={{ backgroundImage: `url('${bgImage}')` }}
+      />
 
       {/* Overlay oscuro */}
       <div className="absolute inset-0 bg-black/50 z-10" />
 
-      {/* Contenido encima del video */}
+      {/* Contenido encima de la imagen */}
       <div className="relative z-20 flex items-center justify-center h-full mt-[0px]">
         <img
           src="/logo.png"

@@ -16,7 +16,7 @@ export default function ServiceCardsWhite() {
           <Link href="/arquitectura" className="md:col-span-3">
             <div
               className="relative text-white h-[260px] bg-cover bg-center shadow-md hover:scale-[1.01] transition-all duration-300"
-              style={{ backgroundImage: "url('https://i.pinimg.com/736x/6e/6d/f2/6e6df20425ea3c6229b9e095782a3432.jpg')" }}
+              style={{ backgroundImage: "url('https://i.pinimg.com/736x/fc/42/32/fc4232fc0d50ba7cf0d683e8cd482c75.jpg')" }}
             >
               <div className="absolute inset-0 bg-black/60 p-6 flex flex-col justify-end">
                 <h3 className="text-xl font-bold mb-1">Arquitectura Escalable con IA</h3>
@@ -32,7 +32,7 @@ export default function ServiceCardsWhite() {
           <Link href="/autonomia" className="md:col-span-3">
             <div
               className="relative text-white h-[260px] bg-cover bg-center shadow-md hover:scale-[1.01] transition-all duration-300"
-              style={{ backgroundImage: "url('https://i.pinimg.com/originals/0b/51/b9/0b51b94dff9846dbdef9c388f701e14e.gif')" }}
+              style={{ backgroundImage: "url('https://i.pinimg.com/1200x/18/dc/26/18dc26a2d817f311fd2b4e0f432da6b4.jpg')" }}
             >
               <div className="absolute inset-0 bg-black/60 p-6 flex flex-col justify-end">
                 <h3 className="text-xl font-bold mb-1">Sistemas Autónomos Inteligentes</h3>
@@ -48,7 +48,7 @@ export default function ServiceCardsWhite() {
           <Link href="/integracion" className="md:col-span-4">
             <div
               className="relative text-white h-[220px] bg-cover bg-center shadow-md hover:scale-[1.01] transition-all duration-300"
-              style={{ backgroundImage: "url('https://i.pinimg.com/736x/7e/37/fb/7e37fb2cb6470f1c3051b881ab231801.jpg')" }}
+              style={{ backgroundImage: "url('https://i.pinimg.com/1200x/77/0a/52/770a52c09426fdfacb58cd15a6a7a3e5.jpg')" }}
             >
               <div className="absolute inset-0 bg-black/60 p-6 flex flex-col justify-end">
                 <h3 className="text-lg font-bold mb-1">Integración de Modelos de IA</h3>
@@ -63,7 +63,7 @@ export default function ServiceCardsWhite() {
           {/* Card 4 - Mensaje Central */}
           <div
             className="relative md:col-span-2 text-white h-[220px] bg-cover bg-center shadow-md hover:scale-[1.01] transition-all duration-300 flex items-center justify-center text-center"
-            style={{ backgroundImage: "url('https://i.pinimg.com/736x/7c/fa/31/7cfa31a5a4fe61388086bc996fa6273b.jpg')" }}
+            style={{ backgroundImage: "url('https://i.pinimg.com/1200x/98/6c/6d/986c6d78ad19430423c00a93aa3a98af.jpg')" }}
           >
             <div className="absolute inset-0 bg-black/60 flex items-center justify-center p-4">
               <h3 className="text-lg font-bold leading-tight">

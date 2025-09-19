@@ -14,7 +14,7 @@ export default function ServiceCardsWhite() {
         <Link href="/arquitectura" className="md:col-span-3">
           <div
             className="relative text-white h-[350px] bg-cover bg-center shadow-md hover:scale-[1.01] transition-all duration-300"
-            style={{ backgroundImage: "url('https://i.pinimg.com/736x/17/42/9a/17429a0ce1a99f308cafc775e103892a.jpg')" }}
+            style={{ backgroundImage: "url('https://i.pinimg.com/1200x/c6/af/43/c6af4328c9154671bd8328f66d46435b.jpg')" }}
           >
             <div className="absolute inset-0 bg-black/60 p-8 flex flex-col justify-end">
               <h3 className="text-2xl font-bold mb-2">Arquitectura Escalable</h3>
@@ -28,7 +28,7 @@ export default function ServiceCardsWhite() {
         <Link href="/automatizacion" className="md:col-span-3">
           <div
             className="relative text-white h-[350px] bg-cover bg-center shadow-md hover:scale-[1.01] transition-all duration-300"
-            style={{ backgroundImage: "url('https://i.pinimg.com/736x/d8/fe/a9/d8fea9019dca5fb238936b8b23bb44f9.jpg')" }}
+            style={{ backgroundImage: "url('https://i.pinimg.com/1200x/77/a4/2f/77a42f4cf4bef3d12abff5306f756621.jpg')" }}
           >
             <div className="absolute inset-0 bg-black/60 p-8 flex flex-col justify-end">
               <h3 className="text-2xl font-bold mb-2">Automatización Inteligente</h3>
@@ -42,7 +42,7 @@ export default function ServiceCardsWhite() {
         <Link href="/integracion" className="md:col-span-3">
           <div
             className="relative text-white h-[300px] bg-cover bg-center shadow-md hover:scale-[1.01] transition-all duration-300"
-            style={{ backgroundImage: "url('https://i.pinimg.com/736x/28/86/b3/2886b300132e53cb084667598d494306.jpg')" }}
+            style={{ backgroundImage: "url('https://i.pinimg.com/1200x/02/01/d2/0201d282076830b79cad086f73ed3259.jpg')" }}
           >
             <div className="absolute inset-0 bg-black/60 p-8 flex flex-col justify-end">
               <h3 className="text-xl font-bold mb-2">Integración de Modelos</h3>
@@ -55,7 +55,7 @@ export default function ServiceCardsWhite() {
         {/* Center block - Texto motivador */}
         <div
           className="relative md:col-span-3 text-white h-[300px] bg-cover bg-center shadow-md hover:scale-[1.01] transition-all duration-300 flex items-center justify-center text-center"
-          style={{ backgroundImage: "url('https://i.pinimg.com/736x/d2/68/a4/d268a442106ebcecbe822b91278e06d2.jpg')" }}
+          style={{ backgroundImage: "url('https://i.pinimg.com/736x/3e/db/88/3edb8802c2143bb86a2371ac357ceb55.jpg')" }}
         >
           <div className="absolute inset-0 bg-black/60 flex items-center justify-center p-4">
             <h3 className="text-xl font-bold">Automatiza todo con IA</h3>

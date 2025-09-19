@@ -23,7 +23,7 @@ export default function MainGlyIAIntro() {
         className="relative z-10 w-full max-w-5xl min-h-[70vh] rounded-3xl p-6 sm:p-10 text-center flex flex-col items-center justify-center space-y-6 shadow-xl ring-1 ring-black/10 overflow-hidden"
         style={{
           backgroundImage:
-            "url('https://i.pinimg.com/736x/05/4d/c9/054dc929f098d5cd92a2df3a78d8868c.jpg')",
+            "url('https://i.pinimg.com/1200x/90/42/03/904203c11728db0d8f1a035129ca06d5.jpg')",
           backgroundSize: '200%',
           backgroundPosition: 'center -1000px',
         }}

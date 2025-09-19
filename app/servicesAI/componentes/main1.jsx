@@ -2,33 +2,41 @@
 
 import { useEffect, useState } from 'react';
 
-export default function VideoBackground() {
+export default function ResponsiveImageBackground() {
   const [showContent, setShowContent] = useState(false);
+  const [bgImage, setBgImage] = useState('/main1.jpg'); // Imagen por defecto
 
+  // Animación del contenido
   useEffect(() => {
     const timeout = setTimeout(() => setShowContent(true), 800);
     return () => clearTimeout(timeout);
   }, []);
 
+  // Cambiar imagen según tamaño de pantalla
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 700) {
+        setBgImage('https://i.pinimg.com/736x/29/5c/33/295c3373808b99b91853846c304401eb.jpg'); // Imagen móvil
+      } else {
+        setBgImage('/main-7.jpg'); // Imagen escritorio
+      }
+    };
+
+    handleResize(); // Revisar al montar
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="relative w-full h-screen overflow-hidden mt-[60px]">
-      {/* Video de fondo desde Cloudinary */}
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-      >
-        <source
-          src="https://res.cloudinary.com/dpdyco5po/video/upload/f_auto,q_auto/Hailuo_Video_quiero_que_a_esta_iimagen_le_c_404445423176769539_row0fw.mp4"
-          type="video/mp4"
-        />
-        Tu navegador no soporta videos HTML5.
-      </video>
+      {/* Imagen de fondo */}
+      <div
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+        style={{ backgroundImage: `url('${bgImage}')` }}
+      />
 
-      {/* Capa oscura */}
+      {/* Overlay oscuro */}
       <div className="absolute inset-0 bg-black/50 z-10" />
 
       {/* Contenido centrado */}

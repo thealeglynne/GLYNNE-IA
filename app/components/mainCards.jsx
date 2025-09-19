@@ -25,7 +25,7 @@ export default function ServiceCardsWhite() {
             className="relative text-white h-[350px] bg-cover bg-center shadow-md hover:scale-[1.01] transition-all duration-300"
             style={{
               backgroundImage:
-                "url('https://i.pinimg.com/originals/ff/73/c2/ff73c2e4fd87b09f16104599744b558a.gif')",
+                "url('https://i.pinimg.com/1200x/89/b6/6c/89b66c6afcb8cc04a2a63eb8dd6f0ad7.jpg')",
             }}
           >
             <div className="absolute inset-0 bg-black/60 p-8 flex flex-col justify-end">
@@ -45,7 +45,7 @@ export default function ServiceCardsWhite() {
             className="relative text-white h-[350px] bg-cover bg-center shadow-md hover:scale-[1.01] transition-all duration-300"
             style={{
               backgroundImage:
-                "url('https://i.pinimg.com/736x/84/d5/80/84d5809ad29ebb0151c59875fde2b350.jpg')",
+                "url('https://i.pinimg.com/736x/ce/8c/0a/ce8c0add25a68923e53d26379442f58b.jpg')",
             }}
           >
             <div className="absolute inset-0 bg-black/60 p-8 flex flex-col justify-end">
@@ -65,7 +65,7 @@ export default function ServiceCardsWhite() {
             className="relative text-white h-[300px] bg-cover bg-center shadow-md hover:scale-[1.01] transition-all duration-300"
             style={{
               backgroundImage:
-                "url('https://i.pinimg.com/736x/7e/37/fb/7e37fb2cb6470f1c3051b881ab231801.jpg')",
+                "url('https://i.pinimg.com/736x/bc/dc/03/bcdc0384ce2b49e18553f82b7b03eb2c.jpg')",
             }}
           >
             <div className="absolute inset-0 bg-black/60 p-8 flex flex-col justify-end">
@@ -84,7 +84,7 @@ export default function ServiceCardsWhite() {
           className="relative md:col-span-2 text-white h-[300px] bg-cover bg-center shadow-md hover:scale-[1.01] transition-all duration-300 flex items-center justify-center text-center"
           style={{
             backgroundImage:
-              "url('https://i.pinimg.com/736x/d2/68/a4/d268a442106ebcecbe822b91278e06d2.jpg')",
+              "url('https://i.pinimg.com/1200x/72/da/e2/72dae2a06cc027c2588798d78a9560f4.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-black/60 flex items-center justify-center p-4">
@@ -98,7 +98,7 @@ export default function ServiceCardsWhite() {
             className="relative text-white h-[300px] bg-cover bg-center shadow-md hover:scale-[1.01] transition-all duration-300"
             style={{
               backgroundImage:
-                "url('https://i.pinimg.com/originals/b1/51/cc/b151ccde97115d63665ef5b1362e7c41.gif')",
+                "url('https://i.pinimg.com/1200x/18/dc/26/18dc26a2d817f311fd2b4e0f432da6b4.jpg')",
             }}
           >
             <div className="absolute inset-0 bg-black/60 p-8 flex flex-col justify-end">
