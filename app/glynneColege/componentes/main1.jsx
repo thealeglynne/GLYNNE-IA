@@ -16,9 +16,9 @@ export default function ResponsiveImageBackground() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 700) {
-        setBgImage('https://i.pinimg.com/1200x/72/90/54/7290548d28e6e6c8b56fd0feb87e661c.jpg'); // Imagen móvil
+        setBgImage('https://i.pinimg.com/736x/78/60/c3/7860c3c83b3a6815194abb4ede155e40.jpg'); // Imagen móvil
       } else {
-        setBgImage('https://i.pinimg.com/1200x/ff/f5/20/fff520b15133cbc54a7409ac5e2b923f.jpg'); // Imagen escritorio
+        setBgImage('/popup1.jpg'); // Imagen escritorio
       }
     };
 

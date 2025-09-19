@@ -4,10 +4,15 @@ import { useState, useEffect } from 'react';
 export default function PopupIntro({ children }) {
   const [showPopup, setShowPopup] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+  const [bgImage, setBgImage] = useState(
+    'https://i.pinimg.com/1200x/31/a7/d8/31a7d8a337f73766d58a8033ebc20507.jpg'
+  );
+  const [isMobile, setIsMobile] = useState(false);
 
   const fullText =
     'GLYNNE transforma industrias creando profesionales expertos con inteligencia artificial para gestionar tus procesos.';
 
+  // Mostrar popup solo una vez
   useEffect(() => {
     const alreadyShown = sessionStorage.getItem('popupShown');
     if (!alreadyShown) {
@@ -16,9 +21,27 @@ export default function PopupIntro({ children }) {
     }
   }, []);
 
+  // Evitar scroll cuando el popup está activo
   useEffect(() => {
     document.body.style.overflow = showPopup ? 'hidden' : 'auto';
   }, [showPopup]);
+
+  // Cambiar imagen de fondo y tamaño según ancho de pantalla
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 700) {
+        setBgImage('https://i.pinimg.com/736x/47/2c/08/472c08b8cb24c6c1ad453a050fcacda7.jpg'); // imagen móvil
+        setIsMobile(true);
+      } else {
+        setBgImage('/intropopup.jpg'); // imagen escritorio
+        setIsMobile(false);
+      }
+    };
+
+    handleResize(); // Revisar al montar
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Función para despertar los servicios de backend
   const wakeUpServers = async () => {
@@ -30,7 +53,7 @@ export default function PopupIntro({ children }) {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ texto: 'ping' }),
         }),
-        fetch('https://gly-csv-service-3.onrender.com', { method: 'GET' })
+        fetch('https://gly-csv-service-3.onrender.com', { method: 'GET' }),
       ]);
     } catch (error) {
       console.error('Error al despertar los servicios:', error);
@@ -39,11 +62,11 @@ export default function PopupIntro({ children }) {
 
   const handleClose = () => {
     setFadeOut(true);
-    wakeUpServers(); // inicia la carga de recursos del backend de forma silenciosa
+    wakeUpServers();
     setTimeout(() => {
       setShowPopup(false);
       setFadeOut(false);
-    }, 500); // misma duración que la transición
+    }, 500);
   };
 
   return (
@@ -54,13 +77,17 @@ export default function PopupIntro({ children }) {
             fadeOut ? 'opacity-0' : 'opacity-100'
           }`}
         >
-           <div className="relative w-full max-w-[65vw] md:max-w-[65vw] lg:max-w-[60vw] h-[65vh] rounded-xl overflow-hidden shadow-2xl border border-white/20">
-
+          <div
+            className={`relative w-full max-w-[65vw] lg:max-w-[60vw] rounded-xl overflow-hidden shadow-2xl border border-white/20`}
+            style={{
+              height: isMobile ? '90vh' : '65vh',
+            }}
+          >
             {/* Imagen de fondo */}
             <img
-              src="https://i.pinimg.com/1200x/31/a7/d8/31a7d8a337f73766d58a8033ebc20507.jpg"
+              src={bgImage}
               alt="Fondo popup"
-              className="absolute inset-0 w-full h-full object-cover object-center opacity-90 z-0 scale-x-[-1]" 
+              className="absolute inset-0 w-full h-full object-cover object-center opacity-90 z-0 scale-x-[-1]"
             />
 
             {/* Capa oscura encima */}
