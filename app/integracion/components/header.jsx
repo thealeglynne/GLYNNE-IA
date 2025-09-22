@@ -23,7 +23,7 @@ export default function Header() {
   const wakeUpServers = async () => {
     try {
       await Promise.all([
-        fetch('https://gly-ai-brain.onrender.com', { method: 'GET' }),
+        fetch('https://gly-chat-v1-2.onrender.com', { method: 'GET' }),
         fetch('https://gly-tts-back.onrender.com/conversar', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
