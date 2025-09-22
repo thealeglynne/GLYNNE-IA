@@ -11,8 +11,8 @@ export default function MainCodeShowcase() {
     >
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
 
-        {/* Columna Izquierda - Imagen con SEO */}
-        <figure className="relative w-full h-[300px] md:h-[500px] shadow-xl overflow-hidden order-1 md:order-none">
+        {/* Columna Izquierda - Imagen con SEO (oculta en móviles) */}
+        <figure className="relative w-full h-[300px] md:h-[500px] shadow-xl overflow-hidden order-1 md:order-none hidden md:block">
           <Image
             src="/codeArquitectura.png"
             alt="Representación visual de arquitectura de código empresarial con inteligencia artificial de GLYNNE"
@@ -26,7 +26,7 @@ export default function MainCodeShowcase() {
         </figure>
 
         {/* Columna Derecha - Texto SEO */}
-        <article className="space-y-5 md:space-y-7">
+        <article className="space-y-5 md:space-y-7 max-w-xl mx-auto text-center md:text-left">
           <header>
             <h1 className="text-2xl md:text-4xl font-bold text-black leading-snug">
               Tu IA no puede vivir en ruinas: necesita una arquitectura sólida para crecer.
@@ -48,7 +48,7 @@ export default function MainCodeShowcase() {
           <h2 className="text-xl md:text-2xl font-semibold text-black">
             Principios de nuestra arquitectura de software inteligente
           </h2>
-          <ul className="list-disc list-inside text-gray-600 text-sm md:text-base space-y-1">
+          <ul className="list-disc list-inside text-gray-600 text-sm md:text-base space-y-1 text-left">
             <li>Fundaciones sólidas con <strong>infraestructuras modulares y escalables</strong></li>
             <li>Interiores inteligentes: APIs, pipelines y motores de datos interconectados</li>
             <li>IA en el núcleo: LLMs, RAG, visión computacional y agentes autónomos</li>

@@ -12,7 +12,6 @@ export default function PopupIntro({ children }) {
   const fullText =
     'GLYNNE transforma industrias creando profesionales expertos con inteligencia artificial para gestionar tus procesos.';
 
-  // Mostrar popup solo una vez
   useEffect(() => {
     const alreadyShown = sessionStorage.getItem('popupShown');
     if (!alreadyShown) {
@@ -21,29 +20,26 @@ export default function PopupIntro({ children }) {
     }
   }, []);
 
-  // Evitar scroll cuando el popup está activo
   useEffect(() => {
     document.body.style.overflow = showPopup ? 'hidden' : 'auto';
   }, [showPopup]);
 
-  // Cambiar imagen de fondo y tamaño según ancho de pantalla
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 700) {
-        setBgImage('https://i.pinimg.com/736x/47/2c/08/472c08b8cb24c6c1ad453a050fcacda7.jpg'); // imagen móvil
+        setBgImage('https://i.pinimg.com/736x/47/2c/08/472c08b8cb24c6c1ad453a050fcacda7.jpg');
         setIsMobile(true);
       } else {
-        setBgImage('/intropopup.jpg'); // imagen escritorio
+        setBgImage('/intropopup.jpg');
         setIsMobile(false);
       }
     };
 
-    handleResize(); // Revisar al montar
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Función para despertar los servicios de backend
   const wakeUpServers = async () => {
     try {
       await Promise.all([
@@ -78,9 +74,12 @@ export default function PopupIntro({ children }) {
           }`}
         >
           <div
-            className={`relative w-full max-w-[65vw] lg:max-w-[60vw] rounded-xl overflow-hidden shadow-2xl border border-white/20`}
+            className={`relative rounded-xl overflow-hidden shadow-2xl border border-white/20`}
             style={{
-              height: isMobile ? '90vh' : '65vh',
+              width: isMobile ? '100vw' : '65vw',
+              height: isMobile ? '100vh' : '65vh',
+              maxWidth: isMobile ? '100vw' : '60vw',
+              borderRadius: isMobile ? 0 : '1rem', // en móviles sin bordes
             }}
           >
             {/* Imagen de fondo */}
@@ -90,7 +89,7 @@ export default function PopupIntro({ children }) {
               className="absolute inset-0 w-full h-full object-cover object-center opacity-90 z-0 scale-x-[-1]"
             />
 
-            {/* Capa oscura encima */}
+            {/* Capa oscura */}
             <div className="absolute inset-0 bg-black/50 z-10" />
 
             {/* Contenido */}

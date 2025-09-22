@@ -23,7 +23,7 @@ export default function Header() {
   const wakeUpServers = async () => {
     try {
       await Promise.all([
-        fetch('https://gly-ai-brain.onrender.com', { method: 'GET' }),
+        fetch('https://gly-chat-v1-2.onrender.com', { method: 'GET' }),
         fetch('https://gly-tts-back.onrender.com/conversar', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -38,10 +38,7 @@ export default function Header() {
 
   const navItems = [
     { label: 'Home', path: '/' },
-    { label: 'Arquitectura', path: '/arquitectura' },
-    { label: 'Automatización', path: '/automatizacion' },
-    { label: 'Integración', path: '/integracion' },
-    { label: 'Autonomía', path: '/autonomia' },
+  
     { label: 'Contact', path: '/contact' },
     { label: 'Nostros', path: '/somos' },
     { label: 'Nuestros servicios IA', path: '/servicesAI' },
@@ -103,7 +100,7 @@ export default function Header() {
 
       {/* Mobile dropdown */}
       <div
-        className={`absolute top-full left-0 right-0 mt-2 bg-white shadow-md lg:hidden transform transition-all duration-300 origin-top ${
+        className={`absolute top-full left-0 right-0  bg-white shadow-md lg:hidden transform transition-all duration-300 origin-top ${
           isMenuOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none'
         }`}
       >
