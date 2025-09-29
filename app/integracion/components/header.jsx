@@ -24,7 +24,7 @@ export default function Header() {
     try {
       await Promise.all([
         fetch('https://gly-chat-v1-2.onrender.com', { method: 'GET' }),
-        fetch('https://gly-tts-back.onrender.com/conversar', {
+        fetch('https://gly-tts-v1.onrender.com/conversar', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ texto: 'ping' }),
