@@ -29,7 +29,7 @@ export default function Header() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ texto: 'ping' }),
         }),
-        fetch('https://gly-csv-service-3.onrender.com', { method: 'GET' }),
+        fetch('https://gly-csv-v2.onrender.com', { method: 'GET' }),
       ]);
     } catch (error) {
       console.error('Error al despertar los servicios:', error);
