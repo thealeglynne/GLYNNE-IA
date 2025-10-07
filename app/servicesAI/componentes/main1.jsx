@@ -2,61 +2,42 @@
 
 import { useEffect, useState } from 'react';
 
-export default function ResponsiveImageBackground() {
-  const [showContent, setShowContent] = useState(false);
-  const [bgImage, setBgImage] = useState('/main1.jpg'); // Imagen por defecto
+export default function Main1() {
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Animación del contenido
   useEffect(() => {
-    const timeout = setTimeout(() => setShowContent(true), 800);
-    return () => clearTimeout(timeout);
+    const checkScreenSize = () => setIsMobile(window.innerWidth < 500);
+    checkScreenSize();
+
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
-  // Cambiar imagen según tamaño de pantalla
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 700) {
-        setBgImage('https://i.pinimg.com/736x/29/5c/33/295c3373808b99b91853846c304401eb.jpg'); // Imagen móvil
-      } else {
-        setBgImage('/main-7.jpg'); // Imagen escritorio
-      }
-    };
+  // URLs de los videos
+  const desktopVideo =
+    'https://res.cloudinary.com/dpdyco5po/video/upload/f_auto,q_auto/1006_1_3_xdell8.mp4';
+  const mobileVideo =
+    'https://res.cloudinary.com/dpdyco5po/video/upload/movilGLY_s2ihya.mp4';
 
-    handleResize(); // Revisar al montar
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  const desktopPoster =
+    'https://res.cloudinary.com/dpdyco5po/video/upload/f_auto,q_auto/movilGLY_s2ihya.mp4.jpg';
+  const mobilePoster =
+    'https://res.cloudinary.com/dpdyco5po/video/upload/movilGLY_s2ihya.mp4.jpg';
 
   return (
-    <div className="relative w-full h-screen overflow-hidden mt-[60px]">
-      {/* Imagen de fondo */}
-      <div
-        className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: `url('${bgImage}')` }}
-      />
-
-      {/* Overlay oscuro */}
-      <div className="absolute inset-0 bg-black/50 z-10" />
-
-      {/* Contenido centrado */}
-      <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
-        {/* Texto Banner */}
-        <h1
-          className={`text-white text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold tracking-wide transition-all duration-1000 ease-out
-            ${showContent ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-2 blur-sm'}`}
-        >
-          conoce nuestros servicios IA
-        </h1>
-
-        {/* Logo pequeño */}
-        <img
-          src="/logo.png"
-          alt="Logo"
-          className={`mt-4 w-16 sm:w-20 md:w-24 lg:w-28 transition-all duration-1000 ease-out
-            ${showContent ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-2 blur-sm'}`}
-        />
-      </div>
-    </div>
+    <main className="w-[100vw] h-[100vh] overflow-hidden font-inter flex items-center justify-center bg-white">
+      <video
+        src={isMobile ? mobileVideo : desktopVideo}
+        poster={isMobile ? mobilePoster : desktopPoster}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="w-full h-full object-cover transition-all duration-500"
+      >
+        Tu navegador no soporta videos HTML5.
+      </video>
+    </main>
   );
 }

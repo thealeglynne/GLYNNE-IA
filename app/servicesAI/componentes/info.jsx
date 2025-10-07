@@ -1,65 +1,29 @@
 'use client';
 
-import Image from 'next/image';
-
 export default function MainCodeShowcase() {
   return (
-    <main className="w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-12 bg-white">
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+    <main className="w-screen min-h-screen flex items-center justify-center bg-white px-4 py-10 md:px-8 md:py-16">
+      <div className="w-full max-w-5xl bg-white rounded-2xl px-6 py-8 md:px-10 md:py-12 text-center">
+        <h1 className="text-lg md:text-2xl font-extrabold text-black leading-tight mb-6">
+          Una oportunidad para entender tus procesos de negoccio
+        </h1>
 
-        {/* Columna Izquierda */}
-        <div className="space-y-4 md:space-y-6 max-w-2xl mx-auto">
-          <h1 className="text-xl md:text-3xl font-bold text-black leading-snug text-center md:text-left">
-            Un resumen claro de lo que nuestra IA puede hacer por tu empresa
-          </h1>
+        <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-5">
+          <strong>GLY_ai</strong> es una inteligencia diseñada para conversar contigo, analizar tu negocio y ayudarte a descubrir cómo mejorarlo. 
+          No necesitas saber de tecnología: solo hablas con ella, y mientras lo haces, va entendiendo cómo funciona tu empresa, 
+          qué oportunidades tiene y en qué puede mejorar. 
+          GLY_ai transforma tus palabras en conocimiento y convierte ese conocimiento en acciones reales.
+        </p>
 
-          <p className="text-gray-700 text-sm md:text-base leading-relaxed text-center md:text-left">
-            En <strong>GLYNNE</strong>, no solo mostramos inteligencia artificial: 
-            te damos una visión clara de cómo estas tecnologías pueden ayudarte a 
-            <span className="font-semibold"> entender tus procesos, detectar fallas y prepararte para la era de la IA</span>.
-          </p>
+        <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+          Con cada conversación, <strong>GLY_ai</strong> crea una auditoría personalizada que muestra cómo está tu negocio, qué procesos se pueden optimizar y 
+          cómo adaptarte a las nuevas tecnologías. Todo con una experiencia natural, incluso de voz a voz. 
+          Es como tener un asesor inteligente que piensa, aprende y evoluciona junto a tu empresa.
+        </p>
 
-          <p className="text-gray-700 text-sm md:text-base leading-relaxed text-center md:text-left">
-            Nuestro ecosistema de agentes inteligentes está diseñado para 
-            analizar tu negocio desde distintos ángulos, rescatar la información clave 
-            y entregarte un <span className="font-semibold">mapa preciso del estado actual de tu empresa</span>, 
-            listo para transformarse en una operación más ágil y escalable.
-          </p>
-
-          <ul className="list-disc list-inside text-gray-600 text-sm md:text-sm space-y-1.5 text-left mx-auto md:mx-0 max-w-md">
-            <li>
-              <strong>Agente TTS especializado</strong> en entender tu negocio: 
-              escucha, interpreta y convierte tus necesidades en acciones claras.
-            </li>
-            <li>
-              <strong>Agente auditor</strong> que rescata toda la información de tus procesos 
-              y realiza un diagnóstico inicial de tu estado actual para adaptarte a la IA.
-            </li>
-            <li>
-              <strong>Análisis de base de datos con IA</strong> que detecta y describe patrones ocultos, 
-              revelando oportunidades de mejora y riesgos que no ves a simple vista.
-            </li>
-            <li>
-              <strong>Resúmenes densos y accionables</strong> que estructuran los datos de tu empresa 
-              en insights prácticos y fáciles de entender.
-            </li>
-          </ul>
-
-          <p className="text-gray-700 text-sm md:text-base leading-relaxed font-medium text-center md:text-left">
-            Todo esto en un solo lugar: <span className="font-semibold text-black">una suite de IA diseñada para 
-            auditar, optimizar y acompañar a tu empresa en el salto hacia el futuro.</span>
-          </p>
-        </div>
-
-        {/* Columna Derecha - Oculta en pantallas < 700px */}
-        <div className="relative w-full h-[260px] md:h-[440px] shadow-lg overflow-hidden rounded-2xl hidden md:block">
-          <Image
-            src="/iaimgej.png"
-            alt="Resumen de servicios GLYNNE IA"
-            fill
-            className="object-cover object-center"
-          />
-        </div>
+        <p className="mt-6 font-semibold text-black text-sm md:text-base">
+          GLYNNE — Donde la inteligencia se vuelve acción.
+        </p>
       </div>
     </main>
   );
