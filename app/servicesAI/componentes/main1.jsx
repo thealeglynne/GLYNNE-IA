@@ -20,7 +20,7 @@ export default function Main1() {
     'https://res.cloudinary.com/dpdyco5po/video/upload/movilGLY_s2ihya.mp4';
 
   const desktopPoster =
-    'https://res.cloudinary.com/dpdyco5po/video/upload/f_auto,q_auto/movilGLY_s2ihya.mp4.jpg';
+    'https://res.cloudinary.com/dpdyco5po/video/upload/1006_1_3_xdell8.jpg';
   const mobilePoster =
     'https://res.cloudinary.com/dpdyco5po/video/upload/movilGLY_s2ihya.mp4.jpg';
 
