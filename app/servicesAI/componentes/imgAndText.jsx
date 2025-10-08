@@ -10,8 +10,22 @@ export default function TextImageSection() {
   return (
     <section className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 bg-white">
       
-      {/* Texto a la izquierda */}
-      <div className="flex-1 flex items-center justify-center text-center md:text-left p-4">
+      {/* Imagen a la izquierda */}
+      <div className="flex-1 flex items-center justify-center p-4 order-1 md:order-1">
+        <div style={{ width: '50%' }}>
+          <Image
+            src="/qrGLY.png"
+            alt="Código QR GLY-AI"
+            width={300}
+            height={300}
+            className="object-contain w-full h-auto select-none"
+            unoptimized
+          />
+        </div>
+      </div>
+
+      {/* Texto a la derecha */}
+      <div className="flex-1 flex items-center justify-center text-center md:text-left p-4 order-2 md:order-2">
         <div className="max-w-xl">
           <h2 className="text-black text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">
             Potencia tu empresa con <span className="text-black font-bold">GLY-AI</span>
@@ -32,20 +46,6 @@ export default function TextImageSection() {
             <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
             <span className="relative z-10">Comienza con GLY-AI</span>
           </button>
-        </div>
-      </div>
-
-      {/* Imagen a la derecha */}
-      <div className="flex-1 flex items-center justify-center p-4">
-        <div style={{ width: '50%' }}>
-          <Image
-            src="/qrGLY.png"
-            alt="Código QR GLY-AI"
-            width={300}
-            height={300}
-            className="object-contain w-full h-auto select-none"
-            unoptimized
-          />
         </div>
       </div>
     </section>
