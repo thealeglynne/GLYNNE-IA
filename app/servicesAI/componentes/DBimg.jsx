@@ -6,30 +6,30 @@ import { motion, AnimatePresence } from 'framer-motion';
 const imagesData = [
   { 
     src: '/db1.png', 
-    desc: 'Interfaz de entrada elegante e intuitiva, diseñada para que cualquier usuario pueda interactuar sin esfuerzo. Un diseño premium, limpio y sofisticado, con sensación de producto de alta calidad, al estilo Apple.' 
+    desc: 'Interfaz principal del sistema: aquí puedes subir tu base de datos y conversar directamente con la inteligencia artificial. Desde este panel, la IA interpreta los datos, analiza tendencias y genera insights narrativos automáticos en segundos.'
   },
   { 
     src: '/db4.png', 
-    desc: 'El chat de inteligencia artificial recolecta información sobre tu empresa de manera inteligente y progresiva. Cada interacción permite que la IA haga preguntas precisas y relevantes, construyendo un análisis completo y personalizado.' 
+    desc: 'Visualización de tendencias: gráfico de líneas donde la IA representa el comportamiento general de los datos. Permite detectar patrones, variaciones y puntos críticos dentro de los indicadores analizados.'
   },
   { 
     src: '/db5.png', 
-    desc: 'Auditoría automatizada en acción: el documento se construye mostrando cada sección y detalle. Puedes ver cómo la IA organiza la información, integra procesos y genera recomendaciones de manera clara y profesional.' 
+    desc: 'Análisis categórico: visualización tipo torta que muestra la distribución de los datos por categorías relevantes. Ideal para entender la composición general y detectar desequilibrios o concentraciones.'
   },
   { 
     src: '/db2.png', 
-    desc: 'Certificaciones, sellos oficiales y firma del CEO. Cada documento está validado legalmente por nuestra empresa, garantizando que la auditoría es legítima, confiable y lista para respaldar cualquier decisión empresarial.' 
+    desc: 'Informe narrativo de auditoría: la IA genera automáticamente un texto completo que explica los resultados del análisis, las correlaciones encontradas y los hallazgos más relevantes. Todo el contexto, explicado con lenguaje natural.'
   },
   { 
     src: '/db3.png', 
-    desc: 'Certificaciones, sellos oficiales y firma del CEO. Cada documento está validado legalmente por nuestra empresa, garantizando que la auditoría es legítima, confiable y lista para respaldar cualquier decisión empresarial.' 
+    desc: 'Organización inteligente de datos: el sistema clasifica toda la información en dos matrices —numérica y no numérica—, facilitando la comprensión estructural de la base y preparando los datos para nuevos modelos o análisis.'
   },
   { 
     src: '/db6.png', 
-    desc: 'Certificaciones, sellos oficiales y firma del CEO. Cada documento está validado legalmente por nuestra empresa, garantizando que la auditoría es legítima, confiable y lista para respaldar cualquier decisión empresarial.' 
+    desc: 'Panel BI completo: conjunto de siete gráficas dinámicas donde se reflejan las métricas clave y las tendencias detectadas en el análisis. Una vista global y visualmente poderosa del comportamiento de tus datos.'
   },
-
 ];
+
 
 export default function FacebookPostGrid() {
   const [activeIndex, setActiveIndex] = useState(null);
