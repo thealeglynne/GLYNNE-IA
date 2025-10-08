@@ -17,12 +17,12 @@ export default function Main1() {
   const desktopVideo =
     'https://res.cloudinary.com/dpdyco5po/video/upload/f_auto,q_auto/1006_1_3_xdell8.mp4';
   const mobileVideo =
-    'https://res.cloudinary.com/dpdyco5po/video/upload/movilGLY_s2ihya.mp4';
+    'https://res.cloudinary.com/dpdyco5po/video/upload/1007_3_yf3ncj.mp4';
 
   const desktopPoster =
     'https://res.cloudinary.com/dpdyco5po/video/upload/1006_1_3_xdell8.jpg';
   const mobilePoster =
-    'https://res.cloudinary.com/dpdyco5po/video/upload/movilGLY_s2ihya.mp4.jpg';
+    'https://res.cloudinary.com/dpdyco5po/video/upload/movilGLY_s2ihya.jpg';
 
   return (
     <main className="w-[100vw] h-[100vh] overflow-hidden font-inter flex items-center justify-center bg-white">
