@@ -12,80 +12,129 @@ const services = [
   {
     icon: <FaUserTie size={40} className="text-orange-500 drop-shadow-sm" />,
     title: 'Quiénes Somos',
-    description: 'En GLYNNE AI no seguimos tendencias: las creamos.',
-    detail: 'Somos una compañía enfocada en diseñar arquitecturas de software escalables e implementar inteligencia artificial aplicada a procesos empresariales. No vendemos herramientas genéricas: creamos sistemas que evolucionan con tu negocio, anticipan problemas y generan autonomía operativa.'
+    description: 'GLYNNE TECH S.A.S: Inteligencia, automatización y propósito empresarial.',
+    detail: `GLYNNE TECH S.A.S es una compañía de base tecnológica especializada en la creación de soluciones empresariales inteligentes. 
+Nos dedicamos a diseñar, desarrollar e implementar arquitecturas de software que permiten a las organizaciones evolucionar hacia modelos de gestión autónomos, precisos y eficientes.
+
+Somos un equipo de mentes creativas, técnicas y estratégicas con una misión clara: transformar la forma en que las empresas operan, utilizando la inteligencia artificial no como un accesorio, sino como el corazón de su infraestructura digital. 
+
+En GLYNNE no seguimos tendencias; las construimos. Creemos en una tecnología que piensa, aprende y se adapta a los objetivos de cada negocio. Nuestro enfoque combina auditoría empresarial, análisis predictivo y automatización para crear ecosistemas digitales que realmente generan valor, eliminan fricciones operativas y aumentan la competitividad global.`
   },
   {
     icon: <FaBullseye size={40} className="text-orange-500 drop-shadow-sm" />,
     title: 'Nuestra Misión',
-    description: 'Transformamos la forma en que operan las empresas.',
-    detail: 'Nuestra misión es integrar la automatización inteligente en cada área de la organización para que puedan escalar más rápido, reducir fricciones y tomar mejores decisiones con datos en tiempo real.'
+    description: 'Impulsar la transformación digital mediante inteligencia aplicada.',
+    detail: `Nuestra misión es ayudar a las empresas a operar con mayor eficiencia, reduciendo la carga manual y potenciando la autonomía tecnológica. 
+Buscamos integrar la automatización inteligente en cada departamento —Ventas, Recursos Humanos, Finanzas, Soporte y Operaciones— para que las organizaciones puedan tomar decisiones basadas en datos y no en suposiciones.
+
+GLYNNE TECH promueve un modelo donde la inteligencia artificial no reemplaza al talento humano, sino que lo amplifica. 
+Nuestro propósito es que cada compañía con la que trabajamos logre independencia tecnológica, control operativo y visión estratégica a largo plazo, utilizando herramientas que auditan, diagnostican y optimizan su propio funcionamiento.`
   },
   {
     icon: <FaEye size={40} className="text-orange-500 drop-shadow-sm" />,
     title: 'Nuestra Visión',
-    description: 'Liderar la nueva era de negocios autónomos.',
-    detail: 'Queremos que las organizaciones se gestionen como una ciudad viva: nodos, flujos y agentes inteligentes trabajando en armonía para lograr eficiencia, innovación y crecimiento sostenido a nivel global.'
+    description: 'Liderar la nueva generación de empresas inteligentes y autónomas.',
+    detail: `Nuestra visión es construir un futuro donde las empresas funcionen como organismos vivos: cada proceso, flujo y sistema trabajando en armonía bajo la dirección de una inteligencia orquestada. 
+GLYNNE TECH busca posicionarse como referente global en la integración de inteligencia artificial aplicada a la operación corporativa, creando soluciones que piensan, actúan y evolucionan junto a las necesidades del mercado.
+
+Soñamos con compañías donde la eficiencia no sea una meta, sino el punto de partida. 
+Nuestra visión se basa en la idea de una arquitectura viva, donde los agentes de IA se comportan como asesores, analistas y operadores digitales dentro de un ecosistema empresarial completamente automatizado.`
   },
   {
     icon: <FaStar size={40} className="text-orange-500 drop-shadow-sm" />,
     title: 'Qué Nos Hace Diferentes',
-    description: 'Arquitecturas modulares + IA aplicada a procesos críticos.',
-    detail: 'Diseñamos arquitecturas escalables que se adaptan al crecimiento. Usamos IA como agentes inteligentes, no simples chatbots. Integramos sistemas existentes (ERP, CRM, WhatsApp, Gmail, bases de datos). Vamos más allá de implementar: auditamos, diseñamos estrategias y aseguramos evolución continua.'
+    description: 'Auditoría inteligente, personalización total y evolución continua.',
+    detail: `GLYNNE TECH no vende software genérico. Creamos sistemas diseñados específicamente para la realidad de cada empresa. 
+Nuestro modelo de automatización se basa en la auditoría profunda de los procesos internos: entendemos cómo funciona tu negocio, identificamos los puntos críticos y proponemos soluciones que generan impacto real.
+
+A diferencia de los desarrollos tradicionales, nuestros sistemas de IA analizan, interpretan y recomiendan. 
+Cada interacción, cada conversación y cada dato recolectado se convierten en conocimiento estructurado, impulsando mejoras automáticas en productividad y precisión operativa.
+
+Nos distingue nuestra capacidad de combinar análisis estratégico con automatización funcional, entregando resultados tangibles en ahorro de tiempo, reducción de costos y aumento del rendimiento empresarial.`
   },
   {
     icon: <FaBalanceScale size={40} className="text-orange-500 drop-shadow-sm" />,
     title: 'Nuestros Valores',
-    description: 'Innovación, escalabilidad y colaboración.',
-    detail: `• Innovación sin límites: romper paradigmas con creatividad aplicada.
-• Escalabilidad real: soluciones que crecen al ritmo de tu empresa.
-• Autonomía inteligente: IA como motor, no accesorio.
-• Impacto tangible: resultados en eficiencia, ingresos y satisfacción.
-• Colaboración: trabajamos contigo, no solo para ti.`
+    description: 'Tecnología con propósito, innovación con sentido y resultados medibles.',
+    detail: `• **Innovación consciente:** Creemos en una innovación que resuelve, no que complica.  
+• **Escalabilidad real:** Cada solución está diseñada para crecer junto con el negocio.  
+• **Autonomía inteligente:** Buscamos que cada empresa logre independencia operativa con el apoyo de la IA.  
+• **Transparencia y ética:** La inteligencia artificial debe ser confiable, verificable y responsable.  
+• **Impacto tangible:** Medimos nuestro éxito por los resultados reales de nuestros clientes.  
+• **Colaboración genuina:** No somos un proveedor más, somos un aliado estratégico en la evolución de tu empresa.`
   },
   {
     icon: <FaHistory size={40} className="text-orange-500 drop-shadow-sm" />,
     title: 'Nuestra Historia',
-    description: 'Nacimos para revolucionar la industria.',
-    detail: 'GLYNNE AI nació de la visión de construir no solo software, sino un titán tecnológico capaz de transformar industrias. Lo que comenzó como un equipo de mentes inquietas, hoy se proyecta como un ecosistema de soluciones que marcan la diferencia en cómo las empresas trabajan y escalan.'
+    description: 'De una idea ambiciosa a un ecosistema de automatización inteligente.',
+    detail: `GLYNNE TECH nació con la visión de construir algo más que software: una compañía capaz de revolucionar la manera en que las empresas piensan y operan. 
+Lo que empezó como un proyecto de desarrollo de sistemas inteligentes se transformó en una organización dedicada a la creación de ecosistemas empresariales completamente automatizados.
+
+Consolidamos un modelo único que combina conversación natural, diagnóstico automatizado y análisis de datos. 
+Hoy, nuestras soluciones están orientadas a detectar oportunidades, anticipar necesidades y proponer mejoras continuas. 
+Nuestra historia es la evolución constante de una idea que busca un único resultado: autonomía empresarial impulsada por inteligencia artificial.`
   },
   {
     icon: <FaFlagCheckered size={40} className="text-orange-500 drop-shadow-sm" />,
-    title: 'Cierre con Impacto',
-    description: 'No perseguimos ideas pequeñas. Perseguimos impacto.',
-    detail: 'Bienvenido a GLYNNE AI, donde tu empresa evoluciona hacia la autonomía. Nuestra meta no es acompañar el futuro, sino crearlo contigo ⚡.'
+    title: 'Nuestro Impacto',
+    description: 'Automatización con propósito, transformación con evidencia.',
+    detail: `El impacto de GLYNNE TECH se mide en la eficiencia que generamos. 
+Cada empresa que pasa por nuestra auditoría obtiene una visión clara de sus puntos críticos, junto con un documento oficial que certifica el diagnóstico y las oportunidades de automatización detectadas.
+
+Ayudamos a compañías a reducir su carga operativa, aumentar su capacidad de respuesta y potenciar la toma de decisiones. 
+En un mundo saturado de herramientas, nosotros entregamos inteligencia. 
+GLYNNE TECH no persigue ideas pequeñas. Perseguimos impacto.`
   },
-  // 🔥 Nuevas 5 cards con info estatutaria y objeto social
   {
     icon: <FaBuilding size={40} className="text-orange-500 drop-shadow-sm" />,
     title: 'Naturaleza Legal',
-    description: 'GLYNNE TECH S.A.S, bajo la Ley 1258 de 2008.',
-    detail: 'GLYNNE es una sociedad por acciones simplificada (S.A.S.) constituida legalmente en Colombia, regida por sus estatutos, la Ley 1258 de 2008 y demás disposiciones legales vigentes. En todos sus actos se identifica como sociedad S.A.S.'
+    description: 'GLYNNE TECH S.A.S, regida por la Ley 1258 de 2008.',
+    detail: `GLYNNE TECH S.A.S es una sociedad por acciones simplificada, constituida bajo las leyes colombianas y debidamente registrada ante cámara de comercio. 
+Opera conforme a los principios de responsabilidad, legalidad y transparencia empresarial.
+
+Cada proyecto, documento o auditoría que emitimos se encuentra respaldado por nuestra firma corporativa, NIT y registro oficial. 
+Nuestro marco legal garantiza la seguridad jurídica y la confianza que las empresas necesitan para implementar procesos de transformación digital con respaldo institucional.`
   },
   {
     icon: <FaLaptopCode size={40} className="text-orange-500 drop-shadow-sm" />,
     title: 'Objeto Social',
-    description: 'Diseño y desarrollo de soluciones tecnológicas avanzadas.',
-    detail: 'Nuestro objeto social es diseñar, desarrollar e implementar soluciones de software avanzadas y automatización de procesos empresariales mediante IA. Ayudamos a organizaciones a auditar, optimizar y transformar digitalmente sus operaciones con arquitecturas de vanguardia, microservicios, low-code y sistemas distribuidos.'
+    description: 'Soluciones empresariales basadas en inteligencia y automatización.',
+    detail: `Nuestro objeto social consiste en diseñar, desarrollar e implementar soluciones tecnológicas avanzadas orientadas a la automatización de procesos empresariales mediante inteligencia artificial. 
+Nos especializamos en auditorías digitales, diagnóstico organizacional y optimización operativa, ayudando a empresas a reducir costos y aumentar su rentabilidad.
+
+GLYNNE TECH impulsa la transformación digital de compañías que buscan eficiencia, escalabilidad y autonomía tecnológica, integrando análisis, asesoría y acompañamiento estratégico dentro de un mismo ecosistema digital.`
   },
   {
     icon: <FaBrain size={40} className="text-orange-500 drop-shadow-sm" />,
-    title: 'Especialización en IA',
-    description: 'IA aplicada a la toma de decisiones y análisis predictivo.',
-    detail: 'Integramos machine learning, NLP, visión computacional, análisis de comportamiento y motores de recomendación. Diseñamos modelos de IA a la medida para cada cliente, garantizando seguridad, interoperabilidad y escalabilidad en entornos productivos.'
+    title: 'Especialización en Inteligencia Artificial',
+    description: 'Inteligencia que entiende, analiza y actúa.',
+    detail: `GLYNNE TECH desarrolla e integra modelos de inteligencia artificial diseñados para comprender el contexto empresarial de cada cliente. 
+Nuestras soluciones no solo responden preguntas: interpretan necesidades, analizan datos y generan estrategias de mejora continua.
+
+Creamos asistentes inteligentes que auditan conversaciones, procesan información empresarial y entregan diagnósticos completos que permiten detectar oportunidades de automatización y mejora. 
+Cada modelo está entrenado para ofrecer respuestas útiles, comprensibles y alineadas con los objetivos del negocio.`
   },
   {
     icon: <FaFlask size={40} className="text-orange-500 drop-shadow-sm" />,
-    title: 'Investigación y Desarrollo',
-    description: 'Innovación tecnológica constante con I+D+i.',
-    detail: 'GLYNNE impulsa proyectos de investigación, desarrollo e innovación (I+D+i) en inteligencia artificial, automatización y transformación digital. También ofrecemos capacitación, mentoría tecnológica y acompañamiento estratégico en la adopción de nuevas tecnologías.'
+    title: 'Investigación, Desarrollo e Innovación',
+    description: 'I+D+i como motor de evolución tecnológica.',
+    detail: `La innovación no es un departamento dentro de GLYNNE TECH: es nuestra esencia. 
+Promovemos proyectos de investigación y desarrollo enfocados en nuevas formas de aplicar la inteligencia artificial a la productividad empresarial.
+
+Colaboramos con instituciones, universidades y organizaciones para explorar soluciones disruptivas que eleven los estándares de automatización y gestión corporativa. 
+Además, ofrecemos formación, mentoría y acompañamiento para que las empresas aprendan a integrar la inteligencia artificial en su ADN organizacional.`
   },
   {
     icon: <FaGlobe size={40} className="text-orange-500 drop-shadow-sm" />,
     title: 'Domicilio y Expansión',
-    description: 'Con sede en Madrid (Cundinamarca) y visión global.',
-    detail: 'Nuestro domicilio principal está en Madrid (Cundinamarca), Colombia, con posibilidad de abrir sucursales y agencias en el país y en el exterior. Operamos con proyección internacional, creando alianzas estratégicas para liderar la revolución de la inteligencia artificial aplicada a la empresa moderna.'
+    description: 'Desde Madrid (Cundinamarca) hacia un impacto global.',
+    detail: `El domicilio principal de GLYNNE TECH se encuentra en Madrid, Cundinamarca, Colombia, desde donde operamos con visión internacional. 
+Nuestra meta es expandir nuestras operaciones hacia mercados globales, estableciendo alianzas estratégicas que impulsen la adopción de la inteligencia artificial empresarial.
+
+Con la proyección de crear sucursales en distintas regiones, GLYNNE TECH se prepara para liderar la revolución digital de las empresas modernas, ofreciendo soluciones que trascienden fronteras y redefinen la forma en que los negocios operan, aprenden y crecen.`
   },
+
+  
 ];
 
 const containerVariants = {
@@ -117,7 +166,7 @@ export default function NosotrosMain() {
             Nosotros
           </h2>
           <p className="text-gray-700 max-w-3xl mx-auto mt-4 text-base md:text-lg">
-            GLYNNE AI no es una empresa tradicional de software: somos un movimiento que diseña la próxima generación de negocios autónomos con IA, integración y visión estratégica.
+            GLYNNE TECH S.A.S es una empresa de transformación digital dedicada a impulsar la autonomía empresarial mediante auditorías inteligentes, diagnóstico automatizado y soluciones de inteligencia artificial enfocadas en resultados reales.
           </p>
         </motion.div>
 
@@ -148,11 +197,10 @@ export default function NosotrosMain() {
         </motion.div>
       </div>
 
-      {/* Popup con detalle mejorado */}
+      {/* Popup con detalle */}
       <AnimatePresence>
         {selected && (
           <Dialog open={!!selected} onClose={() => setSelected(null)} className="relative z-50">
-            {/* Fondo con animación */}
             <motion.div 
               className="fixed inset-0 bg-black/50 backdrop-blur-sm"
               initial={{ opacity: 0 }}
@@ -162,7 +210,6 @@ export default function NosotrosMain() {
               aria-hidden="true"
             />
 
-            {/* Contenido */}
             <div className="fixed inset-0 flex items-center justify-center p-4">
               <motion.div
                 initial={{ opacity: 0, scale: 0.7, y: 40 }}

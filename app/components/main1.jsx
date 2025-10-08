@@ -1,53 +1,85 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
-export default function ImageBackground() {
-  const [showLogo, setShowLogo] = useState(false);
-  const [bgImage, setBgImage] = useState('/main1.jpg'); // Imagen por defecto
+export default function TextImageSection() {
+  const router = useRouter();
 
-  // Mostrar logo con animación
-  useEffect(() => {
-    const timeout = setTimeout(() => setShowLogo(true), 1000);
-    return () => clearTimeout(timeout);
-  }, []);
-
-  // Cambiar imagen según ancho de pantalla
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 700) {
-        setBgImage('https://i.pinimg.com/736x/9e/a9/af/9ea9af19c18e476fb4d7717873ded2a1.jpg'); // Imagen para móviles
-      } else {
-        setBgImage('/main1.jpg'); // Imagen para escritorio
-      }
-    };
-
-    handleResize(); // Comprobar al montar
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  const handleRedirect = () => {
+    router.push('/servicesAI'); // 🔥 redirige en la misma pestaña
+  };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden mt-[60px]">
-      {/* Imagen de fondo */}
-      <div
-        className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: `url('${bgImage}')` }}
-      />
+    <section className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 bg-white overflow-hidden">
 
-      {/* Overlay oscuro */}
-      <div className="absolute inset-0 bg-black/50 z-10" />
+      {/* Texto a la izquierda con animación */}
+      <motion.div
+        className="flex-1 flex items-center justify-center text-center md:text-left p-4"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        viewport={{ once: true }}
+      >
+        <div className="max-w-xl">
+          <motion.h2
+            className="text-black text-3xl md:text-3xl lg:text-5xl font-semibold mb-4"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            BIENVENIDO A <span className="text-black font-bold">GLYNNE</span>
+          </motion.h2>
 
-      {/* Contenido encima de la imagen */}
-      <div className="relative z-20 flex items-center justify-center h-full mt-[0px]">
-        <img
-          src="/logo.png"
-          alt="Logo"
-          className={`w-40 sm:w-52 md:w-64 lg:w-72 xl:w-80 transition-opacity transition-transform duration-1000 ease-out
-            ${showLogo ? 'opacity-100 scale-70' : 'opacity-0 scale-75'}`}
-        />
-      </div>
-    </div>
+          <motion.p
+            className="text-gray-800 text-lg md:text-xl leading-relaxed mb-6"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
+          Potenciamos tu empresa con la misma fuerza que la inteligencia artificial está transformando el mundo.
+         
+          </motion.p>
+
+          {/* Botón con efecto de barrido + hover suave */}
+          <motion.button
+            onClick={handleRedirect}
+            className="relative mt-6 px-10 py-4 text-base font-semibold bg-black text-white shadow-xl overflow-hidden rounded-xl group transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
+            <span className="relative z-10">Comienza con GLY-AI</span>
+          </motion.button>
+        </div>
+      </motion.div>
+
+      {/* Imagen a la derecha con animación responsive */}
+      <motion.div
+        className="flex-1 flex items-center justify-center p-4"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
+        viewport={{ once: true }}
+      >
+        <motion.div
+          style={{ width: '50%' }}
+          animate={{
+            scale: [1, 1.05, 1],
+            transition: { duration: 6, repeat: Infinity, ease: 'easeInOut' }
+          }}
+        >
+          <Image
+            src="/qrGLY.png"
+            alt="Código QR GLY-AI"
+            width={300}
+            height={300}
+            className="object-contain w-full h-auto select-none drop-shadow-lg"
+            unoptimized
+          />
+        </motion.div>
+      </motion.div>
+    </section>
   );
 }
