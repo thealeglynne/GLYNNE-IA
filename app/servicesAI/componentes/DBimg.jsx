@@ -44,8 +44,13 @@ export default function FacebookPostGrid() {
     return words.slice(0, wordLimit).join(' ') + '...';
   };
 
-  const fullDescription = `Mira los avances en thinking de nuestro modelo GLYNNE: desde la interfaz de entrada hasta la auditoría final, cada interacción está diseñada para ofrecer una experiencia inteligente, fluida y confiable. Nuestro sistema de IA recolecta información de tu empresa de manera progresiva y precisa, formulando preguntas estratégicas que permiten construir un análisis completo y personalizado. Cada documento generado muestra de manera clara cómo se organizan los procesos internos, integrando información clave y generando recomendaciones accionables. Desde la validación de datos hasta la firma del CEO y la inclusión de sellos oficiales, todo está pensado para garantizar la legitimidad, confiabilidad y calidad del análisis. Con GLYNNE, la información no solo se recopila: se transforma en decisiones inteligentes, facilitando la toma de decisiones estratégicas y ofreciendo una visión completa de tu empresa.`;
-
+  const fullDescription = `Explora cómo GLYNNE transforma una simple base de datos en un informe inteligente y narrativo. 
+  Sube tus datos y observa cómo nuestra IA los analiza, los clasifica en matrices numéricas y no numéricas, 
+  y genera automáticamente un texto explicativo con conclusiones, hallazgos y correlaciones clave. 
+  El sistema organiza cada campo, detecta patrones, identifica tendencias y las representa en gráficas interactivas y dashboards de BI con siete vistas distintas. 
+  Todo el proceso —desde la carga de datos hasta el análisis visual— ocurre en segundos, sin necesidad de intervención humana. 
+  Con GLYNNE, tus datos no solo se interpretan: cobran vida. Comprende, visualiza y decide con la misma facilidad con la que hablas con un asistente.`;
+  
   const imagesToShow = imagesData.slice(0, 3);
   const remainingCount = imagesData.length - 3;
 
