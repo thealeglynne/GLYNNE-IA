@@ -27,10 +27,10 @@ export default function PopupIntro({ children }) {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 700) {
-        setBgImage('https://i.pinimg.com/736x/47/2c/08/472c08b8cb24c6c1ad453a050fcacda7.jpg');
+        setBgImage('https://i.pinimg.com/1200x/1a/7b/1a/1a7b1a6072c014a1a0faf53d33240afe.jpg');
         setIsMobile(true);
       } else {
-        setBgImage('/intropopup.jpg');
+        setBgImage('https://i.pinimg.com/1200x/44/9e/e5/449ee5903b1bc907779919f3c7c34b86.jpg');
         setIsMobile(false);
       }
     };
@@ -74,12 +74,13 @@ export default function PopupIntro({ children }) {
           }`}
         >
           <div
-            className={`relative rounded-xl overflow-hidden shadow-2xl border border-white/20`}
+            className="relative rounded-xl overflow-hidden shadow-2xl border border-white/20 transition-all duration-300"
             style={{
-              width: isMobile ? '100vw' : '65vw',
-              height: isMobile ? '100vh' : '65vh',
-              maxWidth: isMobile ? '100vw' : '60vw',
-              borderRadius: isMobile ? 0 : '1rem', // en móviles sin bordes
+              width: isMobile ? '100vw' : '90vw',   // 🔥 más grande en desktop
+              height: isMobile ? '100vh' : '90vh',  // 🔥 más alto en desktop
+              maxWidth: isMobile ? '100vw' : '90vw',
+              maxHeight: isMobile ? '100vh' : '90vh',
+              borderRadius: isMobile ? 0 : '1rem',
             }}
           >
             {/* Imagen de fondo */}

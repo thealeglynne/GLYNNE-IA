@@ -15,13 +15,16 @@ export default function Page() {
     <div>
     <Header />
     <Main1 />
-    <TextImageSection />
     <Info />
+    <TextImageSection />
    
+   
+
     <Videos2 />
-    
-     <TextImageSection2 />
+    <TextImageSection2 />
        <Videoss />
+   
+   
        <RedirectServices />
      <Footer />
     </div>

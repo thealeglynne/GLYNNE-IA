@@ -10,7 +10,16 @@ export default function MainCodeShowcase() {
   return (
     <main className="w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-16 bg-white">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
-        
+          {/* Columna Derecha - Imagen intacta */}
+          <div className="relative w-full aspect-[4/5] md:aspect-[4/5] lg:aspect-[3/4] bg-white">
+          <Image
+            src="/codeAgent.png"
+            alt="Arquitectura de Software con Inteligencia Artificial – GLYNNE"
+            fill
+            className="object-cover object-top rounded-2xl shadow-lg"
+            priority
+          />
+        </div>
         {/* Columna Izquierda - Texto GLY-AI */}
         <div className="space-y-6 text-center md:text-left">
           <h2 className="text-black text-2xl md:text-3xl lg:text-4xl font-semibold">
@@ -34,16 +43,7 @@ export default function MainCodeShowcase() {
           </button>
         </div>
 
-        {/* Columna Derecha - Imagen intacta */}
-        <div className="relative w-full aspect-[4/5] md:aspect-[4/5] lg:aspect-[3/4] bg-white">
-          <Image
-            src="/codeAgent.png"
-            alt="Arquitectura de Software con Inteligencia Artificial – GLYNNE"
-            fill
-            className="object-cover object-top rounded-2xl shadow-lg"
-            priority
-          />
-        </div>
+      
       </div>
     </main>
   );
