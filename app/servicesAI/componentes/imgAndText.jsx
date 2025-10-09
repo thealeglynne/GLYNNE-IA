@@ -14,7 +14,7 @@ export default function TextImageSection() {
       <div className="flex-1 flex items-center justify-center p-4 order-1 md:order-1">
         <div style={{ width: '50%' }}>
           <Image
-            src="/mano.png"
+            src="/codeArquitectura.png"
             alt="Código QR GLY-AI"
             width={300}
             height={300}
