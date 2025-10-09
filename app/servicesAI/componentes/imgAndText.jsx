@@ -2,36 +2,22 @@
 
 import Image from 'next/image';
 
-export default function TextImageSection() {
+export default function MainCodeShowcase() {
   const handleRedirect = () => {
     window.open('https://glynne-sst-ai-hsiy.vercel.app/', '_blank');
   };
 
   return (
-    <section className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 bg-white">
-      
-      {/* Imagen a la izquierda */}
-      <div className="flex-1 flex items-center justify-center p-4 order-1 md:order-1">
-        <div style={{ width: '50%' }}>
-          <Image
-            src="/codeArquitectura.png"
-            alt="Código QR GLY-AI"
-            width={300}
-            height={300}
-            className="object-contain w-full h-auto select-none"
-            unoptimized
-          />
-        </div>
-      </div>
-
-      {/* Texto a la derecha */}
-      <div className="flex-1 flex items-center justify-center text-center md:text-left p-4 order-2 md:order-2">
-        <div className="max-w-xl">
-          <h2 className="text-black text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">
+    <main className="w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-16 bg-white">
+      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
+        
+        {/* Columna Izquierda - Texto GLY-AI */}
+        <div className="space-y-6 text-center md:text-left">
+          <h2 className="text-black text-2xl md:text-3xl lg:text-4xl font-semibold">
             Potencia tu empresa con <span className="text-black font-bold">GLY-AI</span>
           </h2>
 
-          <p className="text-gray-800 text-lg md:text-xl leading-relaxed mb-6">
+          <p className="text-gray-800 text-lg md:text-xl leading-relaxed">
             No se trata solo de automatizar procesos, sino de transformar la manera 
             en que tu negocio crece, aprende y se adapta.  
             GLY-AI analiza, gestiona y optimiza cada área de tu empresa, 
@@ -47,7 +33,18 @@ export default function TextImageSection() {
             <span className="relative z-10">Comienza con GLY-AI</span>
           </button>
         </div>
+
+        {/* Columna Derecha - Imagen intacta */}
+        <div className="relative w-full aspect-[4/5] md:aspect-[4/5] lg:aspect-[3/4] bg-white">
+          <Image
+            src="/codeAgent.png"
+            alt="Arquitectura de Software con Inteligencia Artificial – GLYNNE"
+            fill
+            className="object-cover object-top rounded-2xl shadow-lg"
+            priority
+          />
+        </div>
       </div>
-    </section>
+    </main>
   );
 }
