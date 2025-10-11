@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <div>
         <Header />
-      <Nosotros /> 
+    
       <CardNosotro />
       <Menu />
       <Elegirnos />
