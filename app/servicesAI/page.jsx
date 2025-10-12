@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <div>
     <Header />
-    <Main1 />
+
     <Info />
     <TextImageSection />
    
